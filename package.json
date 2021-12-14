@@ -1,0 +1,26 @@
+{
+  "name": "KalkandaKirala",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.13.6",
+    "@nuxtjs/pwa": "^3.3.5",
+    "core-js": "^3.15.1",
+    "nuxt": "^2.15.7",
+    "nuxt-buefy": "^0.4.8",
+    "@nuxtjs/sitemap": "^2.4.0",
+    "moment": "^2.29.1",
+    "swiper": "^7.3.1",
+    "v-lazy-image": "^2.0.1",
+    "vue-awesome-swiper": "^4.1.1",
+    "vue-click-outside": "^1.1.0",
+    "vue-social-sharing": "^3.0.8"
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,50 @@
+
+.modal-card {
+    background: #fff !important;
+  }
+  header.modal-card-head {
+    background-color: #fcf5ee;
+  }
+
+  button.button.mb-bak-button {
+    background: transparent;
+    border: none;
+}
+
+
+.modal-card-foot, .modal-card-head {
+    align-items: center;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: flex-start;
+    padding: 5px 10px;
+    position: relative;
+  }
+
+  .carousel-list {
+    position: relative;
+    overflow: inherit;
+    width: 100%;
+}
+
+.carousel-list.has-shadow {
+  box-shadow: none;
+}
+
+span.like_badge {
+  position: absolute;
+  top: -2px;
+  right: 3px;
+  color: red;
+}
+
+.navbar-link:not(.is-arrowless)::after {
+  border-color: #7957d54a;
+  margin-top: -.375em;
+  right: 1.125em;
+}
+
+a.navbar-item:focus, a.navbar-item:hover {
+  background: #000 !important;
+}
