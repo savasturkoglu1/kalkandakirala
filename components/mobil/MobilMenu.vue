@@ -1,18 +1,11 @@
 <template>
     <div class="mm-card" style="width: auto" v-if="$store.state.base">
-                <header class="modal-card-head mm-header " :style="{ backgroundImage: `url(${bimg})`}">
+                <header class="modal-card-head mm-header " >
                         
                      <button class="button mb-bak-button" @click="backButton">
                          <i class="flaticon-left-arrow"></i>
                      </button>
-                     <div class="mm-logo">
-                        <img class="mob-logo" src="https://panel.villaevreni.com/images/site/villa_evreni.png" >
-                        <br>
-                        <span class="mm-phone">
-                           {{$store.state.base.contact.ilt_mobil1}}
-                        </span>
-                     </div>
-                     <span></span>
+                     
                 </header>
                 <div class="mm-content">
 
@@ -356,22 +349,11 @@ img.mob-logo {
 }
 .mm-header {
  
-    background-size: cover;
+    /* background-size: cover;
     height: 120px;
-    background-position: center;
+    background-position: center; */
 }
-.mm-header::before {
-    position: absolute;
-    content: "";
-    background: #182b54;
-    width: 100%;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    z-index: 1;
-    opacity: .25;
-    pointer-events: none;
-}
+
 .drawer-list {
     width: 100%;
     display: inline-flex;

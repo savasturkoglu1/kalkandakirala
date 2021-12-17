@@ -6,7 +6,7 @@
               <nuxt :key="$route.fullPath"  />
           </transition>
           <span class="s-top desc" @click="scroll"><i class="flaticon-upload"></i></span>
-           <span class="menu-button bg-primary-normal-gradient" @click="()=>{this.menuModal= !this.menuModal}"><i class="mb-icon flaticon-menu-4"></i></span>
+           <!-- <span class="menu-button bg-primary-normal-gradient" @click="()=>{this.menuModal= !this.menuModal}"><i class="mb-icon flaticon-menu-4"></i></span> -->
            <!-- <b-modal
             v-model="menuModal"
             has-modal-card
@@ -14,25 +14,15 @@
             :can-cancel="false">
               
         </b-modal> -->
-         <b-sidebar
-      type="is-light"
-      :fullheight="fullheight"
-      :fullwidth="fullwidth"
-      :overlay="overlay"
-      :right="right"
-      v-model="menuModal"
-    >
-    <MobilMenu />
-         </b-sidebar>
-          <Social v-if="$store.state.base" :data="$store.state.base.contact" /> 
+         
+          <!-- <Social v-if="$store.state.base" :data="$store.state.base.contact" /> 
          
          <div class="wht-fix-d desc">
              <button class="wht-button-d button" @click="wht" >                
                 <i class="flaticon-whatsapp wht-big "></i>
-                
-                <!-- <span class="p5 l10" >WhatsApp Destek</span> -->
+               
              </button>
-         </div>
+         </div> -->
          <MobilSearch />
         <Footer  />
           

@@ -369,7 +369,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .mv-menu {
       text-align: center;
     display: flex;

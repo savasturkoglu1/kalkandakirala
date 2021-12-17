@@ -39,7 +39,7 @@
                </div> -->
           </div>
       </div>
-    
+     <span class="shapedividers_com-658"></span>
     </div>
 </template>
 <script>
@@ -203,7 +203,7 @@ img.f_year {
 }
 .hd-items {
     position: absolute;
-    top: 250px;
+    top: 120px;
     width: 100%;
     text-align: center;
     z-index: 19;
@@ -257,7 +257,7 @@ img.hd-img {
 } */
   .hd-items {
     position: relative !important;
-    top: 40px;
+    top: 5px;
     width: 100%;
     text-align: center;
     z-index: 3;
@@ -273,7 +273,7 @@ img.hd-img {
         
    
 }
-.hd-wrapper::after {
+/* .hd-wrapper::after {
     position: absolute;
     content: "";
     background: #182b54;
@@ -285,7 +285,7 @@ img.hd-img {
     z-index: 1;
     opacity: .35;
     border-radius: 8px;
-}
+} */
 /* .hd-titles h1 {
     font-size: 26px;
     color: #fff;
@@ -345,7 +345,7 @@ img.hd-img {
 }
 @media (min-width:1250px) {
             .hd-img-section {
-            height: 700px;
+            height: 550px;
             overflow: hidden;
             position: relative;
            
@@ -360,14 +360,14 @@ img.hd-img {
         }
 
          .hd-wrapper {
-    margin-top: 10px !important;
+   
     height: 500px;
 }
 }
 
 
 
-
+/* 
 .hd-wrapper::after {
     position: absolute;
     content: "";
@@ -379,6 +379,6 @@ img.hd-img {
     z-index: 1;
     opacity: .35;
   
-}
+} */
 
 </style>

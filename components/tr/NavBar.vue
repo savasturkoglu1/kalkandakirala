@@ -14,7 +14,7 @@
             class="mob-brand desktop-only"
             v-if="$store.state.base"
             :src="$store.state.base.settings.set_logo"
-            alt="villandakal Villa kiralama"
+            alt="kalkadna kirala Villa kiralama"
           />
             <!-- <img
             class="mob-brand mobile tablet-only"
@@ -25,42 +25,32 @@
         </nuxt-link>
         </div>
       <div class="navbar-end">
-        <!-- <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link"> Villa Seçenekleri </a>
-
-          <div class="navbar-dropdown" v-if="$store.state.base">
-            <nuxt-link
-              v-for="(item, i) in veri.kategoriler"
-              :title="item.kat_adi"
-              :key="i"
-              :to="$store.state.trUrls.kats + item.kat_url"
-              class="dropdown-item"
-            >
-              {{ item.kat_adi }}
-            </nuxt-link>
-            <nuxt-link to="/kisa-sureli-kiralama" class="dropdown-item">
-              Kısa süreli kiralamalar
-            </nuxt-link>
-            <nuxt-link to="/kiralik-villa" class="dropdown-item">
-              Tüm Villalar
-            </nuxt-link>
-          </div>
-        </div> -->
-        <!-- <div class="navbar-item has-dropdown is-hoverable">
-        <b-dropdown aria-role="menu">
-            <template #trigger="{ active }">
-                <a class="navbar-link"> Villa Seçenekleri </a>
-            </template>
-
-            <b-dropdown-item has-link aria-role="menuitem">
-               <nuxt-link to="/iletisim">
-                        iletisim
-                    </nuxt-link>
-            </b-dropdown-item>
+        <!-- <b-dropdown class="column sb-level2 is-3 pr"  aria-role="menu">
+                   <template #trigger="{ active }" >
+                      <div   class="mm-men-ir"   >
+                       Kiralık Villalar                      
+                  
+                   </div>
+                   </template>
+                    <b-dropdown-item
+                        aria-role="menu-item"
+                        
+                        custom
+                        paddingless>
+                   <div aria-role="menu-item" >
+                       <mega-menu />
+                  </div>   
+                    </b-dropdown-item>
+              </b-dropdown> -->
+        <b-navbar-dropdown class="mega-button" v-if="$store.state.base" label="Kiralık Villalar" :hoverable="true">
           
-        </b-dropdown>
-        </div> -->
-         <b-navbar-dropdown  v-if="$store.state.base" label="Villa Tipleri" :hoverable="true">
+                <b-navbar-item class="mega-dropdown" >
+                  <mega-menu />
+                    
+                </b-navbar-item>
+               
+            </b-navbar-dropdown>
+         <!-- <b-navbar-dropdown  v-if="$store.state.base" label="Villa Tipleri" :hoverable="true">
           
                 <b-navbar-item v-for="(item, i) in $store.state.base.kategoriler" :key="i" >
                     <nuxt-link 
@@ -93,7 +83,7 @@
                       Tüm bölgelere gözatın
                     </nuxt-link>
                 </b-navbar-item>
-            </b-navbar-dropdown>
+            </b-navbar-dropdown> -->
 
          <b-navbar-dropdown v-if="$store.state.base" label="Kurumsal" :hoverable="true">
                 <b-navbar-item
@@ -137,29 +127,34 @@
            Satılık
           </nuxt-link> -->
 
-        <div class="navbar-item ip-none">
+        <!-- <div class="navbar-item ip-none">
           <a class="navbar-link" href="/blog" target="_blank"> Blog </a>
-        </div>
+        </div> -->
        
       
-        <div class="navbar-s-item">
+        <!-- <div class="navbar-s-item">
            <Search />
-        </div>
+        </div> -->
         
 
-        <div class="navbar-item ip-none" v-if="$store.state.base">
-          <button class="button nav-phone bg-primary-normal-gradient text-w">
+        <div class="navbar-item ip-none contact-item" v-if="$store.state.base">
+          <button class="button nav-phone ">
             <span>
-              <i class="flaticon-phone"></i>
+              <i class="flaticon-call"></i>
             </span>
-            <span>
-              {{ $store.state.base.contact.ilt_mobil1 }}
+            <span class="tel-label">
+              {{ $store.state.base.contact.ilt_mobil1 }} <br>
+              <span class="note">
+                Tklayın iletişimde Kalın
+              </span>
+              
             </span>
           </button>
         </div>
         <div class="navbar-item">
-          <div class="button " @click="() => { this.pdd = !this.pdd}">
+          <div class="user-button button is-medium" @click="() => { this.pdd = !this.pdd}">
             <i class="flaticon-user"></i>
+            <span>Sana Özel</span>
             <span
               class="like_badge"
               v-if="$store.state.saved && $store.state.saved.length > 0"
@@ -259,6 +254,9 @@
       role="navigation"
       aria-label="main navigation"
     >
+     <button class="mobil-menu-button"  @click="()=>{this.menuModal= !this.menuModal}">
+       <i class="flaticon-menu"></i>
+     </button>
       <nuxt-link class="mv-nbrand" to="/">
         <!-- <img
           class="mob-nav-brand"
@@ -298,7 +296,18 @@
     </nav>
 
 <div class="after-header"></div>
+<b-sidebar
+          type="is-light"
+          :fullheight="fullheight"
+          :fullwidth="fullwidth"
+          :overlay="overlay"
+          :right="right"
+          v-model="menuModal"
+        >
+    <MobilMenu />
+         </b-sidebar>
   </div>
+  
 </template>
 
 <script>
@@ -307,8 +316,10 @@ import Apps from '../../components/templates/apps'
 import LoginModal from '../tr/accountdd'
 import LocationDd from './locationDd';
 import Search from '../templates/search';
+import MegaMenu from '../templates/MegaMenu.vue';
+import MobilMenu from '~/components/mobil/MobilMenu.vue';
 export default {
-  components: { LoginModal, Apps, LocationDd, Search,MobilSearch },
+  components: { LoginModal, Apps, LocationDd, Search,MobilSearch,MegaMenu,MobilMenu },
   data() {
     return {
       veri: null,  //this.$store.state.base,
@@ -319,7 +330,12 @@ export default {
       kod: null,
       comp: null,
       bookmark: null,
-      pdd:false
+      pdd:false,
+      menuModal:false,
+      overlay: true,
+      fullheight: true,
+      fullwidth: false,
+      right: false,
     }
   },
 
@@ -362,6 +378,9 @@ export default {
   methods: {
     cModal(){
       this.$store.dispatch('searchModal', true);
+    },
+     sideBar(){
+      this.$store.dispatch('sideBar', true);
     },
     aramaOpen() {
       this.ara = !this.ara
@@ -572,7 +591,7 @@ nav.navbar.nav-top {
     position: relative;
   }
   .mv-nbrand img {
-    height: 40px !important;
+    height: 35px !important;
     max-height: none;
     background: transparent;
   }
@@ -1066,7 +1085,7 @@ span.dd-owerlay {
 }
 .mv-nbrand {
   text-align: left;
-      margin-right: 40px;
+      margin-right: 10px;
 }
 .mob-teklif-but {
   background: transparent;
@@ -1095,7 +1114,10 @@ button.button.ph-button {
 
 .navbar-item:hover {
    
-    background-color: #00000035;
+    /* background-color: #61656e !important; */
+    background-color: #f1f3fa !important;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
 }
 
 .hm .nav-mobil {
@@ -1113,5 +1135,54 @@ button.button.ph-button {
     position: relative;
     z-index: 3!important;
 }
+}
+
+.mega-dropdown {
+    width: 640px;
+    padding: 0px;
+    overflow: hidden;
+    top: 30px;
+}
+
+.mega-button .navbar-dropdown {
+      right: -100px;
+    left: auto;
+    /* top: 70px; */
+    border-radius: 8px;
+    border-top: none;
+    /* background: #61656e; */
+    background: #f1f3fa;
+}
+
+a.navbar-item.mega-dropdown {
+    margin-top: 0px;
+}
+
+.navbar-item.ip-none.contact-item {
+    border-left: 2px solid #09b0e833;
+    border-right: 2px solid #fcb50045;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.navbar-item.ip-none.contact-item:hover {
+    background: transparent !important;
+    border-radius: 0px;
+}
+
+span.tel-label {
+    line-height: 15px;
+    margin-left: 5px;
+}
+
+button.button.nav-phone i::before {
+    font-size: 24px;
+    color: #09b0e8;
+}
+
+button.mobil-menu-button {
+    border: none;
+    background: transparent;
+    margin-right: 10px;
+    color: #9ca1ae;
 }
 </style>

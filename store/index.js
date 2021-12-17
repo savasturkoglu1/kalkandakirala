@@ -20,7 +20,8 @@ export const state = () => ({
     sayfalar:null,
     contact:null,
     base:null,
-    cmodal:false
+    cmodal:false,
+    sidebar:false
   
   })
   
@@ -57,6 +58,10 @@ export const state = () => ({
     searchModal(state, value) {
       state.cmodal = value
     },
+
+    sideBar(state, value) {
+      state.sidebar = value
+    },
   }
   
   export const actions = {
@@ -84,6 +89,10 @@ export const state = () => ({
     },
     searchModal(context, val) {
       context.commit('searchModal', val)
+    },
+
+    sideBar(context, val) {
+      context.commit('sideBar', val)
     },
   }
   

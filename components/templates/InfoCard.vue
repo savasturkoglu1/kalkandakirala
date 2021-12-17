@@ -11,10 +11,10 @@
                         <i class="flaticon-diamond"></i> 
                    </div>
                    <div class="if-detail">
-                        <h4>Teklif Alın</h4>
-                        <span>
+                        <h4>Size Özel Teklif Alın</h4>
+                        <!-- <span>
                             Tıklayın teklif formunu doldurun, size en uygun villaları önerelim
-                        </span>
+                        </span> -->
                    </div>
                </div>
                </nuxt-link>
@@ -28,9 +28,9 @@
                    </div>
                    <div class="if-detail">
                         <h4>Whatsapp Rezervayon</h4>
-                        <span>
+                        <!-- <span>
                             Tıllayın whatsaap ile tatil bilgileriniz gönderin, size en uygun villaları önerelim
-                        </span>
+                        </span> -->
                    </div>
                </div>
            </div>
@@ -44,9 +44,9 @@
                    </div>
                    <div class="if-detail">
                         <h4>Fırsatları Yakalayın</h4>
-                        <span>
+                        <!-- <span>
                             İndirimli villaları görmek için tıklayın
-                        </span>
+                        </span> -->
                    </div>
                </div>
                 </nuxt-link>
@@ -74,7 +74,7 @@ methods:{
 .inf-wrap {
     display: flex;
     padding: 10px 20px;
-    /* background: #f5f5f5; */
+    background: #fff;
     border: 1px solid #ddd;
     border-radius: 8px;
         height: 100%;
@@ -84,20 +84,19 @@ methods:{
     background: #f5f5f5;
 }
 .inf-icon i::before {
-    font-size: 36px;
+    font-size: 24px;
     font-weight: 500;
     color: #bd1f59;
 }
 
 .inf-icon{
     margin-right: 10px;
-    padding-top: 10px;
+    padding-top: 5px;
 }
 
 .if-detail h4 {
-    font-size: 20px;
-    margin-top: 5px;
-    color: #5035a0;
+        margin-top: 5px;
+    color: #0ab2e6;
 }
 
 .if-detail span {
@@ -105,12 +104,12 @@ methods:{
     color: #78909c;
 }
 .w-icon i::before {
-    font-size: 36px;
+    font-size: 24px;
     font-weight: 500;
     color:  #4caf50;
 }
 .h-icon i::before {
-    font-size: 36px;
+    font-size: 24px;
     font-weight: 500;
     color:  #8ac3f1;
 }

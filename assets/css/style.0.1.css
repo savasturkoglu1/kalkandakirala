@@ -34,8 +34,8 @@ body {
     background-size: cover; */
     /* font-family:  system, -apple-system, BlinkMacSystemFont, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
     font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important; */
-    /* font-family: 'Roboto', sans-serif; */
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Quicksand', sans-serif; */
     color: #333 !important;
     
 }
@@ -56,7 +56,9 @@ h1,h2,h3,h4,h5,h6{
     
 } */
 
-
+a:hover {
+  color :#0ab2e6 !important
+}
 body {
     overflow-x: hidden;
     position: relative;

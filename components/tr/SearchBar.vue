@@ -322,7 +322,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style >
 
 .columns.search-bar .column {
     padding: 0px;
@@ -398,15 +398,15 @@ export default {
   
   display: flex;
   width: 100%;
-  height: 64px;
+  height: 60px;
   padding: 6px 12px;
   font-size: 14px;
   line-height: 1.42857;
   color: #555555;
   background-color: #fff;
  
-   border-right: 1px solid #b0bec5;
-    border-radius: 0px;
+  
+    border-radius: 6px;
  
   -webkit-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
@@ -414,6 +414,7 @@ export default {
   transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
   transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  box-shadow: 0 3px 8px 0 rgb(18 5 41 / 20%);
  
 }
 
@@ -468,8 +469,8 @@ export default {
 @media (max-width: 1000px) {
      .hd-search-wrapper {
     margin-bottom: 20px;
-    margin-top: 25px;
-    padding: 10px;
+    margin-top: 5px;
+    padding: 2px;
 }
     .sb-buton {
     width: 100%;
@@ -563,17 +564,13 @@ input.form-k {
 }
 
 .sb-wrapper  {
-       background-color: #fff;
-        border-radius: 8px;
-      box-shadow: 0px 2px 6px 9px rgb(0 0 0 / 20%);
-      z-index: 5;
-    
-    border-radius: 8px;
-    
-   
-    padding: 5px!important;
+         background-color: transparent;
+    box-shadow: none;
+    z-index: 5;
+    border-radius: 0;
+    padding: 1px!important;
     height: 100%;
-    border:none;
+    border: none;
    
 }
 
@@ -635,5 +632,33 @@ input.form-k {
 
 }
 
+
+.search-inp::before {
+    content: "";
+    width: 8px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: -3px;
+    display: block;
+    background-image: linear-gradient( 
+186deg, #08aeea, #17cec4);
+    background-color: #17cec4;
+    -webkit-border-radius: 6px 0 0 6px;
+    -moz-border-radius: 6px 0 0 6px;
+    -ms-border-radius: 6px 0 0 6px;
+    border-radius: 6px 0 0 6px;
+}
+
+/* .sb-level2 {
+    
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    border-radius: 6px;
+    border: 1px solid #e1e9ed;
+    margin-bottom: 0;
+    box-shadow: 0 3px 8px 0 rgb(18 5 41 / 20%);
+} */
 
 </style>

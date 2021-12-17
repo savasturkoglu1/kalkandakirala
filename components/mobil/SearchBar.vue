@@ -63,14 +63,14 @@
          
 
                <div class="column mb-search-row is-3 pr">
-                   <div class="search-inputs-mobile  border-bottom  sl-sol pr"  v-on:click="()=> {this.locationModal=true}">
+                   <div class="search-inputs-mobile    sl-sol pr"  v-on:click="()=> {this.locationModal=true}">
                        <i class="flaticon-pin"></i>
                        <input name="arrive" :value="locPlc" readonly="" type="text" class="form-k check_in_date" autocomplete="off" placeholder="Tatil Noktası">
                    </div>
                    
               </div>
                <div class="column  is-4 mb-search-row pr">
-                       <div class="search-inputs-mobile  border-bottom   pr"  v-on:click="()=> {this.calendarModal = true}">
+                       <div class="search-inputs-mobile     pr"  v-on:click="()=> {this.calendarModal = true}">
                             <i class="flaticon-calendar"></i>
                              
                             <input name="arrive" :value="date1&&date2?datePlc:''" readonly="" type="text" class="form-k check_in_date" autocomplete="off" placeholder="Tarih Aralığı">
@@ -79,7 +79,7 @@
                </div>
              
               <div class="column mb-search-row is-3  pr">
-                         <div class="search-inputs-mobile  border-bottom  sl-sol pr"  v-on:click="()=> {this.guestModal = true }">
+                         <div class="search-inputs-mobile    sl-sol pr"  v-on:click="()=> {this.guestModal = true }">
                             <i class="flaticon-user"></i>
                             <input name="arrive" :value="guestPlc" readonly="" type="text" class="form-k check_in_date" autocomplete="off" placeholder="Misafir Sayısı">
                         </div>
@@ -614,7 +614,7 @@ input.form-k {
 .search-inputs-mobile{
     display: flex;
     width: 100%;
-    height: 54px;
+    height: 60px;
     padding: 6px 12px;
     font-size: 14px;
     
@@ -640,5 +640,20 @@ input.form-k {
     min-width: 100px;
     align-items: center;
     overflow: hidden;
+    border-radius: 6px;
+}
+
+.search-inputs-mobile::before {
+    content: "";
+    width: 8px;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    left: -3px;
+    display: block;
+    background-image: linear-gradient( 
+186deg, #08aeea, #17cec4);
+    background-color: #17cec4;
+    border-radius: 6px 0 0 6px;
 }
 </style>

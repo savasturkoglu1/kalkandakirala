@@ -201,8 +201,8 @@
 }
 
 .header-section {
-  padding: 8px !important;
-  margin-top: -76px !important;
+  /* padding: 8px !important;
+  margin-top: -76px !important; */
   }
 }
 
@@ -230,4 +230,26 @@
         padding: 20px;
         min-height: 300px;
     }
+
+    .hd-titles h1 {
+      font-size: 24px !important;
+      margin-bottom: 5px !important;
+      padding-left: 10px;
+  }
+
+  .hd-search-wrapper {
+    margin-bottom: 20px;
+    margin-top: 5px !important;
+}
+
+.hd-titles {
+  margin-bottom: 15px !important;
+  line-height: 20px;
+  text-align: left;
+  margin-left: 10px;
+}
+
+  .mv-nbrand img {
+    height: 30px !important;
+  }
 }
