@@ -1,20 +1,14 @@
 <template>
-    <div class="bg-gray">
-           <div class="desc">
-               <Brd  v-if="kategori"  :routeArray="[
+    <div>
+        <div class="desc">
+               <Brd :routeArray="[
               {name:'Anasayfa', path:'/'},
-              {name:'Kiralık villalar Kategorileri', path:$store.state.trUrls.kats},
-              {name:kategori.kat_adi, path:$store.state.trUrls.kats+kategori.kat_url}]" /> 
+              {name:'Tüm Kiralık villalar', path:'/tum-villalar'}]" /> 
            </div>
-            <div class="container list-title">
-                  <div class="content">
-                      <h1>{{kategori.kat_baslik}}</h1>
-                  </div>
-              </div>
          <Listing :veri="veri"  :pinUrl="pinUrl" />
           <div class="container">
               <div class="content">
-                   <Content :Cont="kategori.content" />
+                   <Content :Cont="vils.content" />
               </div>
           </div>
     </div>
@@ -30,7 +24,7 @@ export default {
     watchQuery:true,
     scrollToTop: true,
     loading: true,
-    components: { Listing,Content, Brd},
+    components: { Listing,Content, Brd },
     data(){
         return {
         
@@ -40,23 +34,23 @@ export default {
 
      head() {
             return {
-                title: this.kategori.seo.seo_baslik,
+                title: this.vils.seo.seo_baslik,
              meta: [
-                 { hid: 'description', name: 'description', content: this.kategori.seo.seo_aciklama },
-               
+                 { hid: 'description', name: 'description', content: this.vils.seo.seo_aciklama },
+                 
               
-                { property:"og:image" , content:this.kategori.bo_kapak },
+                { property:"og:image" , content:this.vils.kapak },
                 { property:"og:site_name" , content: this.$store.state.siteName },
                 { property:"og:type" , content:"website" },
                 { property:"og:url" , content: this.$store.state.baseTr+  this.$route.path },
                 { property:"og:locale" , content:"tr_TR"},
-                { property:"og:title" , content:this.kategori.seo.seo_baslik },
-                { property:"og:description" , content:this.kategori.seo.seo_aciklama },
+                { property:"og:title" , content:this.vils.seo.seo_baslik },
+                { property:"og:description" , content:this.vils.seo.seo_aciklama },
                 { name:"twitter:card" , content:"summary_large_image"},
                 { name:"twitter:site" , content: this.$store.state.siteName },
                 { name:"twitter:url" , content: this.$store.state.baseTr+  this.$route.path},
-                { name:"twitter:title" , content:this.kategori.seo.seo_baslik },
-                { name:"twitter:image" , content:this.kategori.bo_kapak },
+                { name:"twitter:title" , content:this.vils.seo.seo_baslik },
+                { name:"twitter:image" , content:this.vils.kapak },
                 { name:"twitter:creator" , content:"@twitterkullaniciadiniz"},
                 { property:"fb:pages" , content:"BURAYA_FACEBOOK_SAYFA_ID_NUMARASI" },
                 ],
@@ -65,8 +59,8 @@ export default {
                        {rel: 'canonical',href: this.$store.state.baseTr+  this.$route.path },
                        {rel: 'alterne',href: this.$store.state.baseTr+  this.$route.path, hreflang:"x-default"  },
                        {rel: 'alterne',href: this.$store.state.baseTr+  this.$route.path, hreflang:"tr"  },
-                      // {rel: 'alterne',href: this.$store.state.baseTr+  this.$route.path, hreflang:"en"  },
-                       this.veri.current_page!==1?{ rel:"prev", href:this.$store.state.baseTr+  this.$route.path+"?page="+parseInt(parseInt(this.veri.current_page)-1)}:'',
+                     
+                          this.veri.current_page!==1?{ rel:"prev", href:this.$store.state.baseTr+  this.$route.path+"?page="+parseInt(parseInt(this.veri.current_page)-1)}:'',
                        this.veri.current_page!==this.veri.last_page?{ rel:"next",  href:this.$store.state.baseTr+  this.$route.path+"?page="+parseInt(parseInt(this.veri.current_page)+1)}:'',
                     ],
             }
@@ -75,16 +69,16 @@ export default {
    
      async asyncData ({$axios, params, route}) {           
            const p = route.fullPath.split('?')[1];  
-           let prms = p?p:'';       
-           let url     = '/listing/'+params.url+'?type=kat&'+prms;  
-           let pinUrl  = '/pins/'+params.url+'?type=kat&'+prms; 
-           console.log(url)
+           let prms = p?p:'';        
+           let url     = '/listing?'+prms;  
+           let pinUrl  = '/pins?'+prms; 
+
            let veri  = await $axios.get(url).then(res => {  return res.data; });
-           let kategori = await $axios.get('/kategori/'+params.url).then(resp => { return resp.data });    
-          // let pins = await $axios.get(pinUrl).then(resp => { return resp.data });      
+           let vils = await $axios.get('/villalar').then(resp => { return resp.data });    
+            
          return {
              veri,
-             kategori,
+             vils,
              pinUrl
          }
        },
@@ -93,7 +87,7 @@ export default {
         //    async   getPins(){
         //         const url = this.$route.params.url;
                 
-        //         await this.$axios.get('/bolge-pins?url='+url).then(resp => {
+        //         await this.$axios.get('/vils-pins?url='+url).then(resp => {
         //         this.pins =resp.data
         //         });
         //     },

@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Visby";
+  src: 
+   url(~assets/visby/VisbyRoundCF-Regular.woff) format("woff"),
+   url(~assets/visby/VisbyRoundCF-Bold.woff) format("woff"),
+   url(~assets/visby/VisbyRoundCF-Bold.woff2) format("woff2"),
+   url(~assets/visby/VisbyRoundCF-DemiBold.woff) format("woff"),
+   url(~assets/visby/VisbyRoundCF-DemiBold.woff2) format("woff2"),
+   url(~assets/visby/VisbyRoundCF-Regular.woff2) format("woff2");
+  
+}
+ 
  @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap&subset=latin-ext,vietnamese');
  /*@import url('https://fonts.googleapis.com/css?family=Nunito:400,400i,600,600i,700,700i,800,800i,900,900i&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700&display=swap&subset=latin-ext');
@@ -34,8 +46,9 @@ body {
     background-size: cover; */
     /* font-family:  system, -apple-system, BlinkMacSystemFont, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
     font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important; */
-    font-family: 'Roboto', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
     /* font-family: 'Quicksand', sans-serif; */
+    font-family: "Visby";
     color: #333 !important;
     
 }
@@ -92,6 +105,11 @@ body {
  
 } */
 
+a {
+  color: #0cb4e3;
+  cursor: pointer;
+  text-decoration: none;
+}
 
 .renk1 {
   background: #fff !important;
@@ -107,11 +125,11 @@ body {
  color: #ffaf40  !important;
 }
 .renk2 { 
- background: #7d30fa !important;
+ background: #ff8308 !important;
 }
 
 .text2 {
- color: #e91e63 !important;
+ color: #ff8308 !important;
 }
 .renk3 {
   background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%);
@@ -119,7 +137,7 @@ body {
 
 }
 .text3 {
-  color: #df4a63 !important;
+  color: #0cb4e3 !important;
 }
 
 .list-title {
@@ -1197,9 +1215,10 @@ button.button.nav-phone {
 
 .after-header {
   width: 100%;
-  height: 3px;
+  height: 2px;
   background: linear-gradient(to right,#dc2353,#e84612,#f4b400,#ecd700,#b4cc04,#9dc41c,#54ad32,#028dbf,#071e7d);
   opacity: 0.45;
+  filter: grayscale(1);
 }
 
 .hm .after-header {

@@ -10,7 +10,7 @@ export const state = () => ({
     trUrls: {
       kats: '/kiralik-villa-tipleri/',
       bolge: '/villa-bolgeleri/',
-      villa: '/villa/',
+      villa: '/kiralik-villa/',
       allVillas: '/villa/',
       sayfa: '/bilgilendirme/',
     },

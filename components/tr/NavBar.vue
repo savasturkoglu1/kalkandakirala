@@ -1185,4 +1185,13 @@ button.mobil-menu-button {
     margin-right: 10px;
     color: #9ca1ae;
 }
+
+span.like_badge {
+    position: absolute;
+    top: -2px;
+    right: 3px;
+    color: red;
+    font-size: 13px;
+    font-weight: 600;
+}
 </style>

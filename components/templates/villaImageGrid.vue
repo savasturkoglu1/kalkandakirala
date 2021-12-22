@@ -1,6 +1,6 @@
 <template>
     <div  >
-              <div class="grid-container swipebox " v-if="images">
+              <div class="grid-container swipebox " v-if="images.length>0">
                 <button  class="button  all-imgs" style="" @click="lightBox">
                   <span class="icon">
                     <i class="flaticon-menu-4"></i>
@@ -12,12 +12,12 @@
 
                 <div class="columns ig-wrap">
                      <div class="ig-col  colum id-6">
-                     <img  class="ig-img ig-img-l"  :src="images.filter(i=>{return i.res_oncelik=='1'})[0].res_url" alt="villago" @click="lightBox">
+                     <img  class="ig-img ig-img-l" loading="lazy"  :src="images.filter(i=>{return i.res_oncelik=='1'})[0].res_url" alt="villago" @click="lightBox">
                 </div>
                 <div class="column ig-col is-6">
                     <div class="columns is-multiline">
                         <div class="column  ig-col-s is-6" v-for="(item,j) in images.slice(1,5)" :key="j" @click="lightBox" >
-                            <img class="ig-img ig-img-s" :src="item.res_resp_url" :alt="item.res_alt">
+                            <img class="ig-img ig-img-s" loading="lazy" :src="item.res_resp_url" :alt="item.res_alt">
                         </div>
                     </div>
                 </div>

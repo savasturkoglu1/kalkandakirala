@@ -493,3 +493,8 @@ background-position: 35% 100%;
 background-size: 234% calc(2vw + 89px);
 }
 }
+
+
+.bg-gray {
+    background: #f6f9fd !important;
+}

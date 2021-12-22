@@ -1,5 +1,6 @@
 <template>
-     <div :class="tip=='list'?'buttons l-buttons':'buttons g-buttons'" >
+     <div :class="tip=='list'?'buttons lb l-buttons ':'buttons lb g-buttons'" >
+          <b-tooltip type="is-light" label="Villayı kaydedin !">
             <div :class="begen?'button   is-clk bounce':'button  '" title="Villayı Beğen" @click="set('like', $event)">
                   <span class="icon ">
                        <i :class="begen?'flaticon-heart-1':'flaticon-heart'"></i>
@@ -8,9 +9,12 @@
                         {{like}}
                     </span>
             </div>
+          </b-tooltip>
+           <b-tooltip type="is-light" label="Karşılaştırma listesine ekleyin !">
             <div :class="compare?'button   is-clk bounce':'button  '"  title="Karşılaştırma Listesine Ekle"  @click="set('compare', $event)">
                     <i class="flaticon-transfer"></i>
             </div>
+           </b-tooltip>
             <!-- <div :class="bookmark?'button  is-clk bounce':'button '"  title="Villayı Kaydet"  @click="set('bookmark', $event)">
                 <i :class="bookmark?'fas fa-bookmark':'fal fa-bookmark'"></i>
             </div> -->
@@ -207,5 +211,8 @@ export default {
     100% { top: 0; }
 }
 
-
+.lb .button .icon:first-child:not(:last-child) {
+    margin-left: 0;
+   margin-right:0; 
+}
 </style>

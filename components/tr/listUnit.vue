@@ -2,33 +2,33 @@
    <nuxt-link :to="$store.state.trUrls.villa+data.vil_url" :title="data.vil_adi" >
     <div class="columns unit is-mobile " itemscope itemtype="http://schema.org/Product">
        
-                      <div class="column is-5 u-image-wrap ">
+                      <div class="column is-4 u-image-wrap ">
                           <span v-if="data.vil_etiket" class="u-etiket"> {{data.vil_etiket}} </span>
                            <img loding="lazy" itemprop="image"  class="u-image" :src="data.vil_response_img" :alt="data.vil_adi" />
-                          <div class="u-stars">
-                                 <div class="list-inline rating hidden-xs item-starts">
-                                       
-                                       <i  v-for="(item , i) in data.vil_yildiz"  :key="i" class="fas fa-star"></i>
-                                                    
-                               </div>
-                          </div>
+                          
                       </div>
-                      <div class="column is-7">
+                      <div class="column is-8">
                           <div class="columns pr">
 
-                        <span class="badge-offer renk2" v-if="data.discount && data.discount.fiy_indirim !=0">
+                        <!-- <span class="badge-offer renk2" v-if="data.discount && data.discount.fiy_indirim !=0">
                                
                                <b>{{data.discount.fiy_indirim}}% <br> </b>
-                           </span>
-                       <div class="column is-7 u-desc">
+                           </span> -->
+                       <div class="column is-8 u-desc">
                             
                            <div class="item-body">
                                <div class="unit-title">
                                    <h4 class="u-title "  itemprop="name">{{data.vil_adi}}</h4>
                                    <h6 class="u-baslik"  v-if="!data.kisa">{{data.vil_baslik?data.vil_baslik:'Villa Başlığı kısmı buraya gelecek'}}</h6>
-                                   <div class="item-address">
+                                   <div class="item-address">  <span class="su-pin"><i class="flaticon-pin"></i></span>
                                      {{data.vil_il}} /   <span class="unit-bolge"> {{data.vil_bolge}}</span> / {{data.vil_mevki}}
                                    </div>
+                                    <div class="u-onecikan"  itemprop="description" v-if="data.vil_onecikan_ozellik">
+                                    <span class="u-oc"  v-for="(item, d) in data.vil_onecikan_ozellik.split(',')" :key="d">
+                                        <!-- <i class="fal fa-circle"></i> -->
+                                        {{item}}
+                                    </span>
+                                </div>
                                </div>
                                <nav class="u-level">
                                    <div class="unit-ikons level-item">
@@ -45,10 +45,14 @@
                                           <i class="flaticon-shower"></i> 
                                           {{data.vil_banyo}}
                                       </li>
+                                      <!-- <li>
+                                         
+                                      </li> -->
                                   </ul>
                                    
                                                   
                                </div>
+                               
                                 
                                </nav>
                                
@@ -56,8 +60,15 @@
                           
                              
                       </div>
-                      <div class="column is-5 price-col">
-                         
+                      <div class="column is-4 price-col">
+                          <div class="unit-rate">
+                                            <div class="lu-stars text3" v-if="data.vil_yildiz">
+                                                        <div class="list-inline u-rating hidden-xs item-starts">                                       
+                                                            <i  class="flaticon-star-2"></i> <span>{{data.vil_yildiz}}</span>  
+                                                            <span>/ {{data.vil_comments}} yorum </span>                                                           
+                                                        </div>
+                                            </div>
+                           </div>
                           <div class="ml-price">
                               <div class="column  unit-price" v-if="data.kisa">
                                             
@@ -73,11 +84,15 @@
                                             <span class="unit-dates" v-else>
                                                <span>Gecelik en düşük *</span>
                                            </span>
+                                           <br>
+                                           <span class="discount-percent" v-if="data.discount && data.discount.fiy_indirim !=0">  {{data.discount.fiy_indirim}}% </span>
                                             <h5 itemprop="price">{{data.totalPrice?data.totalPrice.total:data.minPrice}}  <span>{{data.vil_currency}} </span> </h5>
                                        </div>
                           </div>
-                           <button class="button button-small sec-buton">Detaylar</button>
-                          <Like :id="data.id" tip="list" :count="data.vil_like" />
+                          
+                            <div class="lu-botom-like">
+                                <Like :id="data.id" tip="list" :count="data.vil_like" />
+                            </div>
                       </div>
                          </div>
                       </div>
@@ -127,7 +142,9 @@ export default {
     padding: 0px
 }
 .ml-price {
-    margin-top: 40px;
+    margin-top: 10px;
+    background: #f6f9fd;
+    border-radius: 8px;
 }
 
 span.unit-dates {
@@ -178,7 +195,7 @@ span.unit-dates {
 .u-baslik {
     
     font-size: 16px;
-    margin-bottom: 10px !important;
+    margin-bottom: 5px !important;
     /* white-space: nowrap; */
     overflow: hidden;
     text-overflow: ellipsis;
@@ -211,9 +228,10 @@ span.unit-dates {
 }
 
 .unit-price h5 {
-    color: #ce9700;
+        color: #ff8308;
     font-size: 20px;
     margin-top: 5px;
+    font-weight: 800;
 }
 .u-stars {
     position: absolute;
@@ -248,12 +266,13 @@ span.unit-dates {
 }
 .u-title {
        font-size: 18px;
-    margin-bottom: 10px !important;
+    margin-bottom: 5px !important;
     white-space: nowrap;
     overflow: hidden;
     -o-text-overflow: ellipsis;
     text-overflow: ellipsis;
-    color: #3b4249;
+    color: #1f2126;
+    font-weight: 600;
 }
 .u-etiket {
     position: absolute;
@@ -278,22 +297,20 @@ span.unit-dates {
     padding: 10px 15px;    overflow: hidden;
 }
 .u-image-wrap {
-    padding: 0;
+        padding: 5px;
     margin: 0;
-     height: 220px; 
+    height: 100%;
     overflow: hidden;
     position: relative;
     min-height: 100%;
+    border-radius: 4px;
 }
 
-.unit {
-    border: 1px solid #eee;
-    box-shadow: 0 0 8px 0 rgba(0,0,0,.1);
-}
+
     .unit {
     cursor: pointer;
     border-radius: 6px;
-  /*  box-shadow: 0 0 8px 0 rgba(0,0,0,.1);*/
+ 
     background-color: #fff;
     position: relative;
     margin-left: 0px;
@@ -302,12 +319,20 @@ span.unit-dates {
     margin-top: 10px;
     overflow-x: hidden;
     padding: 0px !important;
+    border-radius: 6px;
+    box-shadow: 0 1px 5px 0 rgb(0 0 0 / 15%);
+    background-color: #ffffff;
+    margin-top: 20px;
+
+    height: 240px;
+
 }
 .u-image {
     height: auto;
     width: 100%;
     /* width: auto; */
     min-height: 100%;
+    border-radius: 4px;
 }
 .u-image2 {
     height: 100%;
@@ -422,5 +447,49 @@ span.unit-dates {
     line-height: 12px;
     width: auto
 }
+}
+
+.u-onecikan {
+    font-size: 13px;
+    margin-top: 10px;
+}
+
+span.u-oc {
+    background: #60afe321;
+   
+    margin-right: 5px;
+    border-radius: 10px;
+    color: #546e7a;
+    padding: 5px;
+}
+
+.lu-stars {
+    
+    background: #f6f9fd;
+    border-radius: 8px;
+}
+
+.lu-botom-like {
+    margin-top: 10px;
+    background: #f6f9fd;
+    display: flex;
+    padding-left: 25%;
+}
+
+.discount-percent {
+    background: url('~assets/images/ic-etiket.png');
+    background-repeat: no-repeat;
+    font-size: 18px;
+    color: #ff8308;
+    padding: 0 5px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+    font-weight: bold;
+    width: 65px;
+    display: inline-block;
+}
+
+.u-rating i::before {
+    font-size: 14px;
 }
 </style>

@@ -2,7 +2,7 @@
  
   <div>
 
-        <!-- <div class="mb-list-header mob">
+        <div class="mb-list-header mob">
               <div class="mb-to-button button has-icons-left" @click="() => {this.mFilter = true}">
                    <span class="icon">
                        <i class="flaticon-list"></i>
@@ -15,10 +15,10 @@
                    </span>
                    <span>Sırala</span>
               </div>
-          </div> -->
+          </div>
    
 
-        <!-- <b-modal
+        <b-modal
             v-model="mFilter"
             has-modal-card
             full-screen
@@ -28,7 +28,7 @@
                     <p class="modal-card-title">Fitrele</p>
                 </header>
                 <section class="modal-card-body">
-                     <MobilFilter ref="form" @cBack="(v) => this.getFilter(v)" />
+                     <MobilFilter ref="form" @cBack="(v) => this.getFilter(v)" /> 
                       
                 </section>
                  <footer class="md-card-foot">
@@ -42,117 +42,30 @@
                 </footer>
                 
             </div>
-        </b-modal> -->
+        </b-modal>
      
     <!-- <div class="m-filter mobil-fix-options" v-if="mFilter">
       <MobilFilter @cBack="(v) => this.getFilter(v)" />
     </div> -->
-    <!-- <div class="mobil-top" style="display:none">
-      <div class="mobil-list-top">
-        
-      </div>
-     
-    </div> -->
-    <!-- <div v-if="map" :class="map ? 'hero list-wrapper' : 'list-wrapper'">
-      <div class="mv-map-wrap" v-if="map">
-        <div class="columns">
-          <div class="column is-3 is-gapless">
-            <div class="mv-list-wrap">
-              <ListNav
-                @sendShow="
-                  (i) => {
-                    this.show = i
-                  }
-                "
-                @sendOrder="
-                  (a, b) => {
-                    this.setSort(a, b)
-                  }
-                "
-                @sendView="
-                  (k) => {
-                    this.map = k
-                  }
-                "
-              />
-              <div v-if="veri" class="mv-units">
-                <div class="columns is-multiline">
-                  <div
-                    v-for="(item, i) in veri.data"
-                    :key="item.id"
-                    class="column is-12"
-                  >
-                    <GUnit :data="item" />
-                  </div>
-                </div>
-              </div>
-              <Paginate v-if="veri" :data="veri" :getPage="setQuery" />
-            </div>
-          </div>
-          <div class="column is-9 is-gapless">
-            <div class="map-wrapper">
-              <GMap
-                v-if="map"
-                :pinUrl="pinUrl"
-                @cBack="
-                  (i) => {
-                    this.setPinned(i)
-                  }
-                "
-                :center="
-                  this.bolge
-                    ? {
-                        lat: this.bolge.bo_lat ? Number(this.bolge.bo_lat) : 36,
-                        lng: this.bolge.bo_lang
-                          ? Number(this.bolge.bo_lang)
-                          : 29,
-                      }
-                    : { lat: 36.26, lng: 29.41 }
-                "
-              />
-            </div>
-            <div class="mp-list">
-              <div v-if="selectedProp">
-                <span
-                  class="close"
-                  @click="
-                    () => {
-                      this.selectedProp = null
-                    }
-                  "
-                  >x</span
-                >
-                <div class="mob">
-                  <MapUnit :data="selectedProp" />
-                </div>
-                <div class="desc">
-                  <ListUnit :data="selectedProp" />
-                </div>
-              </div>
 
-              <div v-else class="mp-sec">
-                Detayları görmek için etikete tıklayın
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
     <div class="list-wrapper" >
       <!-- <div class="desk">
         <Filtre @cBack="v => this.getFilter(v)" tip="filtre"   :bolge="bolge?{name:bolge.bo_adi, id:bolge.id}:null" />
       </div> -->
       <div class="container">
-        <div class="columns">
+        <!-- <div class="columns">
           <div class="column is-12 ">
             
             <TopFilter @cBack="(v) => this.getFilter(v)" />
               
             
           </div>
-        </div>
+        </div> -->
           <div class="columns">
-          <div class="column is-12 list-col" v-if="veri">
+          <div class="column-is-3">
+            <SideFilter  @cBack="v => this.getFilter(v)"  />
+          </div>
+          <div class="column is-9 list-col" v-if="veri">
             <div class="list-nav-wrap">
               <ListNav
                 @sendShow="
@@ -247,7 +160,7 @@ export default {
       pagi: 3,
       orderBy: 'id',
       orderCond: 'DESC',
-      show: 2,
+      show: 1,
       map: false,
       mFilter: false,
       selectedProp: null,

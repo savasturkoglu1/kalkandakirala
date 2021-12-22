@@ -274,7 +274,7 @@ VillA Evreni markası, ARICAN EMLAK TURİZM İNŞAAT SAN. VE TİC. LTD. ŞTİ. t
            <hr>
            <div class="level">
                <div class="level-item" style='color:#607d8b'>
-                   © Villaevreni.com - 2021 Tüm Hakları Saklıdır
+                   © KalkandaKirala.com - 2022 Tüm Hakları Saklıdır
                     - Geliştirici <a href="http://www.likyapix.com/" target="_blank"><img loading="lazy" class="footer-cc" style="width:60px" src="~/static/images/lplogo.png" alt="likya pix" > </a> 
                </div>              
            </div>

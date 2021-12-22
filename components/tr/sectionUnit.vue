@@ -52,7 +52,7 @@
                               <div class="column is-6">
                                      <div class="su-stars has-text-right">
                                             <div class="list-inline rating hidden-xs item-starts">                                       
-                                                <i  v-for="(item , i) in data.vil_yildiz"  :key="i" class="fas fa-star"></i>                                                    
+                                              <i  class="flaticon-star-2"></i> <span>{{data.vil_yildiz}}</span>                                                    
                                         </div>
                                     </div>
 

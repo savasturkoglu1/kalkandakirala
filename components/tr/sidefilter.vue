@@ -21,7 +21,7 @@
         <div class="mf-wrap">
               <!-- filter row -->
             <div class="mf-row">
-             <h4>Tarih Aralığı </h4>
+             <h4>Tarih Aralığı </h4> 
                        
                <div class="ub-dates">
                     <div :class="false?'search-feed  pr feed-er  sl-sol':'search-feed  sl-sol  pr'"   v-on:click="()=> {this.showTakvim = !this.showTakvim}">
@@ -44,13 +44,11 @@
 
              <!-- filter row -->
             <div class="mf-row">
-         
+                         <h4>Misafir Sayısı </h4>
+                         <br>
                         <nav class="columns is-mobile is-multiline">
           <!-- Left side -->
-                       <div class="column is-12 guest-label">
-                            <span class="calculator-label">Misafir Sayısı</span> 
-                            
-                        </div>
+                       
 
                         <!-- Right side -->
                             <div class="column is-12 ">
@@ -95,7 +93,7 @@
                    <div :class="showBo?'filter-opts filter-open':'filter-opts' ">
                                   
                         <label v-for="(item, i) in veri.bolgeler" :key="i"  class="check-container" :checked="sBolge.includes(item.id)">
-                            <span :class="sBolge.includes(item.id)?'text2':' '" >{{item.bo_adi}}</span>
+                            <span :class="sBolge.includes(item.id)?'text2 fl-text':' fl-text'" >{{item.bo_adi}}</span>
                         <input type="checkbox"  @change="checkBolge(item)">
                         <span class="checkmark"></span>
                         </label>    
@@ -115,7 +113,7 @@
                  <div :class="showKat?'filter-opts filter-open':'filter-opts' ">
                                   
                         <label v-for="(item, i) in veri.kategoriler" :key="i"  class="check-container" :checked="sKats.includes(item.id)">
-                            <span :class="sKats.includes(item.id)?'text2':' '" >{{item.kat_adi}}</span>
+                            <span :class="sKats.includes(item.id)?'text2 fl-text':' fl-text'" >{{item.kat_adi}}</span>
                         <input type="checkbox"  @change="checkKat(item)">
                         <span class="checkmark"></span>
                         </label>    
@@ -132,7 +130,7 @@
                  <div :class="showOz?'filter-opts filter-open':'filter-opts' ">
                                   
                         <label v-for="(item, i) in veri.ozellikler" :key="i"  class="check-container" :checked="sOz.includes(item.id)">
-                            <span :class="sOz.includes(item.id)?'text2':' '" >{{item.oz_name}}</span>
+                            <span :class="sOz.includes(item.id)?'text2 fl-text':' fl-text'" >{{item.oz_name}}</span>
                         <input type="checkbox"  @change="checkOz(item)">
                         <span class="checkmark"></span>
                         </label>    
@@ -350,10 +348,13 @@ export default {
 </script>
 
 <style scoped>
+.mf-more i::before {
+    color: #90a4ae;
+}
 .mf-more {
     cursor: pointer;
-    background: #edeff7;
-    font-size: 20px;
+    
+    font-size: 14px;
 }
 /* .mf-more:hover {
     box-shadow: 0px 0px 15px -5px #00000040
@@ -382,9 +383,10 @@ export default {
   .mf-row {
           margin-bottom: 15px;
     padding: 10px;
-    border-radius: 2px;
-    background: #fcf5ee;
-    border: 1px solid #8975fa1f;
+    border-radius: 6px;
+    background: #fff;
+    /* border: 1px solid #8975fa1f; */
+    box-shadow: 0 1px 5px 0 rgb(0 0 0 / 15%);
         
   }
   
@@ -434,7 +436,15 @@ div#slider-range {
     width: 25px;
     background-color: #fff;
     border-radius: 5px;
+    border: 1px solid #cfd8dc;
 }
 
+span.fl-text {
+    color: #607d8b;
+}
+
+.ub-dates .search-feed {
+    border: 1px solid #ddd;
+}
 
 </style>
