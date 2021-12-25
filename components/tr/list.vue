@@ -3,13 +3,13 @@
   <div>
 
         <div class="mb-list-header mob">
-              <div class="mb-to-button button has-icons-left" @click="() => {this.mFilter = true}">
+              <div class="mb-to-button button justify-start  is-small has-icons-left" @click="() => {this.mFilter = true}">
                    <span class="icon">
                        <i class="flaticon-list"></i>
                    </span>
                    <span>Filtrele</span>
               </div>
-              <div class="mb-to-button button has-icons-left">
+              <div class="mb-to-button button is-small has-icons-left">
                    <span class="icon">
                        <i class="flaticon-list"></i>
                    </span>
@@ -27,17 +27,19 @@
                 <header class="modal-card-head">
                     <p class="modal-card-title">Fitrele</p>
                 </header>
-                <section class="modal-card-body">
+                <section class="modal-card-body f-modal-body">
                      <MobilFilter ref="form" @cBack="(v) => this.getFilter(v)" /> 
                       
                 </section>
                  <footer class="md-card-foot">
-                         <button class="button" @click="() => {this.mFilter = false}">
+                         <div class=" md-s-buttons">
+                           <button class="button" @click="() => {this.mFilter = false}">
                              Kapat
                          </button>
-                         <button class="button is-fullwidth ml-10 renk3"  @click="() => { this.$refs.form.sendFilter()}">
+                         <button class="button bg-primary-normal-gradient"  @click="sendFilterMob">
                            Fitrele
                          </button>
+                         </div>
                       
                 </footer>
                 
@@ -62,11 +64,11 @@
           </div>
         </div> -->
           <div class="columns">
-          <div class="column-is-3">
+          <div class="column-is-3 desk">
             <SideFilter  @cBack="v => this.getFilter(v)"  />
           </div>
           <div class="column is-9 list-col" v-if="veri">
-            <div class="list-nav-wrap">
+            <div class="list-nav-wrap desk">
               <ListNav
                 @sendShow="
                   (i) => {
@@ -120,7 +122,7 @@ import ListUnit from './listUnit'
 import GUnit from './HomeGridUnit'
 import ListNav from '../tools/listNav'
 import Brd from '../templates/BreadCrum'
-import MobilFilter from './sidefilter'
+import MobilFilter from '~/components/mobil/Filter.vue'
 import MapUnit from './mapUnit'
 import GMap from '../../components/tr/GMap'
 import SideFilter from '../../components/tr/sidefilter'
@@ -178,8 +180,10 @@ export default {
       const a = parseInt(localStorage.getItem('show'))
       const orderBy = localStorage.getItem('orderBy')
       const orderCond = localStorage.getItem('orderCond')
-      if(window.width>1000) {
-        this.show = a ? a : 2
+      if(window.innerWidth>1000) {
+        this.show = a ? a : 1
+      } else {
+        this.show =2
       }
      
       this.orderBy = orderBy ? orderBy : null
@@ -209,6 +213,11 @@ export default {
   },
 
   methods: {
+    sendFilterMob(){
+      this.mFilter = false
+     this.$refs.form.sendFilter()
+     
+    },
     switchList() {
       this.map = false
       localStorage.setItem('listView', JSON.stringify(this.map))
@@ -495,7 +504,49 @@ span.map-ap {
 
 footer.md-card-foot {
     display: flex;
-    margin-bottom: 60px;
+    margin-bottom: 0;
+    padding: 10px;
+    background: #fff;
+    align-items: flex-end;
+    text-align: right;
+    border-top: 1px solid #dedede;
+}
+section.modal-card-body.f-modal-body {
+    padding: 8px;
+    background: #f6f9fd !important;
 }
 
+.f-modal-body .mf-row {
+    border-radius: 4px;
+    box-shadow: none;
+    border: 1px solid #eee;
+}
+.md-s-buttons {
+    width: 1005;
+    text-align: revert;
+    width: 100%;
+}
+
+.mb-list-header.mob {
+    margin-bottom: 10px;
+    align-items: flex-end;
+    text-align: right;
+    padding: 5px;
+    background: #fff;
+    border: 1px solid #eee;
+    display: flex;
+  justify-content: flex-end;
+}
+
+.justify-start {
+  margin-right: auto;
+}
+
+.mb-list-header i::before {
+    font-size: 14px;
+    color: #607d8b;
+    font-weight: normal;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
 </style>

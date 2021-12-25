@@ -1,50 +1,23 @@
 <template>
     <div class="bg-gray">
-           <div class="desk">
-               <Brd  v-if="kategori"  :routeArray="[
-              {name:'Anasayfa', path:'/'},
-              {name:'Kiralık villalar Kategorileri', path:$store.state.trUrls.kats},
-              {name:kategori.kat_adi, path:$store.state.trUrls.kats+kategori.kat_url}]" /> 
-           </div>
+           
             <div class="container list-title">
                   <div class="content">
                       <h1>{{kategori.kat_baslik}}</h1>
-                      <h2></h2>
                   </div>
               </div>
-            <!-- <div class="container listing-wrap">
-                <div class="columns"></div>
-            </div> -->
-            <div v-if="veri">
-               <Listing :veri="veri"  :pinUrl="pinUrl" />
-            </div>
-            <div v-else>
-                <b-skeleton width="20%" :animated="animated"></b-skeleton>
-
-                <b-skeleton width="40%" :animated="animated"></b-skeleton>
-
-                <b-skeleton width="80%" :animated="animated"></b-skeleton>
-
-                <b-skeleton :animated="animated"></b-skeleton>
-            </div>
-             
-          <div class="container">
-              <div class="content">
-                   <Content :Cont="kategori.content" />
-              </div>
-          </div>
+            
     </div>
      
 </template>
 
 <script>
-import Listing from '../../components/tr/list';
-import Content from '../../components/templates/content';
-import Brd from '../../components/templates/BreadCrum';
+import Listing from '~/components/tr/list';
+import Content from '~/components/templates/content';
+import Brd from '~/components/templates/BreadCrum';
 export default {
   
-  //  watchQuery:true,
-    watchQuery: true,
+   // watchQuery:true,
     scrollToTop: true,
     loading: true,
     components: { Listing,Content, Brd},

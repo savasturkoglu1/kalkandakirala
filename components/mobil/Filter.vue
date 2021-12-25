@@ -40,7 +40,7 @@
                    </div>
                    <div class="filter-buton-cont" >
                                     <b-button size="is-small" class="button button-clear"  v-on:click="clearDates">Temizle</b-button>
-                                    <b-button size="is-small" class="button button-small bg-primary-normal-gradient sec-buton text-white"  v-on:click="sendFilter">Filtrele</b-button>
+                                    <!-- <b-button size="is-small" class="button button-small bg-primary-normal-gradient sec-buton text-white"  v-on:click="sendFilter">Filtrele</b-button> -->
                                 </div>
             </div> 
 
@@ -64,7 +64,7 @@
                         <div class="column is-12">
                             <div class="filter-buton-cont" >
                                     <b-button size="is-small" class="button button-clear"  v-on:click="clearGuest">Temizle</b-button>
-                                    <b-button size="is-small" class="button button-small bg-primary-normal-gradient sec-buton text-white"  v-on:click="sendFilter">Filtrele</b-button>
+                                    <!-- <b-button size="is-small" class="button button-small bg-primary-normal-gradient sec-buton text-white"  v-on:click="sendFilter">Filtrele</b-button> -->
                                 </div>
                         </div>
                  </nav>
@@ -76,7 +76,7 @@
             
               <!-- filter row -->
             <div class="mf-row" >
-                <h4> {{priceLabel}} / TL </h4>
+                <h4>Gecelik fiyat aralığı / TL </h4>
                 <div class="">
                 
                 <!-- <div class="control  has-icons-right">
@@ -115,7 +115,7 @@
                                </div>
                               <div class="filter-buton-cont" >
                                     <b-button size="is-small" class="button button-clear"  v-on:click="clearPrice">Temizle</b-button>
-                                    <b-button size="is-small" class="button button-small bg-primary-normal-gradient sec-buton text-white"  v-on:click="sendPriceFilter">Filtrele</b-button>
+                                    <!-- <b-button size="is-small" class="button button-small bg-primary-normal-gradient sec-buton text-white"  v-on:click="sendPriceFilter">Filtrele</b-button> -->
                                 </div>
                 </div>              
             </div> 
@@ -199,7 +199,7 @@
     </div>
 </template>
 <script>
-import Calendar from './detepicker';
+import Calendar from '~/components/tr/detepicker';
 export default {
     components : {  Calendar },
     data(){
@@ -209,7 +209,6 @@ export default {
             sOz:[],
             sBolge:[],
             sPrice:[],
-            priceLabel :'Gecelik fiyat aralığı',
             minPrice:null,
             maxPrice:null,
             guests:0,
@@ -318,15 +317,13 @@ export default {
               this.show = false;
               let esnek = e?'+-3 gün':'';
               this.datePlc = a?a+' - '+b + esnek:'';
-              this.priceLabel = a?'Toplam bütçeniz':'Gecelik fiyat aralığı'
               this.showTakvim = false;
         },
         clearDates(){
            this.date1 = null
            this.date2 = null
            this.datePlc ='';
-           this.priceLabel = 'Gecelik fiyat aralığı'
-           this.sendFilter()
+           //this.sendFilter()
         },
         getFlexDates(a,b,c,d){
              this.datePlc = a+'-'+d+'-'+c+' gece';
@@ -373,7 +370,7 @@ export default {
                             this.sKats.push(item.id);                       
                 }
 
-                 this.sendFilter()
+               //  this.sendFilter()
 
             },
             checkOz(item){
@@ -392,7 +389,8 @@ export default {
                    } else {
                         this.sBolge.push(item.id);                       
                    }
-                 this.sendFilter()
+               
+               //this.sendFilter()
              
              },
 
@@ -400,13 +398,13 @@ export default {
                this.maxPrice = null
                this.minPrice = null
                this.priceRange = [200, 3000]
-               this.sendFilter()
+              // this.sendFilter()
                
            },
            sendPriceFilter(){
                this.maxPrice = this.priceRange[1]
                this.minPrice = this.priceRange[0]
-               this.sendFilter()
+              // this.sendFilter()
            },
       
         getDatas(){
@@ -419,7 +417,7 @@ export default {
 
        clearGuest(){
            this.guests = 0
-           this.sendFilter()
+          // this.sendFilter()
        },
        
         sendFilter(){

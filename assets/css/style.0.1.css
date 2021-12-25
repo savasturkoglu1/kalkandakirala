@@ -1205,7 +1205,7 @@ button.button.nav-phone {
 
 .ist-level {
   
-  margin-top: 15px;
+  margin-top: 0px;
   margin-bottom: 15px;
   background: #ffffff;
   padding: 5px;
@@ -1238,4 +1238,15 @@ button.button.nav-phone {
   justify-content: center;
   color: var(--swiper-navigation-color,var(--swiper-theme-color));
   color: #fff;
+}
+
+.container.list-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.uttons.md-s-buttons {
+  text-align: right;
+  align-items: flex-end;
+  width: 100%;
 }

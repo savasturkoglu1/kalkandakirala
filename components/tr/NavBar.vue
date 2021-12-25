@@ -93,6 +93,7 @@
                  >
                     <nuxt-link 
                     :to="'/bilgilendirme/' + item.say_url"
+                    :prefetch="false"
                     :title="item.say_adi">
                          {{ item.say_adi }}
                     </nuxt-link>

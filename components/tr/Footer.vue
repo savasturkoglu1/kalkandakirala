@@ -59,7 +59,7 @@
                                      
                                       
                                     <div class="column is-6 foter-g-cols " v-for="(item,i) in $store.state.base.bolgeler" :key="i">
-                                          <nuxt-link class="footer-menu-item"   :to="$store.state.trUrls.bolge+item.bo_url" :title="item.bo_adi">{{item.bo_adi}}
+                                          <nuxt-link class="footer-menu-item" :prefetch="false"   :to="$store.state.trUrls.bolge+item.bo_url" :title="item.bo_adi">{{item.bo_adi}}
                                        </nuxt-link> 
                                     </div>
                                 </div>
@@ -73,7 +73,7 @@
                                      
                                       
                                     <div class="column is-4 foter-g-cols " v-for="(item,i) in $store.state.base.kategoriler" :key="i">
-                                          <nuxt-link class="footer-menu-item"   :to="$store.state.trUrls.kats+item.kat_url" :title="item.kat_adi">{{item.kat_adi}}
+                                          <nuxt-link class="footer-menu-item" :prefetch="false"  :to="$store.state.trUrls.kats+item.kat_url" :title="item.kat_adi">{{item.kat_adi}}
                                        </nuxt-link> 
                                     </div>
                                 </div>
@@ -123,153 +123,7 @@
 
        
 
-            
-           <div class="content" v-if="veri" style="display:none">
-               <div class="columns fk-trow">
-                   <div class="column is-4">
-                      <img  :src="$store.state.base.settings.set_logo"  alt="villa kiralama" class="footer-logo" /> <br>
-VillA Evreni markası, ARICAN EMLAK TURİZM İNŞAAT SAN. VE TİC. LTD. ŞTİ. ticari ünvanı altında faaliyetine başlamıştır. VillA Evreni vizyonumuz, misafirlerimizin güzel anılar biriktirmesine aracı olarak bölgemizin değerinin arttırmak. VillA Evreni misyonumuz, müşteri memnuniyetini sürekli kılmak adına tatil döneminde evinde gibi rahat hissetmek isteyen misafirlerimize kaliteli villa portföyümüz ile hizmet vermek.                    </div>
-                   <div class="column is-4">
-                   </div>
-                   <div class="column is-4">
-                       <div >
-                           
-                            
-                              <div class="buttons soc-buttons">
-                                
-                                <a class="button is-medium btn-insta " :href="$store.state.base.contact.sos_instagram" target="_blank">
-                                    <i class=" flaticon-instagram"></i>
-                                </a>
-                                <a class="button is-medium btn-tiwtter" :href="$store.state.base.contact.sos_twitter" target="_blank">
-                                    <i class=" flaticon-twitter"></i>
-                                </a>
-                                <a class="button is-medium btn-face" :href="$store.state.base.contact.sos_face" target="_blank">
-                                    <i class=" flaticon-facebook"></i>
-                                </a>
-                                <a class="button is-medium btn-youtube" href="https://www.youtube.com/" target="_blank">
-                                    <i class=" flaticon-youtube"></i>
-                                </a>
-                                
-                            </div>
-                       </div>
-                       <div>
-                           
-                       <br>
-                        <div class="column has-text-left">
-                        <div class="f-phone" v-if="$store.state.base.contact.ilt_mobil">
-                            <i class="flaticon-phone" ></i>
-                            <span> {{$store.state.base.contact.ilt_sabit1}} </span>
-                        </div>
-                        <div class="f-phone" v-if="$store.state.base.contact.ilt_mobil">
-                            <i class="flaticon-phone"></i>
-                            <span> {{$store.state.base.contact.ilt_mobil2}} </span>
-                        </div>
-                            <div class="f-phone">
-                            <i class="flaticon-whatsapp"></i>
-                            <span> {{$store.state.base.contact.ilt_mobil1}} </span>
-                        </div>
-                        <div class="f-phone">
-                            <i class="flaticon-phone"></i>
-                            <span> {{$store.state.base.contact.ilt_mobil1}} </span>
-                        </div>
-                            </div>
-                            
-                            <div class="column has-text-left">
-                                    
-                                    <div class="f-phone">
-                                        <i class="flaticon-location"></i>
-                                        <span> {{$store.state.base.contact.ilt_adres}} </span>
-                                    </div>
-
-                            </div>
-                        </div>
-                   </div>
-               </div>
-               <hr>   
-              
-               <div class="columns footer-menuler" > 
-                   <div class="column is-3">
-                       <h3>VİLLA SEÇENEKLERİ</h3>
-                 
-                       <div class="footer-menu">
-                             <ul>
-                                 <li  v-for="(item,i) in $store.state.base.kategoriler" :key="i" >
-                                     <nuxt-link class="footer-menu-item" :to="$store.state.trUrls.kats+item.kat_url" :title="item.kat_adi">{{item.kat_adi}}
-                                   </nuxt-link> 
-                                 </li>
-                                 <li>
-                                <nuxt-link class="footer-menu-item"  to="/kiralik-villa" title="kiralik villa kategorileri">Tüm Villalar
-                            </nuxt-link> 
-                                 </li>
-                             </ul>
-                             
-                             
-                       </div>
-                   </div>
-               
-                   <div class="column is-3">
-                       <h3>BÖLGELER</h3>
-                  
-                       <div class="footer-menu">
-                             <ul>
-                                 <li v-for="(item,i) in $store.state.base.bolgeler" :key="i">
-                                       <nuxt-link class="footer-menu-item"   :to="$store.state.trUrls.bolge+item.bo_url" :title="item.bo_adi">{{item.bo_adi}}
-                                   </nuxt-link> 
-                                 </li>
-                             </ul>
-                              
-                       </div>
-                   </div>
-               
-                   <div class="column is-3">
-                       <h3>BİLGİLENDİRME</h3>
-                 
-                             <div class="footer-menu">   
-                                 <ul>
-                                     <li v-for="(item,i) in $store.state.base.pages" :key="i" >
-<nuxt-link class="footer-menu-item"  :to="'/sayfa/'+item.say_url" :title="item.say_adi">{{item.say_adi}}
-                                    </nuxt-link> 
-                                     </li>
-                                     <li>
-                                        <nuxt-link class="footer-menu-item"  to="/iletisim" title="iletişim"> İletişim
-                                   </nuxt-link>
-                                 
-                                     </li>
-                                     <li>
-                                     
-                                   <nuxt-link class="footer-menu-item"  to="/teklif-al" title="teklif"> Sana özel teklif al
-                                   </nuxt-link>
-                                     </li>
-                                    </ul>                      
-
-                                    
-                                      
-                                   
-                                   
-                       </div>
-                   </div>
-                   <div class="column is-3">
-                       <h3>ÇEŞİTLİ</h3>
-                 
-                             <div class="footer-menu">                         
-
-                                    <ul>
-                                        <li>
- <nuxt-link class="footer-menu-item"  to="/emlak" title="iletişim"> Satılık emlak
-                                   </nuxt-link>
-                                        </li>
-                                        <li>
- <a class="footer-menu-item"  href="/blog" title="blog" target="_blank"> Blog
-                                   </a>
-                                        </li>
-                                    </ul>
-                                      
-                                    
-                                     
-                       </div>
-                   </div>
-               </div>
-           </div>
+          
            
            <hr>
            <div class="level">

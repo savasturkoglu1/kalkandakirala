@@ -2,16 +2,16 @@
     <nav class="level ist-level">
                     <div class="level-left">
                      <div class="buttons " v-if="!map">
-                        <!-- <div :class="show==1?'button  selected-style':'button'" @click="setShow(1)">
+                        <div :class="show==1?'button  selected-style':'button'" @click="setShow(1)">
                               <i class="flaticon-list-1"></i>
-                        </div> -->
+                        </div>
                         <div  v-if="!listOnly"  :class="show==2?'button  selected-style':'button'" @click="setShow(2)">
                           <i class="flaticon-grid"></i>
                         </div>
                      </div>
                     </div>
                     <div class="level-item desk has-text-centered">
-                      <div v-if="!listOnly" class="button" @click="setView">
+                      <div v-if="!listOnly" class="button" >
                          
                           <span v-if="map">
                              Liste görünümüne Geç

@@ -10,6 +10,7 @@
                             :title="item.bo_adi"
                                 :key="i"
                                 :to="$store.state.trUrls.bolge + item.bo_url"
+                                :prefetch="false"
                                   class="dd-item">
                                        {{ item.bo_adi }}
                             </nuxt-link>
@@ -21,7 +22,8 @@
                         <div class="columns is-multiline">
                             <div class="column is-6 mm-link" v-for="(item, i) in $store.state.base.kategoriler" :key="i" >
                             <nuxt-link 
-                            :title="item.kat_adi"             
+                            :title="item.kat_adi"        
+                            :prefetch="false"     
                         :to="$store.state.trUrls.kats + item.kat_url"
                         class="dd-item">
                                 {{ item.kat_adi }}

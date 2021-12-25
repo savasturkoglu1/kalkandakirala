@@ -252,4 +252,13 @@
   .mv-nbrand img {
     height: 30px !important;
   }
+
+  .container.list-title {
+    text-align: center;
+    margin-bottom: 5px !important;
+    margin-top: 5px !important;
+}
+.list-title {
+    padding:5px;
+}
 }
