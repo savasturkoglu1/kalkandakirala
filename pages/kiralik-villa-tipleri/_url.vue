@@ -9,7 +9,7 @@
             <div class="container list-title">
                   <div class="content">
                       <h1>{{kategori.kat_baslik}}</h1>
-                      <h2></h2>
+                     
                   </div>
               </div>
             <!-- <div class="container listing-wrap">

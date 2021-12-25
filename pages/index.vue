@@ -12,7 +12,7 @@
   </section> -->
 
 
- <section class="section desc bg-dot" >
+ <section class="section desk bg-dot" >
            <div class="container title-cont">
            <h3>Sizin İçin Seçtiğimiz Villalar</h3>
            <p>Tüm Villaları Sizin İçin Yerinde İnceledik</p>
@@ -29,7 +29,7 @@
             </div>
      </section>
 
-  <!-- <section class="desc"  v-if="$store.state.base">
+  <!-- <section class="desk"  v-if="$store.state.base">
     <div class="container title-cont">
             <h3>Kiralık Villa Tiplerimiz</h3>
            <p>Sizin İçin Yerinde gördük</p>
@@ -37,7 +37,7 @@
       <home-category-carouse />
   </section> -->
 <!-- 
-  <section class="bt-section desc">
+  <section class="bt-section desk">
     <div class="container title-cont">
            <h3>Tatil Bölgeleri</h3>
            <p>Türkiye'nin en Güzel Noktalarından En Seçkin Tatil Villaları</p>
@@ -78,7 +78,7 @@
            <MobilHeader  />
               
    </div> -->
-   <!-- <section class="section desc">
+   <!-- <section class="section desk">
            <div class="container title-cont">
            <h3>Tatil Bölgeleri</h3>
            <p>Türkiye'nin en Güzel Noktalarından En Seçkin Tatil Villaları</p>
@@ -115,7 +115,7 @@
      </section>  -->
     
 <!-- 
-     <section class="section desc" >
+     <section class="section desk" >
            <div class="container title-cont">
            <h3>Kiralık Villa Kategorilerimiz</h3>
            <p>Herzevke Uygun Haftalık Kiralık Yazlık Tatil Villaları</p>

@@ -1,7 +1,7 @@
 <template>
     <div v-if="data" class="hd-wrapper pr hd-bg" :style="{backgroundImage: 'url(' + data.header.hd_image + ')'}">
      
-       <div v-if="data.header.hd_tur ==0" class="hd-img-section desc" >
+       <div v-if="data.header.hd_tur ==0" class="hd-img-section desk" >
              <!-- <span class="hd-owerflow2"></span> -->
            <!-- <img :src="data.header.hd_image" class="hd-img " alt="villa kiralama"> -->
        </div> 
@@ -14,7 +14,7 @@
           </div>
             </div>
           <div class="hd-search-wrapper">
-              <div class="desc">
+              <div class="desk">
                   <client-only>
              <SearchBar />
             </client-only>

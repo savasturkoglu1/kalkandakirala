@@ -3,18 +3,18 @@
   <div>
 
         <div class="mb-list-header mob">
-              <div class="mb-to-button button justify-start  is-small has-icons-left" @click="() => {this.mFilter = true}">
+              <button class="mb-to-button button justify-start  is-small has-icons-left" @click="() => {this.mFilter = true}">
                    <span class="icon">
-                       <i class="flaticon-list"></i>
+                       <i class="flaticon-settings"></i>
                    </span>
                    <span>Filtrele</span>
-              </div>
-              <div class="mb-to-button button is-small has-icons-left">
+              </button>
+              <button class="mb-to-button button is-small has-icons-left">
                    <span class="icon">
-                       <i class="flaticon-list"></i>
+                       <i class="flaticon-sort"></i>
                    </span>
                    <span>Sırala</span>
-              </div>
+              </button>
           </div>
    
 
@@ -443,6 +443,11 @@ ul.pagination-list {
 }
 
 @media (max-width: 1000px) {
+  .list-wrapper {
+  padding: 8px !important;
+}
+
+
   .mp-list {
     z-index: 9;
     position: absolute;
@@ -516,11 +521,7 @@ section.modal-card-body.f-modal-body {
     background: #f6f9fd !important;
 }
 
-.f-modal-body .mf-row {
-    border-radius: 4px;
-    box-shadow: none;
-    border: 1px solid #eee;
-}
+
 .md-s-buttons {
     width: 1005;
     text-align: revert;

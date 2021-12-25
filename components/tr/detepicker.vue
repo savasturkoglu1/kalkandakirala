@@ -466,7 +466,7 @@ span.ui-state {
 }
 
 .dp-highlight a  {
-       background: rgb(137 117 250 / 26%)!important;
+       background:rgb(11 179 227 / 31%)!important;
     color: #263238!important;
 }
 

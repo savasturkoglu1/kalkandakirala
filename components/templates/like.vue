@@ -10,7 +10,7 @@
                     </span>
             </div>
           </b-tooltip>
-           <b-tooltip type="is-light" label="Karşılaştırma listesine ekleyin !">
+           <b-tooltip type="is-light"  label="Karşılaştırma listesine ekleyin !">
             <div :class="compare?'button   is-clk bounce':'button  '"  title="Karşılaştırma Listesine Ekle"  @click="set('compare', $event)">
                     <i class="flaticon-transfer"></i>
             </div>

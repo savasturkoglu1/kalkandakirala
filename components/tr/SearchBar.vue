@@ -661,4 +661,16 @@ input.form-k {
     box-shadow: 0 3px 8px 0 rgb(18 5 41 / 20%);
 } */
 
+
+.sb-wrapper i::before {
+    font-size: 20px;
+    /* margin-top: 12px; */
+    /* padding-top: 10px; */
+}
+
+.sb-wrapper i{
+    
+    margin-top: 10px;
+  
+}
 </style>

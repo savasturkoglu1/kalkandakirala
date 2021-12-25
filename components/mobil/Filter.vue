@@ -20,7 +20,7 @@
         </b-modal>  -->
         <div class="mf-wrap" v-if="$store.state.base">
               <!-- filter row -->
-            <div class="mf-row">
+            <div class="mmf-row">
              <h4>Tarih Aralığı </h4> 
                        
                <div class="ub-dates">
@@ -48,7 +48,7 @@
              <!-- filter row end-->
 
              <!-- filter row -->
-            <div class="mf-row">
+            <div class="mmf-row">
                          <h4>Misafir Sayısı </h4>
                          <br>
                         <nav class="columns is-mobile is-multiline">
@@ -75,7 +75,7 @@
                
             
               <!-- filter row -->
-            <div class="mf-row" >
+            <div class="mmf-row" >
                 <h4>Gecelik fiyat aralığı / TL </h4>
                 <div class="">
                 
@@ -123,7 +123,7 @@
           
 
              <!-- filter row -->
-            <div class="mf-row" v-if="veri">
+            <div class="mmf-row" v-if="veri">
                 <h4>Bölgeler</h4>
                    <div :class="showBo?'filter-opts filter-open':'filter-opts' ">
                                   
@@ -143,7 +143,7 @@
 
              
             <!-- filter row -->
-            <div class="mf-row" v-if="veri" >
+            <div class="mmf-row" v-if="veri" >
                 <h4>Kategoriler</h4>
                  <div :class="showKat?'filter-opts filter-open':'filter-opts' ">
                                   
@@ -160,7 +160,7 @@
             </div> 
              <!-- filter row end -->
               <!-- filter row -->
-            <div class="mf-row" v-if="veri" >
+            <div class="mmf-row" v-if="veri" >
                 <h4>Özellikler</h4>
                  <div :class="showOz?'filter-opts filter-open':'filter-opts' ">
                                   
@@ -505,7 +505,7 @@ export default {
 /* .mf-more:hover {
     box-shadow: 0px 0px 15px -5px #00000040
 } */
-.mf-row .field {
+.mmf-row .field {
     margin-top: 15px;
     margin-bottom: 10px;
 }
@@ -526,7 +526,7 @@ export default {
 .mf-wrap {
     margin-bottom: 95px;
 }
-  .mf-row {
+  .mmf-row {
           margin-bottom: 15px;
     padding: 10px;
     border-radius: 6px;
@@ -591,6 +591,15 @@ span.fl-text {
 
 .ub-dates .search-feed {
     border: 1px solid #ddd;
+}
+
+
+ .mmf-row {
+  border-radius: 4px;
+  box-shadow: none;
+  border: 1px solid #eee;
+  margin-bottom: 15px;
+  padding: 10px;
 }
 
 </style>
