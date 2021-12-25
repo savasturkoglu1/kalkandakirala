@@ -539,9 +539,7 @@ section.modal-card-body.f-modal-body {
   justify-content: flex-end;
 }
 
-.justify-start {
-  margin-right: auto;
-}
+
 
 .mb-list-header i::before {
     font-size: 14px;

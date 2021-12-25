@@ -1,6 +1,6 @@
 <template>
-  <div class=" cl-container kat-cars">
-      <b-carousel-list v-model="katsCar" :data="$store.state.base.kategoriler" 
+  <div class=" cl-container  bolge-car">
+      <b-carousel-list v-model="katsCar" :data="$store.state.base.bolgeler" 
       :items-to-show="perList"
       :arrow="arrow"
       :arrow-hover="arrowHover"
@@ -13,13 +13,13 @@
       >
                             <template   #item="item" >
                                   <nuxt-link class="col-card"                                       
-                                        :to="$store.state.trUrls.kats+item.kat_url">
+                                        :to="$store.state.trUrls.bolge+item.bo_url">
                                            <div class="hb-wrap">
-                                        <img itemprop="image" loading="lazy" :src="item.kat_kapak_resp?item.kat_kapak_resp:item.kat_kapak"  :alt="item.kat_adi" />
-                                         <span class="car-data" >
+                                        <img itemprop="image" loading="lazy" :src="item.bo_kapak_resp?item.bo_kapak_resp:item.bo_kapak"  :alt="item.bo_adi" />
+                                        <span class="car-data" >
                                          
                                              <div class="car-data-content  ">
-                                               <h3> {{item.kat_adi}} </h3>  
+                                               <h3> {{item.bo_adi}} </h3>  
                                                 <transition name="slide-up">    
                                                  <div class="hb-det " >
                                                 
@@ -48,7 +48,7 @@ export default {
             gray: false,
             opacity: false,
             values: 1,
-            perList: 5,
+            perList: 4,
             increment: 1,
             repeat: true,
             kartCar:3,
@@ -57,18 +57,21 @@ export default {
 
     mounted() {
         if(window.innerWidth<1024) {
-            this.perList=2
+            this.perList=1
         }
     },
 }
 </script>
 
 <style>
+.carousel-slide {
+    padding: 10px;
+}
 .cl-container {
     overflow: hidden;
 }
-.hb-wrap {
-    height: 220px;
+ .bolge-car .hb-wrap {
+    height: 420px;
     position: relative;
     overflow: hidden;
     border-radius: 9px;
@@ -79,6 +82,39 @@ export default {
     width: auto;
     min-width: 100%;
     max-width: none;
+}
+
+span.car-data {
+    position: absolute;
+    z-index: 9;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    color: #fff;
+    bottom: 30px;
+    left: 4px;
+    top: auto;
+}
+
+.car-data-content h3 {
+    font-size: 24px;
+    font-weight: 600;
+}
+.car-data-content {
+    text-align: left;
+}
+.hb-wrap:before {
+    transition: 0.2s;
+    content: '';
+    opacity: 1;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0.75) 100%);
+    z-index: 9;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1 !important;
 }
 
 span.hb-data {
@@ -118,10 +154,5 @@ span.hb-data {
     -o-transition: top .3s ease;
     text-align: left;
     padding-left: 30px;
-}
-
-.kat-cars .car-data-content h3 {
-    font-size: 16px;
-    font-weight: 600;
 }
 </style>

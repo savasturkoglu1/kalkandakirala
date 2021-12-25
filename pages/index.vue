@@ -10,12 +10,43 @@
   <!-- <section class="info-sec">
     <info-card />
   </section> -->
+ <section class="des2"  v-if="$store.state.base">
+   <div class="container">
+     <div class="section-tit dFlex">
+       <div class=" section-title-cont justify-start text2">
+            <h3>Kiralık Villa Kategorilerimiz</h3>
+           
+         </div>
+        <div class="st-link">
+           <nuxt-link to="">Tümü -> </nuxt-link>
+        </div>
+     </div>
+         
+      <home-category-carouse />
+   </div>
+    
+  </section>
+
+  <section class="des2 bg-dot cat-section"  v-if="$store.state.base">
+   <div class="container">
+     <div class="section-tit dFlex">
+       <div class=" section-title-cont justify-start text2">
+            <h3>Popüler Bölgeler</h3>
+           
+         </div>
+        <div class="st-link">
+           <nuxt-link to="">Tümü -> </nuxt-link>
+        </div>
+     </div>
+      <home-bolge-carousel />
+   </div>
+  </section>
 
 
- <section class="section desk bg-dot" >
+ <section class="section desk " >
            <div class="container title-cont">
            <h3>Sizin İçin Seçtiğimiz Villalar</h3>
-           <p>Tüm Villaları Sizin İçin Yerinde İnceledik</p>
+           
          </div>
             <div class="container pr">
                    <div class="columns is-multiline b-card">
@@ -29,13 +60,7 @@
             </div>
      </section>
 
-  <!-- <section class="desk"  v-if="$store.state.base">
-    <div class="container title-cont">
-            <h3>Kiralık Villa Tiplerimiz</h3>
-           <p>Sizin İçin Yerinde gördük</p>
-         </div>
-      <home-category-carouse />
-  </section> -->
+ 
 <!-- 
   <section class="bt-section desk">
     <div class="container title-cont">
@@ -114,42 +139,7 @@
             </div>
      </section>  -->
     
-<!-- 
-     <section class="section desk" >
-           <div class="container title-cont">
-           <h3>Kiralık Villa Kategorilerimiz</h3>
-           <p>Herzevke Uygun Haftalık Kiralık Yazlık Tatil Villaları</p>
-         </div>
-            <div class="container pr">
-                   <div class="columns is-multiline b-card">
-                     <div v-for="(item, j) in kategoriler.slice(0, 6)" :key="j" :class="j==7||j==8?'column is-6':'column is-4'">
-                           <nuxt-link class="hb-link" :to="$store.state.trUrls.kats+item.kat_url" :title="item.kat_adi">
-                               <div class="hb-wrap">
-                                        <v-lazy-image :src="item.kat_kapak_resp?item.kat_kapak_resp:item.kat_kapak"  :alt="item.kat_adi" />
-                                        <span class="hb-data" >
-                                         
-                                             <div class="hb-content  ">
-                                               <h3> {{item.kat_adi}} </h3>  
-                                                <transition name="slide-up">    
-                                                 <div class="hb-det " >
-                                                
-                                                   <div> {{item.count}} Villa </div>
-                                                  
-                                                   
-                                               </div>  
-                                               </transition>
-                                               </div>              
-                                          
-                                          </span>  
-                               </div>
-                           </nuxt-link>
-                     </div>
-                   </div>
-                   <div class="all-button">
-                      <nuxt-link :to="this.$store.state.trUrls.kats" class="button  is-outlined is-danger" title="Tüm Kategoriler">Tüm Kategorileri Görün</nuxt-link>
-                   </div>
-            </div>
-     </section> -->
+
   <!-- <div class="desc">
     <Carousel  v-if="homeVillas" :villas="homeVillas"  />
   </div> -->
@@ -216,6 +206,7 @@ import Carousel from '../components/templates/propCarousel';
 import HomeCategoryCarouse from '~/components/templates/HomeCategoryCarouse.vue';
 import BolgeTils from '~/components/templates/BolgeTils.vue';
 import InfoCard from '~/components/templates/InfoCard.vue';
+import HomeBolgeCarousel from '~/components/templates/HomeBolgeCarousel.vue';
 
 
 export default {
@@ -225,8 +216,15 @@ export default {
       components: { Header,
        SearchBar,
         Unit,
-         Spinner,  Story, Carousel, MobilHeader, GridUnit, HomeGridUnit,HomeCategoryCarouse, BolgeTils,
-            InfoCard },
+         Spinner, 
+          Story,
+           Carousel, 
+           MobilHeader,
+            GridUnit,
+             HomeGridUnit,
+             HomeCategoryCarouse, BolgeTils,
+            InfoCard,
+            HomeBolgeCarousel },
       data(){
           return {
             p_villa:1,

@@ -1250,3 +1250,18 @@ button.button.nav-phone {
   align-items: flex-end;
   width: 100%;
 }
+
+.justify-start {
+  margin-right: auto;
+}
+
+.section-tit.dFlex {
+  padding: 10px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.section-title-cont h3 {
+  font-size: 24px;
+  font-weight: bold;
+}
