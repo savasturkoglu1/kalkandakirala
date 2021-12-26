@@ -18,7 +18,7 @@
            
          </div>
         <div class="st-link">
-           <nuxt-link to="">Tümü -> </nuxt-link>
+           <nuxt-link to="">Tümü <span > <i class="flaticon-next"></i>  </span></nuxt-link>
         </div>
      </div>
          
@@ -35,7 +35,7 @@
            
          </div>
         <div class="st-link">
-           <nuxt-link to="">Tümü -> </nuxt-link>
+           <nuxt-link to="">Tümü <span > <i class="flaticon-next"></i>  </span></nuxt-link>
         </div>
      </div>
       <home-bolge-carousel />
@@ -44,7 +44,29 @@
 
 
  <section class="section desk " >
-           <div class="container title-cont">
+          
+          <div class="container">
+            <div class="section-tit dFlex">
+              <div class=" section-title-cont justify-start text2">
+                    <h3>Sizin İçin Seçtiğimiz Villalar</h3>
+                  
+                </div>
+                <div class="st-link">
+                  <nuxt-link to="/villa">Tüm villalar <span > <i class="flaticon-next"></i>  </span></nuxt-link>
+                </div>
+            </div>
+            
+            <div class="container">
+              <div class="columns is-multiline b-card">
+                     <div v-for="(item, j) in homeVillas.slice(0, 8)" :key="j" :class="'column is-'+gridCol">
+                          <HomeGridUnit :data="item" />
+                     </div>
+             </div>
+            </div>
+
+          </div>
+
+           <!-- <div class="container title-cont">
            <h3>Sizin İçin Seçtiğimiz Villalar</h3>
            
          </div>
@@ -57,7 +79,7 @@
                    <div class="all-button">
                       <nuxt-link to="/villa" class="button  is-outlined is-danger" title="Tüm Kategoriler">Tüm Villaları Görün</nuxt-link>
                    </div>
-            </div>
+            </div> -->
      </section>
 
  

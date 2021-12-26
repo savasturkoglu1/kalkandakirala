@@ -1265,3 +1265,27 @@ button.button.nav-phone {
   font-size: 24px;
   font-weight: bold;
 }
+
+.cat-section {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  margin-top: 40px;
+}
+
+.st-link span {
+  margin-left: 10px;
+  
+}
+
+.st-link i::before{
+ 
+  font-size: 13px;
+}
+
+.columns.is-multiline.b-card {
+  margin: auto;
+}
+
+.justify-end {
+  margin-left: auto;
+}

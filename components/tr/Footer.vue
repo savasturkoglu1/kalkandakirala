@@ -160,7 +160,7 @@ export default {
 }
 </script>
 
-<style scoped>
+<style >
 a.footer-menu-item {
     color: #78909c;
     font-size: 16px;

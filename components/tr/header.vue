@@ -39,6 +39,7 @@
                </div> -->
           </div>
       </div>
+    
      <span class="shapedividers_com-658"></span>
     </div>
 </template>
@@ -380,5 +381,13 @@ img.hd-img {
     opacity: .35;
   
 } */
+
+.wave svg {
+    margin-bottom: -1px;
+}
+svg {
+    overflow: hidden;
+    vertical-align: middle;
+}
 
 </style>
