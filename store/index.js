@@ -21,7 +21,8 @@ export const state = () => ({
     contact:null,
     base:null,
     cmodal:false,
-    sidebar:false
+    sidebar:false,
+    mcontact:false
   
   })
   
@@ -58,6 +59,9 @@ export const state = () => ({
     searchModal(state, value) {
       state.cmodal = value
     },
+    mobilContact(state, value) {
+      state.mcontact = value
+    },
 
     sideBar(state, value) {
       state.sidebar = value
@@ -89,6 +93,10 @@ export const state = () => ({
     },
     searchModal(context, val) {
       context.commit('searchModal', val)
+    },
+
+    mobilContact(context, val) {
+      context.commit('mobilContact', val)
     },
 
     sideBar(context, val) {

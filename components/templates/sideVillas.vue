@@ -1,6 +1,7 @@
 <template>
   <div v-if="$store.state.base">
        <div class="sv-wrapper">
+           <h4 style="margin-bottom: 20px;">Öne Çıkan Villalar</h4>
            <div v-for="(data, i ) in $store.state.base.villas"
             :key=i>
 
@@ -14,7 +15,7 @@
                <div class="sv-detail-wra column">
                      <div class="sv-title">
                          <h4 itemprop="name" > {{data.vil_adi}} </h4> 
-                         <b class="sv-bolge"> {{data.vil_baslik}} </b>
+                         <!-- <b class="sv-bolge"> {{data.vil_baslik}} </b> -->
                      </div>
                      <div class="sv-loc">
                          <span class="su-adres text2"> <i class="flaticon-pin"></i> {{data.vil_il?data.vil_il+'/':''}} {{data.vil_bolge}}  {{data.vil_mevki?'/'+data.vil_mevki:''}} </span>
@@ -62,5 +63,9 @@ export default {
     margin: 0;
     overflow: hidden;
     border-radius: 6px 0px 0px 6px;
+}
+
+.sv-detail-wra.column {
+    color: #607d8b;
 }
 </style>

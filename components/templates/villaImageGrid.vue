@@ -1,7 +1,7 @@
 <template>
     <div  >
               <div class="grid-container swipebox " v-if="images.length>0">
-                <button  class="button  all-imgs" style="" @click="lightBox">
+                <button  class="button  all-imgs2" style="" @click="lightBox">
                   <span class="icon">
                     <i class="flaticon-menu-4"></i>
                   </span>
@@ -162,13 +162,18 @@ export default {
    
 }
 
-    .all-imgs {
-      position: absolute;
-      bottom: 40px;
-      right: 40px;
-      z-index: 2;
-      background-color: #1976d2 !important;
-    }
+    .all-imgs2 {
+    /* position: absolute; */
+    top: 40px;
+    left: 20px;
+    z-index: 2;
+    /* background-color: #1976d2 !important; */
+    z-index: 2;
+    z-index: 2;
+    background-image: linear-gradient(to left, #08aeea, #17cec4);
+    border: none;
+    color: #fff !important;
+}
     .swiper-container {
       width: 100%;
       height: 500px;
@@ -238,7 +243,7 @@ export default {
     z-index: 1;
     opacity: 0;
 }
-   .all-imgs {
+   .all-imgs2 {
     position: absolute;
     top: 10px;
     left: 10px;

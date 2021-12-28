@@ -133,9 +133,9 @@
         </div> -->
        
       
-        <!-- <div class="navbar-s-item">
+        <div class="navbar-s-item">
            <Search />
-        </div> -->
+        </div>
         
 
         <div class="navbar-item ip-none contact-item" v-if="$store.state.base">
@@ -150,6 +150,7 @@
               </span>
               
             </span>
+             <b-icon class="is-pulled-right" icon="menu-down"></b-icon>
           </button>
           <div class="cont-dd" v-if="contdd">
             <div class="cont-dd-wrap">
@@ -175,7 +176,7 @@
           </div>
           <div class="priv-dd" v-if="pdd">
             <div class="pdd-items">
-               <div class="mm-list pr"  @click="savedVillas">
+               <a class="mm-list pr"  @click="savedVillas">
                   <span
               class="like_badge"
               v-if="$store.state.saved && $store.state.saved.length > 0"
@@ -190,8 +191,8 @@
                             </div>
                             
 
-                </div>
-                 <div class="mm-list"  @click="goComp">
+                </a>
+                 <a class="mm-list"  @click="goComp">
                             <div class="mm-icon">
                                <i class="flaticon-transfer-1"></i>
                             </div>
@@ -200,7 +201,7 @@
                             </div>
                             
 
-                </div>
+                </a>
                  <!-- <div class="mm-list"   @click=" () => { this.$parent.loginModal() }   ">
                             <div class="mm-icon">
                                <i class="flaticon-user"></i>
@@ -284,45 +285,23 @@
           />
       </nuxt-link>
        <div class="mob-navbar-end">
-           <b-dropdown
-                    position="is-bottom-left"
-                    append-to-body
-                    aria-role="menu"
-                    trap-focus
-                >
-                    <template #trigger >
-                        <b-button  ref="filter_cat"  class=" button is-rounded is-light is-bordered  filter-button " >
-                                  <i class="flaticon-call"></i>                     
-                        </b-button>
-                    </template>
-
-
-                    <b-dropdown-item
-                        aria-role="menu-item"
-                        :focusable="false"
-                        custom
-                        paddingless>
-                           <div aria-role="menu-item" class="mobil-cc-dd">
-                                 <contact-card />
-                            </div>
-                    </b-dropdown-item>
-                </b-dropdown>
-        <!-- <div class="ne-buttons h100 pr">
+           
+        <div class="ne-buttons h100 pr">
             
-           <button class="button is-medium ph-button"  @click="() => { this.mcontdd = true}">
+           <button class="button  is-rounded is-light is-bordered is-medium ph-button"  @click="() => { this.$store.dispatch('mobilContact', true);}">
                <i class="flaticon-call"></i>
            </button>
             
-        </div>  -->
-        <div class="ne-buttons h100 pr">
+        </div> 
+        <!-- <div class="ne-buttons h100 pr">
              <button class="button is-medium mob-teklif-but" @click="cModal" >
                <span class="icon is-medium">
                 <i class="flaticon-search"></i>
               </span>
               
             </button>
-           <!-- <MobilSearch /> -->
-        </div>  
+           
+        </div>   -->
 
     
       </div>
@@ -1236,13 +1215,10 @@ span.like_badge {
 .cont-dd-wrap {
     z-index: 999;
     position: absolute;
-    background: #fff;
+    
     top: 75px;
     left: -10px;
-    min-height: 240px;
-    min-width: 300px;
-    border-radius: 8px;
-    padding: 10px;
+   
 }
 
 button.mobil-menu-button i::before {

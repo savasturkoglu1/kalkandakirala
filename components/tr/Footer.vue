@@ -3,7 +3,7 @@
 
         <div class="footer-top footer-border-top">
             <div class="container">
-                <div class="columns">
+                <div class="columns margin-auto">
                     <div class="column">
                           <div class="ft-sos">
                            

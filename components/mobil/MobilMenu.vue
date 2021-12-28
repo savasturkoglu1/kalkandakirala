@@ -1,20 +1,43 @@
 <template>
     <div class="mm-card" style="width: auto" v-if="$store.state.base">
-                <header class="modal-card-head mm-header " >
+                <header class="modal-card-head mm-header  " >
                         
-                     <button class="button mb-bak-button" @click="backButton">
+                     <button class="button justify-start mb-bak-button" @click="backButton">
                          <i class="flaticon-left-arrow"></i>
                      </button>
-                     
+                      <div class="ne-buttons h100 pr">
+                      <button class="button is-medium mob-teklif-but" @click="cModal" >
+                        <span class="icon is-medium">
+                          <i class="flaticon-search"></i>
+                        </span>
+                        
+                      </button>
+                    
+                  </div> 
                 </header>
                 <div class="mm-content">
 
                     <!-- main menu  -->
-                    <transition name="slide">
+                     <transition name="slide">
                     <div v-if="show==1" class="mm-wrap">
 
 
-
+                      <!-- <b-menu-item  :active="isActive" expanded>
+                          <template #label="props">
+                             <div class="drawer-list border-none"  @click="()=> { this.show=2}">
+                            <div class="mm-icon">
+                               <i class="flaticon-star"></i>
+                            </div>
+                            <div class="mm-menu-name2 ">
+                                Villa Kategoriler
+                            </div>
+                            
+                            <b-icon class="is-pulled-right" :icon="props.expanded ? 'menu-up' : 'menu-right'"></b-icon>
+                            </div>
+                            
+                          </template>
+                          <b-menu-item icon="account" label="Users"></b-menu-item>
+                      </b-menu-item> -->
                       <div class="mm-top">
 
                          <!-- list item  -->
@@ -132,29 +155,7 @@
 
                         </div>
 
-                         <div class="drawer-list">
-                             <div class="top-search">
-                                        <div class="field">
-                                          <form @submit="sorgula">
-                                        <p class="control ">
-                                          
-                                             <input class="input top-inp" type="text" placeholder="Rezervasyon Sorgula" v-model="kod">
-                                          <span class="icon is-small is-left">
-                                            <i class="fal fa-search"></i>
-                                          </span>
-                                                                                
-                                        </p>
-
-                                        </form>    
-                                      </div>
-                                      <div class="button" @click="sorgula">
-                                        <i class="flaticon-search"></i>
-                                      </div>
-
-                                    </div>
-                            
-
-                        </div>
+                        
                          
                          <!-- list item -end -->
 
@@ -162,6 +163,7 @@
 
 
                     </div>
+                   
                     </transition>
                      <!-- main menu end -->
 
@@ -239,6 +241,27 @@
 
 
                       <div class="mm-bottom">
+                         <div class="drawer-list">
+                             <div class="top-search">
+                                        <div class="ms-field">
+                                          <form @submit="sorgula">
+                                        <p class="control ">
+                                          
+                                             <input class="input top-inp" type="text" placeholder="Rezervasyon Sorgula" v-model="kod">
+                                         
+                                                                                
+                                        </p>
+
+                                        </form>    
+                                      </div>
+                                      <div class="button" @click="sorgula">
+                                        <i class="flaticon-search"></i>
+                                      </div>
+
+                                    </div>
+                            
+
+                        </div>
                             <div class="buttons soc-buttons">
                                 
                                 <a class="button is-mediu btn-insta " :href="$store.state.base.contact.sos_instagram" target="_blank">
@@ -282,6 +305,10 @@ export default {
          //  console.log(this.$store.state.bolgeler)
     },
     methods:{
+       cModal(){
+      this.$store.dispatch('searchModal', true);
+      this.$parent.close()
+    },
         backButton(){
           if(this.show==1) {
             this.$parent.close()
@@ -488,13 +515,24 @@ span.mm-phone {
 
 .drawer-list .mm-icon i::before {
     font-size: 14px;
+    color: #78909c;
+    font-weight: 600 !important;
 }
-
 .mm-card {
     background: #fff;
 }
 
 a.drawer-list {
     color: #333;
+}
+
+.mm-header {
+    padding: 5px;
+}
+
+.mm-menu-name2 {
+    font-size: 15px;
+    color: #607d8b;
+    font-weight: 600;
 }
 </style>

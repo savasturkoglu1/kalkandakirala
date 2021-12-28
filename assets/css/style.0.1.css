@@ -1,11 +1,68 @@
 @font-face {
   font-family: "Visby";
+  font-weight: 500;
+  font-display: swap;
   src: 
-   url(~assets/visby/VisbyRoundCF-Regular.woff) format("woff"),
-   url(~assets/visby/VisbyRoundCF-Bold.woff) format("woff"),
-   url(~assets/visby/VisbyRoundCF-Bold.woff2) format("woff2"),
+   url(~assets/visby/VisbyRoundCF-Regular.woff) format("woff");
+   
+  
+}@font-face {
+  font-family: "Visby";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: 
+   
+   url(~assets/visby/VisbyRoundCF-Bold.woff) format("woff");
+   /* url(~assets/visby/VisbyRoundCF-Bold.woff2) format("woff2"),
    url(~assets/visby/VisbyRoundCF-DemiBold.woff) format("woff"),
    url(~assets/visby/VisbyRoundCF-DemiBold.woff2) format("woff2"),
+   url(~assets/visby/VisbyRoundCF-Regular.woff2) format("woff2"); */
+  
+}
+@font-face {
+  font-family: "Visby";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: 
+  
+  
+   url(~assets/visby/VisbyRoundCF-Bold.woff2) format("woff2");
+   /* url(~assets/visby/VisbyRoundCF-DemiBold.woff) format("woff"),
+   url(~assets/visby/VisbyRoundCF-DemiBold.woff2) format("woff2"),
+   url(~assets/visby/VisbyRoundCF-Regular.woff2) format("woff2"); */
+  
+}
+@font-face {
+  font-family: "Visby";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: 
+
+   url(~assets/visby/VisbyRoundCF-DemiBold.woff) format("woff");
+  
+  
+}
+@font-face {
+  font-family: "Visby";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: 
+  
+   url(~assets/visby/VisbyRoundCF-DemiBold.woff2) format("woff2");
+   
+  
+}
+@font-face {
+  font-family: "Visby";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: 
+
    url(~assets/visby/VisbyRoundCF-Regular.woff2) format("woff2");
   
 }
@@ -49,6 +106,7 @@ body {
     /* font-family: 'Roboto', sans-serif; */
     /* font-family: 'Quicksand', sans-serif; */
     font-family: "Visby";
+   
     color: #333 !important;
     
 }
@@ -1141,6 +1199,10 @@ header.modal-card-head {
   fill: var(--title-large-color,var(--gray-extra-dark,#333));
 }
 @media screen and (max-width: 767px) {
+  .section-title-cont h3 {
+    font-size: 16px !important;
+    font-weight: bold;
+  }
   .container.list-title h1 {
     font-size: 14px !important;
     margin-top: 10px;
@@ -1288,4 +1350,10 @@ button.button.nav-phone {
 
 .justify-end {
   margin-left: auto;
+}
+.columns.margin-auto {
+  margin: AUTO;
+}
+.columns:last-child {
+  margin-bottom: -0.75rem;
 }

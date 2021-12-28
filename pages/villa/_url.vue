@@ -677,7 +677,7 @@
           <button class="button mb-bak-button" @click="() => {this.bModal=false}">
             <i class="flaticon-left-arrow"></i>
           </button>
-          <p class="modal-card-title">Booking Form</p>
+          <p class="modal-card-title">Rezervasyon Formu</p>
         </header>
         <div class="mm-content sb-modal-content">
           

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="container bg-dot">
+        <div class="container ">
             <div class="columns page-body">
                 <div class="column is-8">
                     <div class="bu-wrap" >

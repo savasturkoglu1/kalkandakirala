@@ -31,7 +31,12 @@
                                     <b itemprop="name" > {{data.vil_adi}} </b> <br>
                                     <span class="hu-bolge"> {{data.vil_baslik}} </span>
                                 
-                                    
+                                     <div class="hu-oc" v-if="data.vil_onecikan_ozellik">
+                                         <span class="u-oc"  v-for="(item, d) in data.vil_onecikan_ozellik.split(',')" :key="d">
+                                        <!-- <i class="fal fa-circle"></i> -->
+                                        {{item}}
+                                    </span>
+                                     </div>
                                 </div>
                            </div>
                            <div class="column">
@@ -348,5 +353,9 @@ z-index: 1 !important;
 .su-img-wrap {
     border-radius: 6px;
     overflow: hidden;
+}
+
+.hu-oc {
+    margin-top: 10px;
 }
 </style>

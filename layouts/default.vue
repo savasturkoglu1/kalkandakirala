@@ -6,7 +6,7 @@
               <nuxt    /> 
               <!-- :key="$route.fullPath" -->
           </transition>
-          <span class="s-top desc" @click="scroll"><i class="flaticon-upload"></i></span>
+          <!-- <span class="s-top desc" @click="scroll"><i class="flaticon-upload"></i></span> -->
            <!-- <span class="menu-button bg-primary-normal-gradient" @click="()=>{this.menuModal= !this.menuModal}"><i class="mb-icon flaticon-menu-4"></i></span> -->
            <!-- <b-modal
             v-model="menuModal"
@@ -25,6 +25,7 @@
              </button>
          </div> -->
          <MobilSearch />
+         <mobil-contact />
         <Footer  />
           
 
@@ -36,6 +37,7 @@ import Footer from '../components/tr/Footer';
 import MobilMenu from '~/components/mobil/MobilMenu.vue';
 import Social from '../components/templates/Socialbuttons';
 import MobilSearch from '../components/mobil/Search';
+import MobilContact from '~/components/mobil/MobilContact.vue';
 export default {
   data(){
        return {
@@ -57,7 +59,8 @@ export default {
      NavBar,Social,
      Footer,
     MobilMenu,
-    MobilSearch
+    MobilSearch,
+    MobilContact
    },
    created(){
      

@@ -97,9 +97,14 @@ export default {
     padding: 5px 10px;
     cursor: pointer;
     position: relative;
+    transition: transform .2s; /* Animation */
     padding-bottom: 5px;
     border-bottom: 1px solid #eee;
         margin-bottom: 10px;
+}
+
+.cc-item:hover {
+  transform: scale(1.05); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 .cc-icon i::before {
@@ -146,5 +151,15 @@ export default {
     display: flex;
     filter: opacity(0.6);
     margin-top: 20px;
+}
+
+.contact-cart-wrap {
+    background: #fff;
+    top: 75px;
+    left: -10px;
+    min-height: 240px;
+    min-width: 300px;
+    border-radius: 8px;
+    padding: 10px;
 }
 </style>

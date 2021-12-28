@@ -17,7 +17,7 @@
 </template>
 <script>
 import ListUnit from '../../components/tr/listUnit';
-import GridUnit from '../../components/tr/sectionUnit';
+import GridUnit from '../../components/tr/HomeGridUnit';
 export default {
     components: { ListUnit, GridUnit },
     async asyncData ({$axios, params, route}) { 

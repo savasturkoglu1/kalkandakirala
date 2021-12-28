@@ -103,7 +103,7 @@
               <div
                 v-for="(item, i) in veri.data"
                 :key="item.id"
-                class="column is-4"
+                class="column is-half-tablet is-full-mobile is-one-third-desktop"
               >
                 <GUnit :data="item" />
               </div>
