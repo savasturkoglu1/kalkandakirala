@@ -1,19 +1,19 @@
 @font-face {
   font-family: "Visby";
-  /* font-weight: 500; */
-  /* font-display: swap; */
+  font-weight: 500; 
+   font-display: swap;
   src: 
-   url(~assets/visby/VisbyRoundCF-Regular.woff) format("woff"),
-   url(~assets/visby/VisbyRoundCF-Bold.woff) format("woff")
+   url(~assets/visby/VisbyRoundCF-Regular.woff) format("woff");
+   /* url(~assets/visby/VisbyRoundCF-Bold.woff) format("woff")
    url(~assets/visby/VisbyRoundCF-Bold.woff2) format("woff2"),
    url(~assets/visby/VisbyRoundCF-DemiBold.woff) format("woff"),
    url(~assets/visby/VisbyRoundCF-DemiBold.woff2) format("woff2"),
-   url(~assets/visby/VisbyRoundCF-Regular.woff2) format("woff2");
+   url(~assets/visby/VisbyRoundCF-Regular.woff2) format("woff2"); */
    
   
 }
 
-/* @font-face {
+@font-face {
   font-family: "Visby";
   font-style: normal;
   font-weight: 600;
@@ -66,7 +66,7 @@
 
    url(~assets/visby/VisbyRoundCF-Regular.woff2) format("woff2");
   
-} */
+}
  
  @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap&subset=latin-ext,vietnamese');
  /*@import url('https://fonts.googleapis.com/css?family=Nunito:400,400i,600,600i,700,700i,800,800i,900,900i&display=swap');
@@ -87,7 +87,7 @@ body {
 
   font-size: 14px;
     /* line-height: 24px; */
-    font-weight: 500;
+    font-weight: 600;
     text-transform: none;
     letter-spacing: 0;
     color: #3b4249;
@@ -112,6 +112,10 @@ body {
     
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* button, input, optgroup, select, textarea {
   font-family:  system, -apple-system, BlinkMacSystemFont, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important;
@@ -119,7 +123,8 @@ body {
 h1,h2,h3,h4,h5,h6{
   /* font-family:  system, -apple-system, BlinkMacSystemFont, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
   font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important; */
- font-family: 'Roboto', sans-serif;
+ /* font-family: 'Roboto', sans-serif; */
+ font-weight: 700;
   
 }
 /* html {
@@ -131,6 +136,8 @@ h1,h2,h3,h4,h5,h6{
 a:hover {
   color :#0ab2e6 !important
 }
+
+
 body {
     overflow-x: hidden;
     position: relative;
@@ -645,7 +652,7 @@ position: relative;
 .search-feed i {
   font-size: 18px;
   font-size: 20px;
-  margin-top: 5px;
+  margin-top: 2px;
   margin-right: 5px;
   color: #1c2022;
   color: #607d8b;
@@ -1357,4 +1364,8 @@ button.button.nav-phone {
 }
 .columns:last-child {
   margin-bottom: -0.75rem;
+}
+
+.villa-page .nav-mobil {
+  display: none !important;
 }

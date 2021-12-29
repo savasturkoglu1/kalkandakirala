@@ -1,51 +1,20 @@
 <template>
-  <div class="vil-main bg-gray">
+  <div class="vil-main bg-gray parallax">
     
-    <div class="container top-detail-cont desc" style="display:none">
-      <div class="columns">
-        <div class="column is-8">
-          <h1 class="listing-title">
-            {{ vil.vil_adi }}
-          </h1>
-          <h2>
-                  {{
-                    vil.vil_baslik
-                      ? vil.vil_baslik
-                      : 'Bu kısma villa başlık yazısı gelecek '
-                  }}
-                </h2>
+   <div class="parallax__group">
 
-         
-
-          <div class="item-address">
-            <span class="icon">
-              <i class="flaticon-pin"></i>
-            </span>
-            {{ vil.lokasyon.vil_il }} {{ vil.lokasyon.vil_il ? '/' : '' }}
-            <span class="unit-bolge"> {{ vil.vil_bolge }}</span> /
-            {{ vil.lokasyon.vil_mevki }}
-          </div>
-        </div>
-        <div class="column is-4">
-          <!-- <div class="v-ilanno"><button class="button ">İlan No: TRM00{{vil.id}}</button></div> -->
-          <div class="column" style="float: right">
-            <Like :id="vil.id"  :title="false" />
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="container">
+   
+    <div class="container   parallax__layer parallax__layer--back">
       <div class="slider-sectio desc">
         <ImageGrid v-if="vil" :images="vil.image" />
       </div>
 
-      <!-- <div class="slider-sectio mob">
+      <div class="slider-sectio parallax-slider mob" id="mobile-galery">
         <Slider v-if="vil" :images="vil.image" />
-      </div> -->
+      </div>
     </div>
 
-    <div class="container body-main">
+    <div class="container body-main parallax__layer parallax__layer--base">
       <div class="columns is-fullheight">
         <!-- sol sağ  -detaylar -->
         <div class="column is-8 ">
@@ -58,7 +27,7 @@
           <div class="welc-section vil-detail-cont">
                    <!-- DetaySekmesi Sekmesi -->
             <div class="columns w-col">
-               <div class="column is-12 dFlex">
+               <div class="column is-12 w-top-col">
                  <div class="wel-title justify-start">
                       <h1 class="welk-title">
                   {{ vil.vil_adi }}
@@ -87,10 +56,10 @@
             </div>
             <div class="ow-sec">
               <div class="ow-wrap">
-                 <div class="ow-row">
+                 <div class="ow-row ">
                     <!-- ow-col  -->
 
-                      <div class="ow-col desc">
+                      <div class="ow-col desk ">
                         <div class="ow-item">
                           <div class="block-icon-m">
                         <i class="flaticon-home"></i>
@@ -179,7 +148,7 @@
                  </div>
                  
             </div>
-            <div class="ws-bottom">
+            <!-- <div class="ws-bottom">
                    <div class="ws-bottom-wrap dFlex">
                        <div class="we-like justify-start ">
                             <Like :id="vil.id"  :title="false" />
@@ -198,7 +167,7 @@
                            </div>
                        </div>
                    </div>
-                 </div>
+                 </div> -->
           </div>
 
           <div class="sec-tabs desc dis-none" id="menutab">
@@ -228,77 +197,17 @@
 
           <div class="main-content">
             <!-- Başlık Sekmesi -->
-            <div class="item-section mob" v-if="vil">
-              <div class="block-body">
-                <div class="item-title">
-                  <div class="mb-titles">
-                    <h1 class="mob-top_name">{{ vil.vil_adi }}</h1>
-                    <h2>
-                      {{
-                        vil.vil_baslik
-                          ? vil.vil_baslik
-                          : 'Bu kısma villa başlık yazısı gelecek '
-                      }}
-                    </h2>
-                  </div>
-                 
-
-                   <div class="mob-onc">
-                      <b> {{ vil.vil_onecikan_ozellik || '-' }} </b>
-                    </div>
-                 
-
-                  <div class="mb-address">
-                    <i class="flaticon-pin"></i>
-                    {{ vil.lokasyon.vil_il }}
-                    {{ vil.lokasyon.vil_il ? '/' : '' }}
-                    <span class="unit-bolge"> {{ vil.vil_bolge }}</span> /
-                    {{ vil.lokasyon.vil_mevki }}
-                  </div>
-                  <div class="columns is-mobile mb-icons">
-                    <div class="block-col-m column is-4">
-                      <span class="block-icon-m">
-                        <i class="flaticon-user-3"></i>
-                      </span>
-                      <span>
-                        <strong>{{ vil.vil_kapasite }} Kişilik</strong>
-                      </span>
-                    </div>
-
-                    <div class="block-col-m column is-4">
-                      <span class="block-icon-m">
-                        <i class="flaticon-bed"></i>
-                      </span>
-                      <span>
-                        <strong> {{ vil.vil_yodasi }} Y. Odası </strong>
-                      </span>
-                    </div>
-
-                    <div class="block-col-m column is-4">
-                      <span class="block-icon-m">
-                        <i class="flaticon-shower"></i>
-                      </span>
-                      <span>
-                        <strong>{{ vil.vil_banyo }} Duş </strong>
-                      </span>
-                    </div>
-                  </div>
-
-                  <div class="mb-like">
-                    <Like :id="vil.id" :count="vil.vil_like" :title="false" />
-                  </div>
-                </div>
-              </div>
-            </div>
+            
             <!-- Başlık Sekmesi end -->
 
             <!-- DetaySekmesi Sekmesi -->
-            <div class="item-section vil-detail-cont" id="sec1">
-              <div class="block-body">
-              
-               <div class="section-title bck3">
-                  <h5>Detaylar</h5>
+            <div class="item-section " id="sec1">
+              <div class="section-title2">
+                  <h3>Detaylar</h3>
                 </div>
+              <div class="block-body vil-detail-cont">
+              
+               
                 <div class="tab-body-de">
                   <div class="" v-html="vil.vil_aciklama"></div>
                   <div v-for="(item, t) in vil.content" :key="t">
@@ -314,12 +223,15 @@
             <client-only>
 
           
-            <div class="item-section vil-detail-cont" id="sec2">
-              <div class="block-body">
-                <div class="section-title bck3">
-                  <h5>Takvim</h5>
+            <div class="item-section" id="sec2">
+              <div class="section-title2">
+                  <h3>Takvim</h3>
                 </div>
-                <Calendar v-if="vil" :vilId="vil.id" :inline="true" />
+              <div class="block-body vil-detail-cont">
+                
+               
+                  <Calendar v-if="vil" :vilId="vil.id" :inline="true" />
+               
               </div>
             </div>
               </client-only>
@@ -329,11 +241,12 @@
             <client-only>
 
             
-            <div class="item-section vil-detail-cont" id="sec3">
-              <div class="block-body">
-                <div class="section-title bck3">
+            <div class="item-section " id="sec3">
+              <div class="section-title2">
                   <h5>Fiyatlar</h5>
                 </div>
+              <div class="block-body vil-detail-cont">
+                
                 <div class="cur-dd ">
                   <b-dropdown aria-role="list"
                 @change="val => {this.setCur(val)}">
@@ -428,76 +341,95 @@
             <client-only>
 
           
-            <div class="item-section vil-detail-cont" id="sec4">
-              <div class="block-body">
-                <div class="section-title bck3">
+            <div class="item-section " id="sec4">
+              <div class="section-title2">
                   <h5>Konum</h5>
                 </div>
+              <div class="block-body conum-cont vil-detail-cont  ">
+                
                 <div
                   class="map-section"
                   v-html="mapRender(vil.bolge.vil_lat, vil.bolge.vil_lang)"
                 ></div>
               
-                <div class="columns is-multiline mesafeler desc">
-                  <div class="column is-6">
-                    <div class="mes-buton2">
-                      <span class="icon is-small">
+                <div class="columns is-mobile is-multiline mesafeler">
+                  <div class="column is-one-third-desktop is-half-mobile mes-col">
+                    <div class="mes-wrap">
+                      <div class="icon is-small">
                         <i class="flaticon-airplane"></i>
-                      </span>
-                      <span class="mes-name"
-                        >Havaalanına: {{ vil.lokasyon.vil_havaalanina }}
-                      </span>
+                      </div>
+                      <div class="mes-name"
+                        >Havaalanına 
+                      </div>
+                      <div class="mes-value">
+                             {{ vil.lokasyon.vil_havaalanina }}
+                      </div>
                     </div>
                   </div>
 
-                  <div class="column is-6">
-                    <div class="mes-buton2">
-                      <span class="icon is-small">
+                  <div class="column is-one-third-desktop is-half-mobile mes-col">
+                    <div class="mes-wrap">
+                      <div class="icon is-small">
                         <i class="flaticon-heartbeat"></i>
-                      </span>
-                      <span class="mes-name"
-                        >Sağlık Kurumuna: {{ vil.lokasyon.vil_dolmusa }}
-                      </span>
+                      </div>
+                      <div class="mes-name"
+                        >Sağlık Kurumuna
+                      </div>
+                      <div class="mes-value">
+                          {{ vil.lokasyon.vil_dolmusa }}
+                      </div>
                     </div>
                   </div>
-                  <div class="column is-6">
-                    <div class="mes-buton2">
-                      <span class="icon is-small">
+                  <div class="column is-one-third-desktop is-half-mobile mes-col">
+                    <div class="mes-wrap">
+                      <div class="icon is-small">
                         <i class="flaticon-cityscape"></i>
-                      </span>
-                      <span class="mes-name"
-                        >Merkeze : {{ vil.lokasyon.vil_merkeze }}
-                      </span>
+                      </div>
+                      <div class="mes-name"
+                        >Merkeze
+                      </div>
+                      <div class="mes-value">
+                        {{ vil.lokasyon.vil_merkeze }}
+                      </div>
                     </div>
                   </div>
-                  <div class="column is-6">
-                    <div class="mes-buton2">
-                      <span class="icon is-small">
+                  <div class="column is-one-third-desktop is-half-mobile mes-col">
+                    <div class="mes-wrap">
+                      <div class="icon is-small">
                         <i class="flaticon-shopping-cart"></i>
-                      </span>
-                      <span class="mes-name"
-                        >Markete : {{ vil.lokasyon.vil_markete }}
-                      </span>
+                      </div>
+                      <div class="mes-name"
+                        >Markete
+                      </div>
+                       <div class="mes-value">
+                         {{ vil.lokasyon.vil_markete }}
+                       </div>
                     </div>
                   </div>
-                  <div class="column is-6">
-                    <div class="mes-buton2">
-                      <span class="icon is-small">
+                  <div class="column is-one-third-desktop is-half-mobile mes-col">
+                    <div class="mes-wrap">
+                      <div class="icon is-small">
                         <i class="flaticon-sunbed"></i>
-                      </span>
-                      <span class="mes-name"
-                        >Plaja : {{ vil.lokasyon.vil_plaja }}
-                      </span>
+                      </div>
+                      <div class="mes-name"
+                        >Plaja
+                      </div>
+                       <div class="mes-value">
+                         {{ vil.lokasyon.vil_plaja }}
+                       </div>
                     </div>
                   </div>
-                  <div class="column is-6">
-                    <div class="mes-buton2">
-                      <span class="icon is-small">
+                  <div class="column is-one-third-desktop is-half-mobile mes-col">
+                    <div class="mes-wrap">
+                      <div class="icon is-small">
                         <i class="flaticon-fork"></i>
-                      </span>
-                      <span class="mes-name"
-                        >Restorana : {{ vil.lokasyon.vil_restoranta }}
-                      </span>
+                      </div>
+                      <div class="mes-name"
+                        >Restorana 
+                      </div>
+                       <div class="mes-value">
+                         {{ vil.lokasyon.vil_restoranta }}
+                       </div>
                     </div>
                   </div>
                 </div> 
@@ -509,8 +441,12 @@
             <!-- ozellikler Sekmesi -->
 
 
-            <div class="item-section vil-detail-cont" id="sec5">
-              <div class="block-body">
+            <div class="item-section " id="sec5">
+
+              <div class="section-title2">
+                  <h3>Özellikler</h3>
+                </div>
+              <div class="block-body vil-detail-cont">
                 <h6>Havuz Özellikleri</h6>
                 <div class="columns is-multiline">
                   <div class="column">
@@ -518,9 +454,7 @@
                   </div>
                 </div>
 
-                <div class="section-title bck3">
-                  <h5>Özellikler</h5>
-                </div>
+               
                 <div class="columns is-mobile is-multiline">
                   <div
                     :class="'column oz-cols is-' + col"
@@ -549,11 +483,12 @@
 
             <!-- ozellikler Sekmesi end -->
             <!--  video -->
-            <div class="item-section vil-detail-cont" v-if="vil.vil_video">
-              <div class="block-body">
-                <div class="section-title bck3">
-                  <h5>Video</h5>
+            <div class="item-section " v-if="vil.vil_video">
+              <div class="section-title2">
+                  <h3>Video</h3>
                 </div>
+              <div class="block-body vil-detail-cont">
+                
                 <div class="vdeo-body" v-html="vil.vil_video"></div>
               </div>
             </div>
@@ -561,11 +496,12 @@
           </div>
           <!-- yorumlar -->
           <div class="mob mob-s"></div>
-          <div class="item-section vil-detail-cont " id="commetns">
-            <div class="block-body" id="sec6">
-              <div class="section-title">
-                <h5>Yorumlar</h5>
+          <div class="item-section  " id="commetns">
+            <div class="section-title2">
+                <h3>Yorumlar</h3>
               </div>
+            <div class="block-body vil-detail-cont" id="sec6">
+              
               <Comment type="Villa" :comments="vil.comments" :id="vil.id" />
             </div>
           </div>
@@ -595,6 +531,29 @@
             ref="bookside"
           >
             <BookingForm v-if="vil" :vil="vil" />
+
+            <div class="bb-bottom">
+               <div class="ws-bottom">
+                   <div class="ws-bottom-wrap">
+                       <div class="we-like ">
+                            <Like :id="vil.id"  :title="false" />
+                       </div>
+                       <div class="ws-whatsapp">
+                            <div class="cs-row ws-cont" v-if="$store.state.base">
+                                             <span class="wa-icon">
+                                               <i class="flaticon-whatsapp" ></i>
+                                             </span>
+                                             <span class="ws-tel">
+                                               {{$store.state.base.contact.ilt_mobil1}}
+                                               <br>
+                                               <span class="note">WhatsApp Rezervasyon</span>
+                                             </span>
+                                             <b-icon class="is-pulled-right" icon="menu-right"></b-icon>
+                           </div>
+                       </div>
+                   </div>
+                 </div>
+            </div>
           </div>
         </aside>
              
@@ -635,10 +594,10 @@
     >
       <div class="modal-card" style="width: auto">
         <header class="modal-card-head">
-          <button class="button mb-bak-button" @click="() => {this.bModal=false}">
+          <button class="button mb-bak-button is-ghost" @click="() => {this.bModal=false}">
             <i class="flaticon-left-arrow"></i>
           </button>
-          <p class="modal-card-title">Booking Form</p>
+          <p class="modal-card-title">Rezervasyon formu</p>
         </header>
         <div class="mm-content sb-modal-content">
           
@@ -693,7 +652,7 @@
             </div>
           </div>
           <div class="column">
-            <button class="button renk3" style="float: right" @click="showRez">
+            <button class="button bg-primary-normal-gradient text-w" style="float: right" @click="showRez">
               <span v-if="!rf">Rezervasyon Yap</span>
               <span class="icon" v-if="rf">
                 <i class="flaticon-left-arrow"></i>
@@ -702,6 +661,7 @@
           </div>
         </div>
       </div>
+    </div>
     </div>
   </div>
 </template>
@@ -718,7 +678,7 @@ import Spinner from '../../components/tools/Spinner'
 import Like from '../../components/templates/villaLike'
 
 import ImageGrid from '../../components/templates/villaImageGrid'
-import Slider from '../../components/mobil/VillaSlider'
+import Slider from '../../components/mobil/ImageGrid.vue'
 
 import MobilBooking from '../../components/mobil/BookingForm'
 
@@ -956,7 +916,7 @@ export default {
         if ($(this).scrollTop() > 400) {
           $('#bookside').addClass('fixed-right')
           $('#bookside').css('width', self.width)
-          $('#menutab').show()
+          $('#menutab').removeClass('dis-none')
           $('#menutab').addClass('tab-fix')
           //   $("#menutab").css('width',self.widthtab);
         }
@@ -967,11 +927,27 @@ export default {
         if ($(this).scrollTop() < 400) {
           $('#bookside').removeClass('fixed-right')
           $('#bookside').removeClass('fixed-right2')
-          $('#menutab').hide()
+          $('#menutab').addClass('dis-none')
           $('#menutab').removeClass('tab-fix')
         }
       }
+     
+
+    //   if($(window).width() < 1000) {
+       
+      
+    //    if($(this).scrollTop() > 30){
+    //      $("#mobile-galery").addClass('slider-fix');
+    //    }
+
+    //    if($(this).scrollTop() < 30){
+    //      $("#mobile-galery").removeClass('slider-fix');
+    //    }
+    // }
+
     })
+
+   
 
     // setTimeout(() => {
     //   this.$Model.run()
@@ -1261,7 +1237,7 @@ iframe {
 .item-section {
   padding: 0 !important;
     position: relative;
-    background: #fff;
+    
    margin-bottom: 35px !important;
     border-radius: 0px;
     border-top: none;
@@ -1271,11 +1247,15 @@ iframe {
 .tab-body-de {
     font-weight: initial;
 }
-
+.section-title2 {
+    margin-bottom: 20px;
+    font-size: 18px;
+    
+}
 .vil-detail-cont {
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 2px 12px 0 rgb(55 64 77 / 8%);
+  /* box-shadow: 0 2px 12px 0 rgb(55 64 77 / 8%); */
 }
 
 .item-starts {
@@ -1364,7 +1344,7 @@ iframe {
   .item-section {
     padding: 0 !important;
     position: relative;
-    background: #fff;
+ 
     border: none;
     margin-bottom: 35px !important;
     border-radius: 0px;
@@ -1383,7 +1363,7 @@ iframe {
   }
   .block-body {
     padding: 15px;
-    border-bottom: 1px solid #d8dce1;
+    
   }
 
   .mobile-book {
@@ -1486,6 +1466,10 @@ span.ub-currency {
   margin-left: 20%;
 }
 
+ .w-top-col {
+   display: flex;
+ }
+
 @media (max-width: 1000px) {
   .section-title.renk3 {
     position: inherit;
@@ -1519,6 +1503,9 @@ span.ub-currency {
     margin-bottom: 5px;
     display: inline-block;
   }
+  .w-top-col {
+    display: block !important;
+  }
 }
 
 .block-col-m {
@@ -1538,7 +1525,7 @@ span.block-icon-m i {
 
 .oz-cols.is-3 i {
   font-size: 17px;
-  color: #ff980052;
+  color: rgb(25 118 210);;
 }
 
 button.mes-buton {
@@ -1695,7 +1682,13 @@ h1.welk-title {
     border-bottom: 1px solid #16ccc73d;
 }
 .cs-row.ws-cont {
-    display: flex;
+    display: inline-flex;
+}
+.ws-whatsapp {
+    text-align: center;
+    margin-top: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
 }
 span.ws-tel {
     line-height: 14px;
@@ -1713,8 +1706,10 @@ span.wa-icon i::before {
 
 .ws-bottom {
     padding: 10px;
-    border-top: 1px solid #eee;
+    border-top: 1px solid rgb(10 178 228 / 38%);
     margin-top: 20px;
+    background: #fff;
+    border-bottom: 1px solid #fcb50073;
 }
 
 .item-address i::before {
@@ -1748,4 +1743,93 @@ span.wo-item {
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+.block-body.conum-cont {
+    padding: 0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.mes-wrap {
+    text-align: center;
+}
+
+.mes-wrap i::before {
+    font-size: 28px;
+        color: #1976d2;
+}
+.columns.is-mobile.is-multiline.mesafeler {
+    margin: auto;
+}
+
+.mes-col {
+    border: 1px solid #1976d224;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.mes-value {
+    color: #607d8b;
+}
+
+.slider-fix {
+    position: fixed;
+    top: -25px;
+    transition: all, 0.3s, ease-in;
+}
+
+.slider-fix::before {
+    background: #fff;
+}
+
+.parallax-slider {
+  /* transform-style: preserve-3d;
+  transform: translateZ(-2px) scale(1.2);
+  overflow-x: hidden;
+  overflow-y: auto;
+  perspective: 2px; */
+}
+
+/* .parallax__group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+   transform: translate3d(700px, 0, -800px) rotateY(30deg);
+}
+.parallax__group {
+  position: relative;
+  height: 100vh;
+  transform-style: preserve-3d;
+}
+.parallax {
+  perspective-origin-x: 100%;
+}
+.parallax__layer {
+  transform-origin-x: 100%;
+}
+
+.parallax__layer--back {
+  transform: translateZ(-1px) scale(2);
+}
+
+.parallax__layer--base {
+  transform: translateZ(0);
+}
+.parallax__layer--back {
+  transform: translateZ(-1px);
+}
+
+.parallax {
+  perspective: 1px;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.parallax__layer {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+} */
 </style>

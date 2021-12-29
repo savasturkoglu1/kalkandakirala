@@ -107,7 +107,7 @@
                                         </p>
                                     </div>
                                     <div class="button-cont">
-                                        <button class="button txt_w bck3  bg-primary-normal-gradient confirm-button is-medium is-fullwidth" @click="makeRez" > Rezervasyon Yap</button>
+                                        <button class="button text-w bck3  bg-primary-normal-gradient confirm-button is-medium is-fullwidth" @click="makeRez" > Rezervasyon Yap</button>
                                         
                                     </div>
                                     
@@ -341,10 +341,6 @@ span.fd-note {
     text-align: right;
 }
 
-button.button.txt_w.bck3.confirm-button.is-medium.is-fullwidth {
-    background: #156bc1;
-    color: #fff;
-}
 
 .columns.is-mobile.bk-likes {
     margin-top: 15px;

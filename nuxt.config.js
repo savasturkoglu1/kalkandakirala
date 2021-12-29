@@ -108,6 +108,7 @@ export default {
     '~/assets/font/flaticon.css',
     '~/assets/ui/jquery-ui.min.css',
     '~/assets/css/default.css',
+    '~/assets/css/mobile.css',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

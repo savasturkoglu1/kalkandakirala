@@ -172,11 +172,7 @@
   z-index: 99;
   box-shadow: 0 2px 15px 0 rgb(0 0 0 / 24%);
 }
-.mb-list-header .button {
-  width: 100%;
-  border-radius: 0;
-  color: #b4b4b4;
-}
+
 
 .mb-list-header.mob {
   display: flex;
@@ -203,6 +199,11 @@
 .header-section {
   /* padding: 8px !important;
   margin-top: -76px !important; */
+  }
+
+  .container.body-main {
+    padding: 10px;
+    border-radius: 10px;
   }
 }
 
@@ -263,4 +264,20 @@
 }
 
 
+.desk {
+  display: none !important;
+}
+
+
+.container.body-main {
+  padding: 10px;
+}
+
+.villa-page .after-header {
+  display: none;
+}
+
+.vil-main.bg-gray {
+  margin-top: -20px;
+}
 }  

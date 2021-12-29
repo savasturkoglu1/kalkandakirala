@@ -3,21 +3,19 @@
               <div class="grid-container swipebox " v-if="images.length>0">
                 
 
-                <div class="columns ig-wrap">
-                     <div class="ig-col ig-col-lagrge column is-7">
-                     <img  class="ig-img ig-img-l"   :src="images.filter(i=>{return i.res_oncelik=='1'})[0].res_url" alt="villago" @click="lightBox">
+                <div class=" mig-wrap">
+                 <div class="mig-col mig-col-lagrge ">
+                     <img  class="mig-img mig-img-l"   :src="images.filter(i=>{return i.res_oncelik=='1'})[0].res_url" alt="villago" @click="lightBox">
                 </div>
-                <div class="column ig-col is-5">
-                    <div class="columns is-multiline">
-                        <div class="column pr  ig-col-s is-6" v-for="(item,j) in images.slice(1,5)" :key="j" @click="lightBox" >
-                            <img class="ig-img ig-img-s"  :src="item.res_resp_url" :alt="item.res_alt">
-                            <span v-if="j==3" class="all-img">
+                <div class="mig-col-bottom">
+                    <div class="columns is-mobile">
+                        <div class="column pr  mig-col-s is-4" v-for="(item,j) in images.slice(1,4)" :key="j" @click="lightBox" >
+                            <img class="mig-img mig-img-s"  :src="item.res_resp_url" :alt="item.res_alt">
+                            <span v-if="j==2" class="all-img">
                                   <div  class="all-img-owerlay" style="" @click="lightBox">
-                                    <span class="icon">
-                                      <i class="flaticon-menu-4"></i>
-                                    </span>
+                                   
                                     <span>
-                                      Tüm resimleri gör <br> {{images.length}} 
+                                      Tüm resimler <br> {{images.length}} 
                                     </span>
                                   </div>
                             </span>
@@ -129,12 +127,12 @@ export default {
 }
 
 
-.column.ig-col-s {
-    height: 200px;
+.column.mig-col-s {
+    height: 100px;
     padding: 1px;
 }
 
-.ig-img {
+.mig-img {
         object-fit: cover;
     vertical-align: bottom;
     height: 100%;
@@ -143,8 +141,8 @@ export default {
     
 }
 
-.ig-col {
-    height: 400px;
+.mig-col {
+    height: 300px;
     width: 100%;
 }
 span.all-img {
@@ -156,13 +154,15 @@ span.all-img {
     background: #00000042;
     color: #fff;
     cursor: pointer;
+    pointer-events:none
 }
 .all-img-owerlay {
-margin-top: calc(30% - 5px);
-    margin-left: 10%;
+    margin-top: 20px;
+    margin-left: 1px;
     text-align: center;
+    font-size: 12px;
 }
-.ig-wrap{
+.mig-wrap{
     max-height: -webkit-calc(60vh - 64px) !important;
     max-height: -moz-calc(60vh - 64px) !important;
     max-height: calc(60vh - 64px) !important;
@@ -176,7 +176,7 @@ margin-top: calc(30% - 5px);
     max-height: calc(100vh - 144px) !important;
     min-height: 300px !important;
      overflow: hidden;
-    border-radius: 12px;
+    border-radius: 6px;
    
 }
 
@@ -334,11 +334,11 @@ margin-top: calc(30% - 5px);
     padding: 0;
     z-index: 0;
 }
-.ig-col-lagrge {
+.mig-col-lagrge {
   padding: 0;
 }
 
-.columns.ig-wrap {
+.columns.mig-wrap {
     margin: auto;
 }
   </style>

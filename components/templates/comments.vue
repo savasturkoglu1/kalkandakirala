@@ -14,7 +14,7 @@
                                 <span  itemprop="creator" itemscope itemtype="http://schema.org/Person">
                                 <strong itemprop="name">{{item.yor_ad}}</strong>
                                 <div>
-                                    <span v-for="yld in item.yor_yildiz" class="flaticon-start-1"></span>
+                                    <i v-for="yld in item.yor_yildiz" class="flaticon-start-1"></i>
                                 </div>
                                 </span>
                                 <br>
@@ -78,11 +78,11 @@
                     <div class="field">
                         <label class="label">Puanınız ? </label>
                         <div class="control has-icons-left has-icons-right">
-                            <span v-bind:class="star>0?'flaticon-star-1 seleted-star':'flaticon-star'"    @click="setStar(1)"></span> 
-                            <span  v-bind:class="star>1?'flaticon-star-1 seleted-star':'flaticon-star'"   @click="setStar(2)" ></span> 
-                            <span  v-bind:class="star>2?'flaticon-star-1 seleted-star':'flaticon-star'"   @click="setStar(3)"></span> 
-                            <span  v-bind:class="star>3?'flaticon-star-1 seleted-star':'flaticon-star'"   @click="setStar(4)"></span> 
-                            <span  v-bind:class="star>4?'flaticon-star-1 seleted-star':'flaticon-star'"   @click="setStar(5)"></span>                     
+                            <i v-bind:class="star>0?'flaticon-star-1 seleted-star':'flaticon-star'"    @click="setStar(1)"></i> 
+                            <i  v-bind:class="star>1?'flaticon-star-1 seleted-star':'flaticon-star'"   @click="setStar(2)" ></i> 
+                            <i  v-bind:class="star>2?'flaticon-star-1 seleted-star':'flaticon-star'"   @click="setStar(3)"></i> 
+                            <i  v-bind:class="star>3?'flaticon-star-1 seleted-star':'flaticon-star'"   @click="setStar(4)"></i> 
+                            <i  v-bind:class="star>4?'flaticon-star-1 seleted-star':'flaticon-star'"   @click="setStar(5)"></i>                     
                         </div>                    
                     </div>
                     <div class="field">

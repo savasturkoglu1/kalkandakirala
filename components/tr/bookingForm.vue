@@ -23,8 +23,8 @@
                                                    </div>
                                                     <div class="vl-stars">
                                                         
-                                                        <span v-for="(item,i) in vil.stars||0" class="flaticon-star-1" :key="i"></span>
-                                                        <span v-for="(item,i) in Array(5 - vil.stars ).fill().map((_, idx) => idx)" class="flaticon-star" :key="i"></span>
+                                                        <i v-for="(item,i) in vil.stars||0" class="flaticon-star-1" :key="i"></i>
+                                                        <i v-for="(item,i) in Array(5 - vil.stars ).fill().map((_, idx) => idx)" class="flaticon-star" :key="i"></i>
                                                    </div> 
                                                    
                                                     
@@ -39,8 +39,11 @@
                                         <i class="flaticon-check-out"></i>
                                         <input name="depart" :value="date2" readonly="" type="text" class="form-k check_out_date" autocomplete="off" placeholder="Çıkış">
                                     </div>
+                                    <!-- <span v-if="showTakvim"  class="cal-owerlay" @click="()=> {this.showTakvim = false}"></span> -->
                                     <div class="search-calendar mobil-fix-options clearfix"  v-if="showTakvim" >
+                                         
                                           <Calendar  :vilId="vil.id" @cBack="(a,b) => {this.date1 = a, this.date2 = b,this.showTakvim = false }" />
+                                             
                                          
                                     </div>
                                 </div>
@@ -104,7 +107,7 @@
                                         </p>
                                     </div> -->
                                     <div class="button-cont">
-                                        <button class="button txt_w bg-primary-normal-gradient g-button is-medium is-fullwidth" @click="makeRez" > Rezervasyon Yap</button>
+                                        <button class="button bg-primary-normal-gradient text-w g-button is-medium is-fullwidth" @click="makeRez" > Rezervasyon Yap</button>
                                         
                                     </div>
                                     
@@ -345,5 +348,9 @@ button.button.txt_w.bck3.confirm-button.is-medium.is-fullwidth {
     margin-top: 15px;
     text-align: center;
     padding: 10px;
+}
+
+.a-box .rating {
+    color: #ffc107 !important;
 }
 </style>
