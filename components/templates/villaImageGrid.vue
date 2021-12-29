@@ -1,23 +1,26 @@
 <template>
     <div  >
               <div class="grid-container swipebox " v-if="images.length>0">
-                <button  class="button  all-imgs2" style="" @click="lightBox">
-                  <span class="icon">
-                    <i class="flaticon-menu-4"></i>
-                  </span>
-                  <span>
-                     Tüm resimleri gör - {{images.length}} 
-                  </span>
-                </button>
+                
 
                 <div class="columns ig-wrap">
-                     <div class="ig-col  colum id-6">
+                     <div class="ig-col ig-col-lagrge column is-7">
                      <img  class="ig-img ig-img-l" loading="lazy"  :src="images.filter(i=>{return i.res_oncelik=='1'})[0].res_url" alt="villago" @click="lightBox">
                 </div>
-                <div class="column ig-col is-6">
+                <div class="column ig-col is-5">
                     <div class="columns is-multiline">
-                        <div class="column  ig-col-s is-6" v-for="(item,j) in images.slice(1,5)" :key="j" @click="lightBox" >
+                        <div class="column pr  ig-col-s is-6" v-for="(item,j) in images.slice(1,5)" :key="j" @click="lightBox" >
                             <img class="ig-img ig-img-s" loading="lazy" :src="item.res_resp_url" :alt="item.res_alt">
+                            <span v-if="j==3" class="all-img">
+                                  <div  class="all-img-owerlay" style="" @click="lightBox">
+                                    <span class="icon">
+                                      <i class="flaticon-menu-4"></i>
+                                    </span>
+                                    <span>
+                                      Tüm resimleri gör <br> {{images.length}} 
+                                    </span>
+                                  </div>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -126,8 +129,8 @@ export default {
 }
 
 
-.column.ig-col-s.is-6 {
-    height: 275px;
+.column.ig-col-s {
+    height: 200px;
     padding: 1px;
 }
 
@@ -141,9 +144,24 @@ export default {
 }
 
 .ig-col {
-     height: 550px;
+    height: 400px;
+    width: 100%;
 }
-
+span.all-img {
+    position: absolute;
+    left: auto;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: #00000042;
+    color: #fff;
+    cursor: pointer;
+}
+.all-img-owerlay {
+margin-top: calc(30% - 5px);
+    margin-left: 10%;
+    text-align: center;
+}
 .ig-wrap{
     max-height: -webkit-calc(60vh - 64px) !important;
     max-height: -moz-calc(60vh - 64px) !important;
@@ -315,5 +333,12 @@ export default {
     list-style: none;
     padding: 0;
     z-index: 0;
+}
+.ig-col-lagrge {
+  padding: 0;
+}
+
+.columns.ig-wrap {
+    margin: auto;
 }
   </style>

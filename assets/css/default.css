@@ -350,8 +350,8 @@ html {
 }
 
 .tabs li.is-active a {
-    border-bottom-color: #7957d5;
-    color: #fff;
+    border-bottom-color: transparent;
+    color: #09b0e6;
 }
 
 .font-init {

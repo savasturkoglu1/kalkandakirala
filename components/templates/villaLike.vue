@@ -152,7 +152,7 @@ export default {
 }
 
 .l-buttons .button {
-  border: 1px solid #cfd8dc;
+  border: 1px solid #cfd8dc3d;
 
        color: #607d8b;
 }

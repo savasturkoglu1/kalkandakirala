@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="bg-gray">
         <div class="decs">
             <Brd  v-if="bolge"  :routeArray="[
               {name:'Anasayfa', path:'/'},

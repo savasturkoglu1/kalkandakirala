@@ -99,12 +99,13 @@
             </div>
             </div>
 
-            <div class="columns is-multiline" v-if="show == 2">
+            <div class="columns is-multiline is-mobile " v-if="show == 2">
               <div
                 v-for="(item, i) in veri.data"
                 :key="item.id"
-                class="column is-half-tablet is-full-mobile is-one-third-desktop"
+                :class="'column is-'+col"
               >
+              <!-- is-half-tablet is-full-mobile is-one-third-desktop  -->
                 <GUnit :data="item" />
               </div>
             </div>
@@ -163,6 +164,7 @@ export default {
       orderBy: 'id',
       orderCond: 'DESC',
       show: 1,
+      col:4,
       map: false,
       mFilter: false,
       selectedProp: null,
@@ -172,7 +174,9 @@ export default {
   },
   mounted() {
    
-    
+    // rid responsivnes
+     
+
     
     //this.show = window.width > 1000 ? 1 : 2
     //  this.getpinUrl();
@@ -189,27 +193,20 @@ export default {
       this.orderBy = orderBy ? orderBy : null
       this.orderCond = orderCond ? orderCond : null
     }
-    this.map = JSON.parse(localStorage.getItem('listView'))
+      this.map = JSON.parse(localStorage.getItem('listView'))
 
-    $(window).scroll(function (self) {
-      if ($(window).width() > 1000) {
-        if ($(this).scrollTop() > 5) {
-          $('.mv-list, .mv-filter').addClass('mtop')
+      let w = window.innerWidth
+        if (w<768) {
+          this.show = 2
+          this.col = 12
+        } else if(w<=1024) {
+          this.show = 2
+          this.col = 6
         }
-        if ($(this).scrollTop() < 5) {
-          $('.mv-list, .mv-filter').removeClass('mtop')
+        else if(w>1024) {
+          this.show = 1
+          this.col = 4
         }
-      }
-    })
-
-    if($(window).width()<1000) {
-         if ($(this).scrollTop() >100) {
-          $('.mb-list-header').addClass('mf-fix')
-        }
-        if ($(this).scrollTop() < 100) {
-          $('.mb-list-header').removeClass('mf-fix')
-        }
-      }
   },
 
   methods: {

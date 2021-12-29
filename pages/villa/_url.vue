@@ -1,5 +1,5 @@
 <template>
-  <div class="vil-main">
+  <div class="vil-main bg-gray">
     
     <div class="container top-detail-cont desc">
       <div class="columns">
