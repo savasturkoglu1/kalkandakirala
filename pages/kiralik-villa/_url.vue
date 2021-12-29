@@ -23,7 +23,32 @@
                                   
                              </div>
                          </div> -->
-          
+
+        <div class="sec-tabs desc dis-none" id="menutab">
+            <div class="tabs is-medium">
+              <ul>
+                <li :class="pos == 1 ? 'is-active' : ''" @click="go(1)">
+                  <a>Açıklama</a>
+                </li>
+                <li :class="pos == 2 ? 'is-active' : ''" @click="go(2)">
+                  <a>Takvim</a>
+                </li>
+                <li :class="pos == 3 ? 'is-active' : ''" @click="go(3)">
+                  <a>Fiyatlar</a>
+                </li>
+                <li :class="pos == 4 ? 'is-active' : ''" @click="go(4)">
+                  <a>Konum</a>
+                </li>
+                <li :class="pos == 5 ? 'is-active' : ''" @click="go(5)">
+                  <a>Özellikler</a>
+                </li>
+                <li :class="pos == 6 ? 'is-active' : ''" @click="go(6)">
+                  <a>Yorumlar</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+           <div class="main-content">
           <div class="welc-section vil-detail-cont">
                    <!-- DetaySekmesi Sekmesi -->
             <div class="columns w-col">
@@ -148,54 +173,12 @@
                  </div>
                  
             </div>
-            <!-- <div class="ws-bottom">
-                   <div class="ws-bottom-wrap dFlex">
-                       <div class="we-like justify-start ">
-                            <Like :id="vil.id"  :title="false" />
-                       </div>
-                       <div class="ws-whatsapp">
-                            <div class="cs-row ws-cont" v-if="$store.state.base">
-                                             <span class="wa-icon">
-                                               <i class="flaticon-whatsapp" ></i>
-                                             </span>
-                                             <span class="ws-tel">
-                                               {{$store.state.base.contact.ilt_mobil1}}
-                                               <br>
-                                               <span class="note">WhatsApp Rezervasyon</span>
-                                             </span>
-                                             <b-icon class="is-pulled-right" icon="menu-right"></b-icon>
-                           </div>
-                       </div>
-                   </div>
-                 </div> -->
+           
           </div>
 
-          <div class="sec-tabs desc dis-none" id="menutab">
-            <div class="tabs is-medium">
-              <ul>
-                <li :class="pos == 1 ? 'is-active' : ''" @click="go(1)">
-                  <a>Açıklama</a>
-                </li>
-                <li :class="pos == 2 ? 'is-active' : ''" @click="go(2)">
-                  <a>Takvim</a>
-                </li>
-                <li :class="pos == 3 ? 'is-active' : ''" @click="go(3)">
-                  <a>Fiyatlar</a>
-                </li>
-                <li :class="pos == 4 ? 'is-active' : ''" @click="go(4)">
-                  <a>Konum</a>
-                </li>
-                <li :class="pos == 5 ? 'is-active' : ''" @click="go(5)">
-                  <a>Özellikler</a>
-                </li>
-                <li :class="pos == 6 ? 'is-active' : ''" @click="go(6)">
-                  <a>Yorumlar</a>
-                </li>
-              </ul>
-            </div>
-          </div>
+          
 
-          <div class="main-content">
+         
             <!-- Başlık Sekmesi -->
             
             <!-- Başlık Sekmesi end -->
@@ -1843,5 +1826,8 @@ span.wo-item {
   right: 0;
   bottom: 0;
   left: 0;
+} */
+/* .parallax-slider {
+  position: absolute;
 } */
 </style>

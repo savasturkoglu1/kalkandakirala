@@ -163,7 +163,7 @@ export default {
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      name: "Villa Evreni",
+      name: "Kalkanda Kirala",
   theme_color: "#cb1260",
   display:'fullscreen',  
   short_name:"KalkandaKirala",

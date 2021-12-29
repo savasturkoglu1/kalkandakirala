@@ -1,11 +1,11 @@
 export const state = () => ({
     counter: 0,
-    apiUrl: 'https://panel.villaevreni.com/frontapi/',
-    siteName: 'villaevreni.com',
-    baseTr: 'https://www.villaevreni.com',
-    baseEng: 'https://www.villaevreni.com/eng',
-    facebook_id: 'villaevreni.com',
-    twitter_user: 'villaevreni.com',
+    apiUrl: 'https://panel.kalkandakirala.com/frontapi/',
+    siteName: 'kalkandakirala.com',
+    baseTr: 'https://www.kalkandakirala.com',
+    baseEng: 'https://www.kalkandakirala.com/eng',
+    facebook_id: 'kalkandakirala.com',
+    twitter_user: 'kalkandakirala.com',
     vec: [],
     trUrls: {
       kats: '/kiralik-villa-tipleri/',
