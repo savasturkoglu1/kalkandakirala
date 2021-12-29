@@ -167,11 +167,16 @@
   </div> -->
  
 
-     <!-- <section class="section mob">
-       <div class="container title-cont">
-           <h3>En Popüler Villalarımız</h3>
-          
-         </div>
+     <section class="section mob">
+        <div class="section-tit dFlex">
+              <div class=" section-title-cont justify-start text2">
+                    <h3>Popüler Villalar</h3>
+                  
+                </div>
+                <div class="st-link">
+                  <nuxt-link to="/villa">Tüm villalar <span > <i class="flaticon-next"></i>  </span></nuxt-link>
+                </div>
+            </div>
             <div class="car-content" v-if="homeVillas" >
                  <b-carousel-list v-model="carousel" :data="homeVillas"  :items-to-show="mVils">
                             <template #item="data" >
@@ -184,6 +189,8 @@
            
      </section> 
 
+
+<!-- 
      
       
       <section class="section desc-section">
@@ -715,5 +722,9 @@ section.bt-section.desc {
     background-color: transparent !important;
 }
 
+
+.carousel-list.has-shadow {
+    box-shadow: none;
+}
 
 </style>

@@ -219,25 +219,74 @@
             </div>
             <!-- setay Sekmesi Sekmesi end -->
 
-            <!-- takvim Sekmesi -->
-            <client-only>
 
-          
-            <div class="item-section" id="sec2">
+             <!-- ozellikler Sekmesi -->
+
+
+            <div class="item-section " id="sec5">
+
               <div class="section-title2">
-                  <h3>Takvim</h3>
+                  <h3>Özellikler</h3>
                 </div>
               <div class="block-body vil-detail-cont">
-                
+                <h6>Havuz Özellikleri</h6>
+                <div class="columns is-multiline">
+                  <div class="column">
+                    {{ vil.vil_havuz }}
+                  </div>
+                </div>
+
                
-                  <Calendar v-if="vil" :vilId="vil.id" :inline="true" />
-               
+                <div class="columns is-mobile is-multiline">
+                  <div
+                    :class="'column oz-cols is-' + col"
+                    v-for="(item, d) in Array.from(
+                      new Set(
+                        vil.features
+                          .filter((ii) => {
+                            if (ii.oz_lang == 'tr') {
+                              return ii
+                            }
+                          })
+                          .map((j) => {
+                            return j.oz_name
+                          })
+                      )
+                    )"
+                    :key="d"
+                  >
+                    <i class="flaticon-check-box-with-check-sign"></i>
+                    {{ item }}
+                  </div>
+                </div>
               </div>
             </div>
-              </client-only>
-            <!-- takvim Sekmesi end -->
 
-            <!-- fiyat Sekmesi  -->
+
+            <!-- ozellikler Sekmesi end -->
+
+
+             <!-- ozellikler Sekmesi -->
+
+
+            <div class="item-section " id="sec5">
+
+              <div class="section-title2">
+                  <h3>Kurallar</h3>
+                </div>
+              <div class="block-body vil-detail-cont">
+              
+               
+                <div class="kural-col">
+                     <rules :vil="vil" />
+                </div>
+              </div>
+            </div>
+
+
+            <!-- ozellikler Sekmesi end -->
+
+                  <!-- fiyat Sekmesi  -->
             <client-only>
 
             
@@ -303,32 +352,7 @@
                       </span>
                     </div>
                   </div>
-                  <!-- <div class="column is-4">
-                    <div class="price-level level">
-                      <div class="level-item">
-                        Kiralama Kaporası: {{ vil.priceSets.vil_kaparo }} %
-                      </div>
-                    </div>
-                    <div class="price-level level">
-                      <div class="level-item">
-                        Hasar Depozitosu: {{ vil.priceSets.vil_depozito }}
-                        {{ vil.priceSets.vil_currency }}
-                      </div>
-                    </div>
-                    <div class="price-level level">
-                      <div class="level-item">
-                        Ekstra Temizlik Ücreti:
-                        {{ vil.priceSets.vil_extra_tem }}
-                        {{ vil.priceSets.vil_currency }}
-                      </div>
-                    </div>
-                    <div class="price-level level">
-                      <div class="level-item" style="display: contents">
-                        Fiyata Dahil Olanlar: Konaklama, Giriş Temizliği, Günlük
-                        Havuz Bakımı, Elektrik, Su, Gaz, İnternet
-                      </div>
-                    </div>
-                  </div> -->
+                  
                 </div>
               </div>
             </div>
@@ -336,6 +360,26 @@
             </client-only>
 
             <!-- fiyat Sekmesi  enf-->
+
+            <!-- takvim Sekmesi -->
+            <client-only>
+
+          
+            <div class="item-section" id="sec2">
+              <div class="section-title2">
+                  <h3>Takvim</h3>
+                </div>
+              <div class="block-body vil-detail-cont">
+                
+               
+                  <Calendar v-if="vil" :vilId="vil.id" :inline="true" />
+               
+              </div>
+            </div>
+              </client-only>
+            <!-- takvim Sekmesi end -->
+
+      
 
             <!-- mapSekmesi -->
             <client-only>
@@ -438,50 +482,7 @@
               </client-only>
             <!-- mapSekmesi end -->
 
-            <!-- ozellikler Sekmesi -->
-
-
-            <div class="item-section " id="sec5">
-
-              <div class="section-title2">
-                  <h3>Özellikler</h3>
-                </div>
-              <div class="block-body vil-detail-cont">
-                <h6>Havuz Özellikleri</h6>
-                <div class="columns is-multiline">
-                  <div class="column">
-                    {{ vil.vil_havuz }}
-                  </div>
-                </div>
-
-               
-                <div class="columns is-mobile is-multiline">
-                  <div
-                    :class="'column oz-cols is-' + col"
-                    v-for="(item, d) in Array.from(
-                      new Set(
-                        vil.features
-                          .filter((ii) => {
-                            if (ii.oz_lang == 'tr') {
-                              return ii
-                            }
-                          })
-                          .map((j) => {
-                            return j.oz_name
-                          })
-                      )
-                    )"
-                    :key="d"
-                  >
-                    <i class="flaticon-check-box-with-check-sign"></i>
-                    {{ item }}
-                  </div>
-                </div>
-              </div>
-            </div>
-
-
-            <!-- ozellikler Sekmesi end -->
+           
             <!--  video -->
             <div class="item-section " v-if="vil.vil_video">
               <div class="section-title2">
@@ -681,6 +682,7 @@ import ImageGrid from '../../components/templates/villaImageGrid'
 import Slider from '../../components/mobil/ImageGrid.vue'
 
 import MobilBooking from '../../components/mobil/BookingForm'
+import Rules from '~/components/templates/rules.vue'
 
 export default {
   components: {
@@ -694,6 +696,7 @@ export default {
     Like,
     ImageGrid,
     MobilBooking,
+    Rules,
   },
   scrollToTop: true,
   data() {
@@ -933,6 +936,12 @@ export default {
       }
      
 
+
+      // window.addEventListener("scroll", function(){
+      //     var s = document.getElementById("mobile-galery");
+      //   var yPos = 0 - window.pageYOffset/5;  
+      //   s.style.top = 50 + yPos + "%";  
+      // });
     //   if($(window).width() < 1000) {
        
       
@@ -1630,7 +1639,8 @@ button.mob-bttom-back {
     padding: 15px 20px;
     width: 100%;
     text-align: center;
-    border-right: 1px solid #2196f33d;
+    /* border-right: 1px solid #2196f33d; */
+    padding: 5px;
 }
 
 .ow-sec i::before {
@@ -1678,8 +1688,8 @@ h1.welk-title {
 }
 
 .ow-row {
-    border-top: 1px solid #16ccc73d;
-    border-bottom: 1px solid #16ccc73d;
+    /* border-top: 1px solid #16ccc73d;
+    border-bottom: 1px solid #16ccc73d; */
 }
 .cs-row.ws-cont {
     display: inline-flex;
@@ -1718,11 +1728,13 @@ span.wa-icon i::before {
     font-weight: 800;
 }
 
-/* .ow-item {
-    background: #f6f9fd !important;
+.ow-item {
+   background: #eef1f5 !important;
     border-radius: 8px;
     box-shadow: 0 2px 12px 0 rgb(55 64 77 / 8%);
-} */
+    padding: 12px;
+    height: 100%;
+}
 
 .dis-none{
   display: none;

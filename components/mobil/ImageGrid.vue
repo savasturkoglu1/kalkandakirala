@@ -5,7 +5,7 @@
 
                 <div class=" mig-wrap">
                  <div class="mig-col mig-col-lagrge ">
-                     <img  class="mig-img mig-img-l"   :src="images.filter(i=>{return i.res_oncelik=='1'})[0].res_url" alt="villago" @click="lightBox">
+                     <img  class="mig-img mig-img-l"   :src="kapak" alt="villago" @click="lightBox">
                 </div>
                 <div class="mig-col-bottom">
                     <div class="columns is-mobile">
@@ -33,7 +33,8 @@
 export default {
     data() {
           return{
-                 pr:4
+                 pr:4,
+                 kapak:null
           }
     }, 
     props: {
@@ -51,31 +52,15 @@ export default {
        sclass:null
     },
 
-    mounted(){
-    //     let p = window.innerWidth<1001?1:this.per;
-    //     this.pr=p;
-    //     var swiper = new Swiper('.swiper-container', {
-    //   slidesPerView: 1,
-    //   spaceBetween:2,
-    //   slidesPerGroup: 1,
-    //    grabCursor: true,
-    //    centeredSlides: true,
-    //   loop: true,
-    //   autoplay: {
-    //             delay: 5000,
-    //           },
-    //   loopFillGroupWithBlank: true,
-    //   pagination: {
-    //     el: '.swiper-pagination',
-    //     clickable: true,
-    //   },
-    //   navigation: {
-    //     nextEl: '.swiper-button-next',
-    //     prevEl: '.swiper-button-prev',
-    //   },
-    // });
-
-
+    beforeMount(){
+      let kapak = this.images.filter(i=>{return i.res_oncelik=='1'})
+     if (kapak.length>0){
+       this.kapak = kapak[0].res_url
+     }
+     else {
+       this.kapak = this.images.length>0?this.images[0].res_url:''
+     }
+   
     },
 
     methods: {
@@ -151,7 +136,8 @@ span.all-img {
     left: 0;
     right: 0;
     height: 100%;
-    background: #00000042;
+        background: rgb(0 0 0 / 41%);
+
     color: #fff;
     cursor: pointer;
     pointer-events:none

@@ -1100,6 +1100,8 @@ span.dd-owerlay {
 
 .navbar-s-item {
     padding-top: 7px;
+        margin-right: 10px;
+            margin-left: 10px;
 }
 .mv-nbrand {
   text-align: left;

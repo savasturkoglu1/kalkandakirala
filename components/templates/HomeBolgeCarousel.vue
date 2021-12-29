@@ -51,7 +51,7 @@ export default {
             perList: 4,
             increment: 1,
             repeat: true,
-            kartCar:3,
+            katsCar:3,
         }
     },
 

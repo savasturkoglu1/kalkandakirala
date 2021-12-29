@@ -607,7 +607,7 @@ input.form-k {
     padding: 10px; 
       height: 100%;
     font-size: 16px;
-    font-weight: 600 !important;
+    /* font-weight: 600 !important; */
     color: #263238;
 }
 .calendar-dd {
