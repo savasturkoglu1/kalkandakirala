@@ -14,10 +14,7 @@ export default ({ app }) => {
     ** Set the current page 
     */
     ga('create', '1111111', 'auto')
-    /*
-    ** Every time the route changes (fired on initialization too)
-    */
-
+  
   //  gtag('event', 'conversion', {'send_to': 'AW-583253822/Ata3COORut8BEL7-jpYC'});
   //  window.dataLayer = window.dataLayer || [];
   //   function gtag(){dataLayer.push(arguments);}
@@ -33,3 +30,5 @@ export default ({ app }) => {
       ga('send', 'pageview')
     })
   }
+
+

@@ -18,7 +18,7 @@
            
          </div>
         <div class="st-link">
-           <nuxt-link to="">Tümü <span > <i class="flaticon-next"></i>  </span></nuxt-link>
+           <nuxt-link  :to="$store.state.trUrls.kats">Tümü <span > <i class="flaticon-next"></i>  </span></nuxt-link>
         </div>
      </div>
          
@@ -35,7 +35,7 @@
            
          </div>
         <div class="st-link">
-           <nuxt-link to="">Tümü <span > <i class="flaticon-next"></i>  </span></nuxt-link>
+           <nuxt-link :to="$store.state.trUrls.bolge">Tümü <span > <i class="flaticon-next"></i>  </span></nuxt-link>
         </div>
      </div>
       <home-bolge-carousel />
@@ -174,7 +174,7 @@
                   
                 </div>
                 <div class="st-link">
-                  <nuxt-link to="/villa">Tüm villalar <span > <i class="flaticon-next"></i>  </span></nuxt-link>
+                  <nuxt-link  :to="$store.state.trUrls.villa">Tüm villalar <span > <i class="flaticon-next"></i>  </span></nuxt-link>
                 </div>
             </div>
             <div class="car-content" v-if="homeVillas" >

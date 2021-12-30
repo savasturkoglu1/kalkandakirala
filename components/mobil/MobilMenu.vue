@@ -362,6 +362,9 @@ export default {
 </script>
 
 <style>
+.top-search {
+    display: flex;
+}
 .mm-bottom {
     text-align: center;
     align-items: baseline;

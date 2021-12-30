@@ -475,6 +475,16 @@ export default {
 </script>
 
 <style>
+.mm-list {
+    width: 100%;
+    display: inline-flex;
+    padding: 8px ;
+    margin-bottom: 8px;
+        margin-top: 5px;
+        border-radius: 6px;
+    background: #f8f8f8;
+
+}
 a.navbar-link,
 a.navbar-item {
   font-size: 17px;

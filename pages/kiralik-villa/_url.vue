@@ -1394,7 +1394,7 @@ iframe {
     background-color: #fff;
     color: inherit;
     position: fixed;
-    z-index: 999;
+    z-index: 9;
     bottom: 0;
     width: 100%;
     display: block;

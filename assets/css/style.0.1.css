@@ -1369,3 +1369,20 @@ button.button.nav-phone {
 .villa-page .nav-mobil {
   display: none !important;
 }
+
+.mb-bak-button {
+  border: none;
+}
+
+.modal.is-full-screen>.animation-content, .modal.is-full-screen>.animation-content>.modal-card {
+  width: 100%;
+  height: 100%;
+  max-height: 100vh;
+  margin: 0;
+  background-color: #673ab7;
+  background: #f6f9fd !important;
+}
+
+.is-active.bg-primary-normal-gradient a {
+  color: #fff !important;
+}
