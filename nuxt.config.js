@@ -46,6 +46,8 @@ export default {
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1, user-scalable=no,maximum-scale=1' },
+      {  name:"google-site-verification", content:"A5tAojA-mFP3ySVDwRn82HaYxc1aYZdcnrgPhNo8l4Y" },
+      {name:"yandex-verification", content:"080cdba740516973"},
       { name:'theme-color' , content: '#cb1260'},      
      { name:"ROBOTS",content:"FOLLOW" },
      { name:"ROBOTS", content:"INDEX" },
