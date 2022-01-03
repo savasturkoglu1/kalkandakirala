@@ -4,7 +4,7 @@
       :items-to-show="perList"
       :arrow="arrow"
       :arrow-hover="arrowHover"
-            
+            :autoplay="true"
         :items-to-list="increment"
         :repeat="repeat"
         :has-drag="drag"

@@ -1139,7 +1139,7 @@ span.tp-icon {
 }
 .p-note {
   font-size: 14px;
-  color: #b0bec5;
+  color: #90a4ae;
   font-weight: 500;
 }
 .comment-section {
@@ -1746,7 +1746,12 @@ span.wo-item {
 }
 
 .mes-wrap {
-    text-align: center;
+        text-align: center;
+    background: #eef1f5 !important;
+    border-radius: 8px;
+    box-shadow: 0 2px 12px 0 rgb(55 64 77 / 8%);
+    padding: 12px;
+    height: 100%;
 }
 
 .mes-wrap i::before {
@@ -1758,9 +1763,9 @@ span.wo-item {
 }
 
 .mes-col {
-    border: 1px solid #1976d224;
-    padding-bottom: 20px;
-    padding-top: 20px;
+ 
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .mes-value {

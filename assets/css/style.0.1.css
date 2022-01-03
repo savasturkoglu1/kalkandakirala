@@ -600,8 +600,9 @@ span.close-button-abs {
   left: 0;
 }
 .fixed-right {
-  position: fixed; 
+  position: fixed;
   top: 60px;
+  z-index: 99;
 }
 .a-box {
 display: inline-block;

@@ -324,9 +324,9 @@ export default {
 
         call(){            
            var self = this;
-      
+           var dateToday = new Date(); 
            $('.takvim').datepicker({
-               
+            minDate: dateToday,
             inline:!0,minDate: 0,
             dateFormat:"dd/mm/yy",
             numberOfMonths:this.t_size,
@@ -386,6 +386,9 @@ export default {
 
 
 <style>
+td.ui-datepicker-week-end.ui-datepicker-unselectable.ui-state-disabled {
+    opacity: 0.6;
+}
 @import '~/assets/ui/jquery-ui.min.css';
 .field.column.is-4 {
     padding: 0px;

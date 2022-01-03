@@ -39,7 +39,7 @@
                                         <i class="flaticon-check-out"></i>
                                         <input name="depart" :value="date2" readonly="" type="text" class="form-k check_out_date" autocomplete="off" placeholder="Çıkış">
                                     </div>
-                                    <!-- <span v-if="showTakvim"  class="cal-owerlay" @click="()=> {this.showTakvim = false}"></span> -->
+                                    
                                     <div class="search-calendar mobil-fix-options clearfix"  v-if="showTakvim" >
                                          
                                           <Calendar  :vilId="vil.id" @cBack="(a,b) => {this.date1 = a, this.date2 = b,this.showTakvim = false }" />
@@ -115,7 +115,7 @@
                                         <Like :id="vil.id"  :count="vil.vil_like" :title="false" />
                                     </div> -->
                             </div>
-                            
+                            <span v-if="showTakvim"  class="cal-owerlay" @click="()=> {this.showTakvim = false}"></span>
                         </div>
 </template>
 
@@ -254,8 +254,9 @@ export default {
 }
 
 .search-calendar {    
-           -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+           -webkit-transform: translateX(-104%) !important;
+         
+          transform: translateX(-104%) !important;
          }
 
        @media (max-width:1000px) {
@@ -352,5 +353,45 @@ button.button.txt_w.bck3.confirm-button.is-medium.is-fullwidth {
 
 .a-box .rating {
     color: #ffc107 !important;
+}
+
+.cal-owerlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    BACKGROUND: #00000072;
+    z-index: 2;
+}
+.fixed-right {
+    position: fixed;
+    top: 60px;
+    z-index: 11;
+}
+
+.u-book-body {
+    z-index: 11;
+    position: relative;
+    background: #fff;
+        border-radius: 6px;
+}
+
+.search-calendar {
+    left: auto;
+    transform: none;
+    top: -96px !important;
+    border: 1px solid #d8dce1;
+    padding: 30px;
+    background-color: #fff;
+    margin-top: 10px;
+    border-radius: 4px;
+    z-index: 7;
+    /* width: 600px; */
+    left: 0;
+    transform: auto;
+    position: absolute;
+    margin: 0;
+    z-index: 99;
 }
 </style>
