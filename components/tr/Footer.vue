@@ -100,13 +100,34 @@
             </div>
         </div>   
 
+        <div class="fotter-pages footer-border-top">
+            <div class="container">
+                <div class="col">
+                    <h4>Bilgilendirme</h4>
+                     <div class="blg-wra">
+                         <div class="buttons justify-start">
+                         <nuxt-link class="footer-menu-item button footer-page-button"  v-for="(item,i) in $store.state.base.pages" :key="i"   :to="'/bilgilendirme/'+item.say_url" :title="item.say_adi">{{item.say_adi}}
+                        </nuxt-link> 
+                        <nuxt-link class="footer-menu-item button footer-page-button"   to="/iletisim" > iletişim
+                        </nuxt-link> 
+                     </div>
+                       <a href="/blog" target="_blank" class="blog-button">
+                       Blog</a>
+                     </div>
+                     
+                    
+                </div>
+            </div>
+
+        </div>
+
         <div class="fotter-logos footer-border-top">
             <div class="container">
                 <div class="columns">
 
                      <div class="column">
                             <img  :src="$store.state.base.settings.set_logo"  alt="villa kiralama" class="footer-logo" /> <br>
-                            <b>KalkandaKirala Turizm</b>
+                            <b>KalkandaKirala.com</b>
                      </div>
                      <div class="column">
 
@@ -363,5 +384,21 @@ button.button.fi-button {
 
 .fotter-logos {
     padding: 30px;
+}
+
+.fotter-pages {
+    padding: 30px;
+    background: #f6f9fd;
+}
+
+.blg-wra {
+    margin-top: 15px;
+    display: flex;
+    width: 100%;
+}
+
+a.footer-menu-item.button.footer-page-button {
+    border: none;
+    background: transparent;
 }
 </style>

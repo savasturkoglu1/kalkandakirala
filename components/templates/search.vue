@@ -125,7 +125,7 @@ export default {
     width: 100%;
     
     z-index: 999;
-    top: 2px;
+    top: 6px;
     right: 5px;
 
 }
@@ -210,5 +210,10 @@ span.s-owerflow {
     padding-right: 0px;
 }
 
+}
+
+.s-wrapper  .icon {
+    color: #607d8b;
+    
 }
 </style>

@@ -19,7 +19,7 @@ export default {
   data(){
       return {
           show:true,
-          url:'https://www.villandakal.com/sayfa/cerez-politikasi'
+          url:'https://www.kalkandakirala.com/sayfa/cerez-politikasi'
       }
   },
   mounted(){
@@ -55,7 +55,7 @@ export default {
 
 @media  (max-width:1000px) {
     .coo-wrap {
-    position: relative;
+    position: fixed;
     bottom: 0;
     background: #fff;
     left: auto;

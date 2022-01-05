@@ -15,7 +15,7 @@
                 </div>
             </div> -->
 
-             <div v-for="(item, j) in data" :key="j" :class="j%5===0?'column is-6':'column is-3'">
+             <div v-for="(item, j) in data" :key="j" class="column is-4">
                            <nuxt-link class="hb-link" :to="$store.state.trUrls.kats+item.kat_url" :title="item.kat_adi">
                                <div class="hb-wrap">
                                        <img loding="lazy" :src="item.kat_kapak" :alt="item.kat_adi" />
@@ -25,7 +25,7 @@
                                                <h3> {{item.kat_adi}} </h3>  
                                                 <transition name="slide-up">    
                                                  <div class="hb-det">
-                                                  <div><h5>{{item.kat_baslik}}</h5></div>
+                                                  <!-- <div><h5>{{item.kat_baslik}}</h5></div> -->
                                                    <div> {{item.count}} Villa </div>
                                                   
                                                    <!-- <button class="button color-sec">İncele</button> -->

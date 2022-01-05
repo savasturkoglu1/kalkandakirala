@@ -455,12 +455,12 @@ span.unit-dates {
 }
 
 span.u-oc {
-    background: #60afe321;
    
     margin-right: 5px;
     border-radius: 10px;
-    color: #546e7a;
+    color: #03a9f4;
     padding: 5px;
+
 }
 
 .lu-stars {

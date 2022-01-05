@@ -619,8 +619,9 @@
               <span class="un-den">başlayan</span>
             </div>
             <div class="mob-stars">
-              <div class="vl-stars">
-                <i
+              <div class="vl-stars" v-if="vil.stars">
+                <i class="flaticon-star-1"></i> <span> {{vil.stars}} </span>
+                <!-- <i
                   v-for="(item, i) in vil.stars || 0"
                   class="flaticon-star-1"
                   :key="i"
@@ -631,7 +632,7 @@
                     .map((_, idx) => idx)"
                   class="flaticon-star"
                   :key="i"
-                ></i>
+                ></i> -->
               </div>
             </div>
           </div>
@@ -1835,4 +1836,8 @@ span.wo-item {
 /* .parallax-slider {
   position: absolute;
 } */
+
+.vl-stars i::before {
+    color: #ff9800;
+}
 </style>

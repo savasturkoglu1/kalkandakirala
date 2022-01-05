@@ -108,42 +108,19 @@
                 </b-navbar-item>
                
             </b-navbar-dropdown>
-        <!-- <div class="navbar-item has-dropdown is-hoverable">
-          <a class="navbar-link"> Bölgeler </a>
-
-          <div class="navbar-dropdown" v-if="$store.state.base">
-            <nuxt-link
-              v-for="(item, i) in veri.bolgeler"
-              :title="item.bo_adi"
-              :key="i"
-              :to="$store.state.trUrls.bolge + item.bo_url"
-              class="dropdown-item"
-            >
-              {{ item.bo_adi }}
-            </nuxt-link>
-          </div>
-        </div> -->
-       
-        <!-- <nuxt-link to='/satılık-emlak' class="navbar-item">
-           Satılık
-          </nuxt-link> -->
-
-        <!-- <div class="navbar-item ip-none">
-          <a class="navbar-link" href="/blog" target="_blank"> Blog </a>
-        </div> -->
-       
+        
       
         <div class="navbar-s-item">
            <Search />
         </div>
         
 
-        <div class="navbar-item ip-none contact-item" v-if="$store.state.base">
+        <div class="navbar-item contact-item" v-if="$store.state.base">
           <button class="button nav-phone " @click="() => { this.contdd = !this.contdd}">
             <span>
               <i class="flaticon-call"></i>
             </span>
-            <span class="tel-label">
+            <span class="tel-label ip-none ">
               {{ $store.state.base.contact.ilt_mobil1 }} <br>
               <span class="note">
                 Bize Ulaşın !
@@ -166,7 +143,7 @@
         <div class="navbar-item">
           <div class="user-button button is-medium" @click="() => { this.pdd = !this.pdd}">
             <i class="flaticon-user"></i>
-            <span>Sana Özel</span>
+            <!-- <span>Sana Özel</span> -->
             <span
               class="like_badge"
               v-if="$store.state.saved && $store.state.saved.length > 0"
@@ -1175,8 +1152,8 @@ button.button.ph-button {
 }
 
 .mega-button .navbar-dropdown {
-      right: -100px;
-    left: auto;
+    
+    left: -300px;
     /* top: 70px; */
     border-radius: 8px;
     border-top: none;
@@ -1188,13 +1165,13 @@ a.navbar-item.mega-dropdown {
     margin-top: 0px;
 }
 
-.navbar-item.ip-none.contact-item {
+.navbar-item.contact-item {
     border-left: 2px solid #09b0e833;
     border-right: 2px solid #fcb50045;
     padding-left: 5px;
     padding-right: 5px;
 }
-.navbar-item.ip-none.contact-item:hover {
+.navbar-item.contact-item:hover {
     background: transparent !important;
     border-radius: 0px;
 }
@@ -1218,22 +1195,30 @@ button.mobil-menu-button {
 
 span.like_badge {
     position: absolute;
-    top: -2px;
-    right: 3px;
+    top: 4px;
+    right: 12px;
     color: red;
     font-size: 13px;
     font-weight: 600;
 }
 .cont-dd-wrap {
-    z-index: 999;
+   z-index: 999;
     position: absolute;
-    
     top: 75px;
-    left: -10px;
+    left: auto;
+    right: 20px;
    
 }
 
 button.mobil-menu-button i::before {
     font-size: 24px;
+}
+
+.user-button.button.is-medium {
+    border: none;
+}
+
+.s-wrapper input {
+    border: none;
 }
 </style>

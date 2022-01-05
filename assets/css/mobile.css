@@ -207,10 +207,8 @@
   }
 }
 
-@media (max-width:1224px) {
-         .ip-none {
-           display: none !important;
-         }
+@media (max-width:1023px) {
+         
 
          .search-calendar {
           transform: translateX(-80%) !important;
@@ -281,3 +279,10 @@
   margin-top: -20px;
 }
 }  
+
+@media (max-width:1124px) {
+  .ip-none {
+    display: none !important;
+  }
+
+}

@@ -27,7 +27,7 @@
          <MobilSearch />
          <mobil-contact />
         <Footer  />
-          
+          <coocie />
 
   </div>
 </template>
@@ -38,6 +38,7 @@ import MobilMenu from '~/components/mobil/MobilMenu.vue';
 import Social from '../components/templates/Socialbuttons';
 import MobilSearch from '../components/mobil/Search';
 import MobilContact from '~/components/mobil/MobilContact.vue';
+import Coocie from '~/components/tr/coocie.vue';
 export default {
   data(){
        return {
@@ -60,7 +61,8 @@ export default {
      Footer,
     MobilMenu,
     MobilSearch,
-    MobilContact
+    MobilContact,
+    Coocie
    },
    created(){
      

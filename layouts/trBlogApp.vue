@@ -4,7 +4,7 @@
   <div class="navbar-brand">
     <nuxt-link class="navbar-item" to="/blog" title="blog"> 
       <img style="height: 50px !important;
-    max-height: none;" src="https://panel.villaevreni.com/images/site/villa_evreni.png" >
+    max-height: none;" src="https://panel.kalkandakirala.com/images/site/convert.png" >
     </nuxt-link>
 
     <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">

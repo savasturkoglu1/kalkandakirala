@@ -15,7 +15,7 @@
                 </div>
             </div> -->
 
-             <div v-for="(item, j) in data" :key="j" :class="j%5===0?'column is-6':'column is-3'">
+             <div v-for="(item, j) in data" :key="j" class="column is-4">
                            <nuxt-link class="hb-link" :to="$store.state.trUrls.bolge+item.bo_url" :title="item.bo_adi">
                                <div class="hb-wrap">
                                         <img loding="lazy" :src="item.bo_kapak" :alt="item.bo_adi" />

@@ -717,7 +717,7 @@ span.un-den {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 8px;
 }
 
 /* Track */
@@ -726,7 +726,7 @@ span.un-den {
 }
  
 ::-webkit-scrollbar-thumb {
-  background: #cfd8dc;
+  background: #719aac;
   border-radius: 3px;
 }
 
@@ -1386,4 +1386,12 @@ button.button.nav-phone {
 
 .is-active.bg-primary-normal-gradient a {
   color: #fff !important;
+}
+
+.search-guests-wrap .column {
+  padding: 10px;
+}
+
+.s-button.g-button {
+  border: none;
 }

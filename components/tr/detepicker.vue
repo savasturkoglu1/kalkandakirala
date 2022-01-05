@@ -57,7 +57,7 @@
                 
                 <div class="border-top has-text-left">
                 <p> Tatil planlaması konusunda karasız mı kaldınız?</p>
-                <p> <nuxt-link to="/teklif-al"> <strong>Tıklayın </strong> </nuxt-link> anında size en uyfun villaları önerelim !  </p>
+                <p> <nuxt-link to="/teklif-al"> <strong>Tıklayın </strong> </nuxt-link> anında size en uygun villaları önerelim !  </p>
             </div>
             </div>
 
