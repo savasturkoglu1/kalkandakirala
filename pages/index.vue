@@ -18,7 +18,7 @@
            
          </div>
         <div class="st-link">
-           <nuxt-link  :to="$store.state.trUrls.kats">Tümü <span > <i class="flaticon-next"></i>  </span></nuxt-link>
+           <nuxt-link :prefetch="false"   :to="$store.state.trUrls.kats">Tümü <span > <i class="flaticon-next"></i>  </span></nuxt-link>
         </div>
      </div>
          
@@ -35,7 +35,7 @@
            
          </div>
         <div class="st-link">
-           <nuxt-link :to="$store.state.trUrls.bolge">Tümü <span > <i class="flaticon-next"></i>  </span></nuxt-link>
+           <nuxt-link :prefetch="false"  :to="$store.state.trUrls.bolge">Tümü <span > <i class="flaticon-next"></i>  </span></nuxt-link>
         </div>
      </div>
       <home-bolge-carousel />
@@ -209,7 +209,45 @@ VillA Evreni misyonumuz, müşteri memnuniyetini sürekli kılmak adına tatil d
  </div>
       </section>    -->
 
+    <sec class="section manifest">
+      <div class="container">
+        <div class="man-wrap pr">
+          <h2>Likya kuşu size uygun kiralık tatil villasını bulsun!</h2>
+          <b><a href="/">Kalkandakirala.com</a> ’da yüzlerce farklı tatil konseptinde villa, apart, bungalov gibi uygun fiyatlı kiralık villa önerileri sizlere sunuluyor. Her sene güncellenen yenilenen kiralık yazlık tatil evi çeşitleri ile binlerce kişiye villa tatili hizmeti sunan markamız günden güne gelişerek <nuxt-link :prefetch="false"  :to="$store.state.trUrls.kats+'balayi-villalari'" target="_blank">balayı tatili </nuxt-link>, geniş aile tatili,<nuxt-link :prefetch="false"  :to="$store.state.trUrls.kats+'muhafazakar-villalar'" target="_blank"> muhafazakar villa tatili </nuxt-link>, balayı tatili gibi kiralık villa konseptleriyle sizlere hayalinizdeki tatili gerçekleştirme fırsatı sunuyor. %15 indirim oranına varan kiralık villa, kiralık yazlık ve <nuxt-link :prefetch="false"  :to="$store.state.trUrls.kats+'kiralik-apartlar'" target="_blank">kiralık apart</nuxt-link> portföyüyle kaliteli hizmeti ilke alan firmamız tüm tatilseverler için çalışıyor.
+</b>
+<br>
+<strong>Villa Tatili</strong>
+<p>
+  Tatil temanızı belirledikten sonra yapmanız gereken bir sonraki adım en uygun villa tatili için güvenilir bir platformdan seçim yapmanız. En hesaplı konaklama fırsatları için erken rezervasyon tarihlerini tercih edebilirsiniz.
+   Bunun için villa tatili planınızı önceden yapmış olmanız ve kiralık villa konseptinizi belirlemiş olmanız gerekir. 
+   Eğer arkadaş grubunuzla, eşinizle balayı ya da kalabalık ailenizle tatil planı yapıyorsanız kiralık tatil villaları arasından bütçenize en uygun olanı <a href="/">Kalkandakirala.com</a> 'da bulabilirsiniz.
 
+</p>
+<br>
+<strong>İndirimli Villalar</strong>
+<p>
+  Aniden gelişen tatil imkanları için yüksek fiyatlar ödemenize de gerek yok. Kısa süreli kiralık villalar ve <nuxt-link :prefetch="false"  :to="$store.state.trUrls.kats+'indirimli-villalar'" target="_blank">indirimli villalar</nuxt-link> içerisinden dilediğiniz konseptte kiralık tatil villasını tercih edebilirsiniz. Ayrıca sevgililer günü yaklaşırken bu günlere özel kampanyaları takip ederek sevgililer günü kiralık villaları arasından seçim yaparak sevdiğinize sürpriz yapabilirsiniz. Bununla birlikte sosyal medya hesaplarımıza abone olarak en uygun kiralık villa yerleri ve özel indirimli son dakika fırsatlarını yakalayabilirsiniz. Yaşam şeklinize uygun olan muhafazakar villalar arasından tercih ederek bütçe dostu tatilin tadını çıkarabilisiniz.
+
+</p>
+<br>
+<strong>Kiralık Villa Fiyatları</strong>
+<p>
+  Kısa bir zaman ayırarak hayalini kurduğunuz kiralık villa tatilini gerçekleştirmek için <a href="/">Kalkandakirala.com</a> ’u tercih edebilirsiniz. Bir kiralık villa için önce nasıl bir villa tatili yapmak istediğiniz hakkında kesin bir karara varmanız gerekir. <nuxt-link :prefetch="false"  :to="$store.state.trUrls.kats+'jakuzili-villalar'" target="_blank"> Jakuzili villalar</nuxt-link> mı, ısıtmalı havuzlu villalar mı, doğayla iç içe bir tatil mi, havuzu görünmeyen villalar mı, kalkan villaları mı, balayı villaları mı gibi konularda iyice düşünüp net bir karar vermeniz atacağınız bir sonraki adımı kolaylaştıracaktır. Tatil temanızı belirledikten sonra <nuxt-link :prefetch="false"  :to="$store.state.trUrls.allVillas" target="_blank">kiralık villalar</nuxt-link> arasından tercih yapabilirsiniz. Likya kuşu size uygun kiralık tatil villasını bulmak için memnuniyetle yardımcı olacaktır. Türkiye'nin en iyi tatil villalarını inceleyip indirimli villalar kampanyalarından yararlanarak uygun fiyatlı rezervasyon yaptırabilirsiniz.
+Kiralık yazlık tatili için öncelikle tatil yapacağınız mevsimi belirlemeniz gerekir. Yaz için bir tatil planınız varsa 2022 kiralık villaları, muhafazakar villalar, plaja yakın villalar, deniz manzaralı villalar kış için bir tatil planınız varsa kış tatili villaları, sıcak havuzlu villalar, ısıtmalı havuzlu villalar yada jakuzili villalar ve kapalı havuzlu villalar gibi  rezervasyon seçeneklerini değerlendirmelisiniz. Plansız gelişen tatilleriniz için <a href="/">Kalkandakirala.com</a> ’da sizler için indirimli villalar ve kısa süreli kiralık villalarda bulunuyor. Yılbaşı, sevgililer günü, kurban bayramı, ramazan bayramı, sömestr gibi tatil dönemlerinde kampanyalı villalar için indirimli villaları ziyaret edebilir ya da Likya Kuşu müşteri temsilcileri size en uygun villayı bulabilir. Hafta sonu gezilecek yerler listesinden ise kısa süreli kiralık villalar kategorisinden kendinize yakın destinasyonlarda bir tatil planı yapabilirsiniz.
+
+</p>
+ <br>
+<strong>Günlük, Haftalık, Aylık Kiralık Daireler</strong>
+<p>Türkiye'nin kiralık villa sitesi <a href="/">kalkandakirala.com</a> 'da her an dilediğiniz tatili yapabileceğiniz çeşitli villalar bulunuyor. Erken rezervasyon fırsatı ile büyük indirimler yakalayabilir, son dakika fırsatları ile bir anda gelişen kiralık villa fırsatlarını değerlendirebilirsiniz. 12 ay boyunca hizmet veren tatil evlerimize %30 rezervasyon anında ön ödeme ile rezervasyon yaptırabilir, kalan ödemesini ise kiralık villanıza giriş esnasında yapabilirsiniz. Her zaman devam eden kısa süreli kiralık villa indirimi ile en iyi villalarda uygun fiyatlı tatil yapabilirsiniz.
+</p>
+<br>
+
+  <p>Eğlence, dinlenme ve tüm yılın stresini atmak amacıyla yapacağınız tatiller için Muğla, Antalya ve <nuxt-link :prefetch="false"  :to="$store.state.trUrls.bolge+'kalkan'" target="_blank">Kalkan villaları</nuxt-link> , kış için en çok tercih edilen sapanca villaları ve <nuxt-link :prefetch="false"  :to="$store.state.trUrls.bolge+'kalkan'" target="_blank">kaş villaları</nuxt-link> muhteşem fırsatlar sunuyor. Tarihi, kültürel faaliyetlerin ve eğlence hayatının renkli kapıları bu şehirlerde aralanıyor. Tatil bölgelerimizdeki kültür, eğlence ve tatil aktiviteleri hakında bilgi almak için <nuxt-link :prefetch="false"  to="/blog" target="_blank">bloğunuzu</nuxt-link> ziyaret edebilirsiniz!. Akdeniz ve Ege'de sıcacık, huzur dolu bir villa tatili için bu noktaları tercih edebilirsiniz.
+</p>
+        </div>
+        <img class="mn-icon" src="~/static/icon.png" alt="">
+      </div>
+    </sec>
 
   </div>
   
@@ -726,5 +764,41 @@ section.bt-section.desc {
 .carousel-list.has-shadow {
     box-shadow: none;
 }
+img.mn-icon {
+    position: absolute;
+    right: -250px;
+    top: -50px;
+    filter: opacity(0.5);
+    opacity: 0.4;
+    height: 600px;
+    width: 600px;
+}
 
+.man-wrap{
+  padding: 30px;
+}
+
+.man-wrap p {
+    font-weight: 500;font-size: 15px;
+}
+
+.man-wrap.pr h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+}
+
+.man-wrap.pr strong {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.man-wrap.pr b {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.man-wrap.pr a {
+    font-weight: 600;
+}
 </style>
