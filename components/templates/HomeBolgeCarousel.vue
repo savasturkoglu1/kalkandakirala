@@ -15,7 +15,7 @@
                                   <nuxt-link class="col-card"                                       
                                         :to="$store.state.trUrls.bolge+item.bo_url">
                                            <div class="hb-wrap">
-                                        <img itemprop="image" loading="lazy" :src="item.bo_kapak_resp?item.bo_kapak_resp:item.bo_kapak"  :alt="item.bo_adi" />
+                                        <img itemprop="image" loading="lazy" :src="item.bo_kapak"  :alt="item.bo_adi" />
                                         <span class="car-data" >
                                          
                                              <div class="car-data-content  ">

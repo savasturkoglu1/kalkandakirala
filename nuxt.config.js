@@ -120,7 +120,7 @@ export default {
     {src:'~/plugins/lazy', mode: 'client', ssr:false}, 
   //  {src:'~/plugins/swiper', mode: 'client', ssr:false},    
     // '~/plugins/touch',  
-     { src: '~plugins/ga.js', mode: 'client' },
+     { src: '~plugins/ga.js', mode: 'client' }, 
     { src: '~plugins/tawk.js', mode: 'client', ssr:false },
   ],
 

@@ -1389,7 +1389,7 @@ button.button.nav-phone {
 }
 
 .search-guests-wrap .column {
-  padding: 10px;
+  padding: 10px !important;
 }
 
 .s-button.g-button {

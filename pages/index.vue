@@ -244,6 +244,9 @@ Kiralık yazlık tatili için öncelikle tatil yapacağınız mevsimi belirlemen
 
   <p>Eğlence, dinlenme ve tüm yılın stresini atmak amacıyla yapacağınız tatiller için Muğla, Antalya ve <nuxt-link :prefetch="false"  :to="$store.state.trUrls.bolge+'kalkan'" target="_blank">Kalkan villaları</nuxt-link> , kış için en çok tercih edilen sapanca villaları ve <nuxt-link :prefetch="false"  :to="$store.state.trUrls.bolge+'kalkan'" target="_blank">kaş villaları</nuxt-link> muhteşem fırsatlar sunuyor. Tarihi, kültürel faaliyetlerin ve eğlence hayatının renkli kapıları bu şehirlerde aralanıyor. Tatil bölgelerimizdeki kültür, eğlence ve tatil aktiviteleri hakında bilgi almak için <nuxt-link :prefetch="false"  to="/blog" target="_blank">bloğunuzu</nuxt-link> ziyaret edebilirsiniz!. Akdeniz ve Ege'de sıcacık, huzur dolu bir villa tatili için bu noktaları tercih edebilirsiniz.
 </p>
+<p>
+  Tüm bu seçenekler için kararınız ne olursa olsun kalkandakirala.com ekibimizin sizlere severek ve ilgiyle yardımcı olacaklarını unutmayınız, bize yazın Likya kuşu size uygun kiralık tatil villasını bulsun ! Kalkandakirala.com Kiralık Villa Tatil Asistanınız !"
+</p>
         </div>
         <img class="mn-icon" src="~/static/icon.png" alt="">
       </div>
@@ -772,6 +775,7 @@ img.mn-icon {
     opacity: 0.4;
     height: 600px;
     width: 600px;
+    z-index: -1;
 }
 
 .man-wrap{
