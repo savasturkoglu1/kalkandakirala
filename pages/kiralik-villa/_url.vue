@@ -158,7 +158,7 @@
                  <div class="wo-body">
                      <h5>Öne Çıkan Özellikler</h5>
                      <div class="wo-list">
-                          <div class="hu-oc columns" v-if="vil.vil_onecikan_ozellik">
+                          <div class="hu-oc columns is-mobile" v-if="vil.vil_onecikan_ozellik">
                             <div class="column is-4" v-for="(item, d) in vil.vil_onecikan_ozellik.split(',')" :key="d">
                                 <span>
                                   <i class="flaticon-check"></i>

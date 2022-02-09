@@ -42,7 +42,7 @@
                 collapses: [
                 {
                     title: 'Griş çıkış satleri',
-                    text: 'Giriş Zamanı: 15:00        Çıkış Zamanı: 10:00'
+                    text: 'Giriş Zamanı: 16:00        Çıkış Zamanı: 10:00'
                 },
                 {
                     title: 'Ücrete Dahil olanlar',
