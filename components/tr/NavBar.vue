@@ -234,7 +234,9 @@
           </div>
         </div>
 
-        
+         <nuxt-link  class="navbar-item blog-link desk" to="/blog" target="_blank">
+       Blog
+      </nuxt-link >
       </div>
       </div>
     </nav>
@@ -953,7 +955,7 @@ a.box-link {
   }
 
   .mv-nbrand img {
-    height: 50px !important;
+    height: 55px !important;
     max-height: none;
     /* transform: skew(30deg);
     -moz-transform: skew(20deg);
@@ -1163,6 +1165,7 @@ button.button.ph-button {
 
 a.navbar-item.mega-dropdown {
     margin-top: 0px;
+    padding-top: 0px;
 }
 
 .navbar-item.contact-item {
@@ -1220,5 +1223,11 @@ button.mobil-menu-button i::before {
 
 .s-wrapper input {
     border: none;
+}
+
+a.navbar-item.blog-link {
+    color: #ff9800;
+    font-weight: 600;
+    padding-top: 17px;
 }
 </style>

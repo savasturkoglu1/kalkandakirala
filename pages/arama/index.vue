@@ -52,6 +52,34 @@ export default {
           show:1
         }
     },
+      head() {
+    return {
+      title:'KalkandaKirala.com - Kiralık Villa Tatili Asistanınız',
+     meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Kiralık Villa Tatili Asistanınız'
+        
+        },
+        
+        { property: 'og:site_name', content: this.$store.state.siteName },
+        { property: 'og:type', content: 'website' },
+        {
+          property: 'og:url',
+          content: this.$store.state.baseTr + this.$route.path,
+        },
+        { property: 'og:locale', content: 'tr_TR' }, // Buraya o sayfanın dili. İngilizce ise en_US, türkçe ise tr_TR olacak.
+     
+        
+      ],
+
+    
+      }
+
+      
+  },
+
 
      async asyncData ({$axios, params, route}) {
          const prms = route.fullPath.split('?')[1];        

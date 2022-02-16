@@ -107,6 +107,7 @@ export default {
     .bu-body {
         padding: 30px;
         position: relative;
+        font-weight: initial;
     }
     .bu-footer {
     border-top: 1px dotted #d8dce1;

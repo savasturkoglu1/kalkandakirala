@@ -19,7 +19,7 @@ export default {
   data(){
       return {
           show:true,
-          url:'https://www.kalkandakirala.com/sayfa/cerez-politikasi'
+          url:'https://www.kalkandakirala.com/bilgilendirme/cerezler-hakkinda'
       }
   },
   mounted(){

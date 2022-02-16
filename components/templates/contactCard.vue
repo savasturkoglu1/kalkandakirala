@@ -17,7 +17,7 @@
         <!-- contact card item end -->
 
          <!-- contact card item -->
-       <div class="cc-item" @click="wht">
+       <div class="cc-item" @click="phone">
            <div class="cc-icon phn">
                <i class="flaticon-phone"></i>
            </div>
@@ -32,7 +32,7 @@
         <!-- contact card item end -->
 
          <!-- contact card item -->
-       <div class="cc-item" @click="wht">
+       <div class="cc-item" @click="mailto">
            <div class="cc-icon mail">
                <i class="flaticon-envelope"></i>
            </div>
@@ -80,6 +80,12 @@ export default {
         '&text=Merhaba'
       window.open(wh, '_blank')
     },
+     mailto(){
+           location.href = "mailto:"+this.$store.state.base.contact.ilt_eposta1;
+        },
+          call(){        
+            location.href = "tel:"+this.data.ilt_mobil1
+        },
     phone(){
             location.href = "tel:"+this.$store.state.base.contact.ilt_sabit1
        },

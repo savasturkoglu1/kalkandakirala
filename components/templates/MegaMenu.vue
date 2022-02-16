@@ -60,10 +60,11 @@ export default {
 }
    .mega-menu {
     padding: 20px;
+    padding-top: 0px
 }
 
 .mm-section h4 {
-    font-size: 24px;
+    font-size: 18px;
     margin-bottom: 15px;
 }
 

@@ -42,7 +42,7 @@
                 collapses: [
                 {
                     title: 'Griş çıkış satleri',
-                    text: 'Giriş Zamanı: 16:00        Çıkış Zamanı: 10:00'
+                    text: 'Giriş Saati: 16:00 - Çıkış Saati: 10:00 ( Sezon yoğunluğuna göre değişiklik gösterebilir. )'
                 },
                 {
                     title: 'Ücrete Dahil olanlar',
@@ -54,15 +54,15 @@
                 },
                 {
                     title: 'Temizlik',
-                    text: 'Villalarımız haftada 1 kez temizlenmektedir. 1 haftayı aşan konaklamalarda, dilerseniz ücretsiz temizlik hizmetinden faydalanabilirsiniz. Minimum kiralama süresinin altındaki rezervasyonlarda '+this.vil.priceSets.vil_extra_tem+' TL temizlik ücreti alınmaktadır.'
+                    text:'Tüm tatil evlerimiz her giriş çıkış döneminde sizler için tertemiz edilir. Minimum kiralama süresinin altındaki rezervasyonlarda '+this.vil.priceSets.vil_extra_tem+' TL temizlik ücreti alınmaktadır.'
                 },
                 {
                     title: 'Doğa İçindeki Villalar',
-                    text: 'Villalar böcek ve haşerelere karşı düzenli olarak ilaçlanmaktadır. Buna rağmen doğa içinde bulunan villalarda haşere çıkma ihtimali bulunmaktadır. Bu bilgi sadece bu villa için değil, doğa içinde bulunan tüm villalar için geçerlidir.'
+                    text: 'Tüm tatil evlerimiz haşere ve böceklere karşı belirli aralıklarla ilaçlanmaktadır. Buna rağmen konumu gereği, böcek, haşere görülebilmektedir. Bu bilgi tüm tatil evlerimiz için geçerlidir'
                 },
                 {
                     title: 'Havuz Bakımı',
-                    text: 'Bakımlar günde bir kez sabah veya akşam görevliler tarafından ücretsiz olarak yapılmaktadır.'
+                    text: 'Havuz ve bahçe bakımları, çöplerin alınması gibi işlemler, tatil evi sorumluluları tarafından günübirlik gerçekleşmektedir.'
                 }
                 ]
             }

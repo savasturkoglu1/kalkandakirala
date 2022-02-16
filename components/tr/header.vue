@@ -171,10 +171,11 @@ img.f_year {
     margin-top: 25px;
 }
 .hd-titles h1 {
-    font-size: 36px;
+    font-size: 38px;
     color: #fff;
     letter-spacing: 1px;
-    margin-bottom: 15px
+    margin-bottom: 15px;
+    font-weight:600
 }
 
 .hd-titles h1 {

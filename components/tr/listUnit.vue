@@ -33,14 +33,15 @@
                                <nav class="u-level">
                                    <div class="unit-ikons level-item">
                                   <ul>
+                                       <li>
+                                          <i class="flaticon-user"></i>
+                                          {{data.vil_kapasite}} 
+                                      </li>
                                       <li>
                                         <i class="flaticon-bed"></i>
                                           {{data.vil_yodasi}} 
                                       </li>
-                                      <li>
-                                          <i class="flaticon-user"></i>
-                                          {{data.vil_kapasite}} 
-                                      </li>
+                                     
                                       <li>
                                           <i class="flaticon-shower"></i> 
                                           {{data.vil_banyo}}

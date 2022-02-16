@@ -10,6 +10,10 @@
       </div>
 
       <div class="slider-sectio parallax-slider mob" id="mobile-galery">
+         
+         <span class="prop-back-button" @click="$router.go(-1)">
+             <i class="flaticon-left-arrow"></i>
+         </span>
         <Slider v-if="vil" :images="vil.image" />
       </div>
     </div>
@@ -98,6 +102,21 @@
                         </div>
                     </div>
                     <!-- ow col end -->
+                     <!-- ow-col  -->
+                    <div class="ow-col">
+                      <div class="ow-item">
+                          <div class="block-icon-m">
+                        <i class="flaticon-user-3"></i>
+                      </div>
+                      <div class="note ow-label">
+                          Kapasite
+                      </div>
+                      <div>
+                        <strong>{{ vil.vil_kapasite }} Kişilik</strong>
+                      </div>
+                      </div>
+                    </div>
+                  <!-- ow col end -->
                    <!-- ow-col  -->
                    
                     <div class="ow-col">
@@ -117,21 +136,7 @@
 
                  <!-- ow col end -->
 
-                 <!-- ow-col  -->
-                    <div class="ow-col">
-                      <div class="ow-item">
-                          <div class="block-icon-m">
-                        <i class="flaticon-user-3"></i>
-                      </div>
-                      <div class="note ow-label">
-                          Kapasite
-                      </div>
-                      <div>
-                        <strong>{{ vil.vil_kapasite }} Kişilik</strong>
-                      </div>
-                      </div>
-                    </div>
-                  <!-- ow col end -->
+                
 
                      <!-- ow-col  -->
 
@@ -158,7 +163,7 @@
                  <div class="wo-body">
                      <h5>Öne Çıkan Özellikler</h5>
                      <div class="wo-list">
-                          <div class="hu-oc columns is-mobile" v-if="vil.vil_onecikan_ozellik">
+                          <div class="hu-oc columns is-multiline" v-if="vil.vil_onecikan_ozellik">
                             <div class="column is-4" v-for="(item, d) in vil.vil_onecikan_ozellik.split(',')" :key="d">
                                 <span>
                                   <i class="flaticon-check"></i>
@@ -1463,7 +1468,17 @@ span.ub-currency {
    display: flex;
  }
 
+ .welc-section.vil-detail-cont {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
 @media (max-width: 1000px) {
+
+  .welc-section.vil-detail-cont {
+    padding-left: 5px;
+    padding-right: 5px;
+}
   .section-title.renk3 {
     position: inherit;
     margin-bottom: 10px;
@@ -1839,5 +1854,21 @@ span.wo-item {
 
 .vl-stars i::before {
     color: #ff9800;
+}
+
+span.prop-back-button {
+    position: absolute;
+    left: 11px;
+    top: 10px;
+    z-index: 99 !important;
+    background: #fff;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+    border-radius: 50%;
+    font-weight: 600;
+    padding-right: 2px;
+    box-shadow: 1px 1px 9px 3px #0000004a;
 }
 </style>

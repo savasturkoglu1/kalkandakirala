@@ -51,6 +51,8 @@ export default {
       { name:'theme-color' , content: '#cb1260'},      
      { name:"ROBOTS",content:"FOLLOW" },
      { name:"ROBOTS", content:"INDEX" },
+     { name:'p:domain_verify',content:"741bbe8beb6a3f1bacf3f0011b65b8c4"}
+    
     ],
     link: [
       // { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
