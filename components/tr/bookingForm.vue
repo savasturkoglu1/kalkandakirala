@@ -21,10 +21,10 @@
                                                             <span v-else>ilk yorumu sen yap</span>
                                                             </a> 
                                                    </div>
-                                                    <div class="vl-stars">
-                                                        
-                                                        <i v-for="(item,i) in vil.stars||0" class="flaticon-star-1" :key="i"></i>
-                                                        <i v-for="(item,i) in Array(5 - vil.stars ).fill().map((_, idx) => idx)" class="flaticon-star" :key="i"></i>
+                                                    <div class="vl-stars" v-if="vil.stars">
+                                                         {{vil.stars}} <i  class="flaticon-star" ></i>
+                                                        <!-- <i v-for="(item,i) in vil.stars||0" class="flaticon-star-1" :key="i"></i>
+                                                        <i v-for="(item,i) in Array(5 - vil.stars ).fill().map((_, idx) => idx)" class="flaticon-star" :key="i"></i> -->
                                                    </div> 
                                                    
                                                     

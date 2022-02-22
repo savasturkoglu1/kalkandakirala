@@ -125,7 +125,7 @@
                        </div>
                        <div class="bf-send">
                               <div style="margin-bottom:25px">
-                                   <label class="check-cont"><a href="/bilgilendirme/villa-apart-kiramala-sozlesmesi-ve-sartlari" target="_blank">Kiralama Sözleşmesini</a> Kabul Ediyorum
+                                   <label class="check-cont"><a href="/bilgilendirme/kiralama-sozlesmesi" target="_blank">Kiralama Sözleşmesini</a> Kabul Ediyorum
                                         <input type="checkbox"  @change="sozlesmeAccept($event)" >
                                         <span class="checkmark"></span>
                                     </label>

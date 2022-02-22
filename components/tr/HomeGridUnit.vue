@@ -55,7 +55,7 @@
                          {{data.vil_onecikan_ozellik}}
                     </div> -->
                     <div class="columns is-mobile  su-botom">
-                        <div class="column is-half has-text-left">
+                        <div class="column is-4 has-text-left">
                                <div class="su-icons-h">
                                 <span class="su-icon">
                                     <i class="flaticon-user"></i> <span>{{data.vil_kapasite}}</span>
@@ -68,7 +68,7 @@
                               
 
                            </div>    
-                           <div class="column is-half has-text-right">
+                           <div class="column is-8 has-text-right">
                                 <div class="unit-dates" v-if="data.totalPrice">
                                                <span class="t_dates" >{{data.dates.from}} - {{data.dates.to}}</span>
                                                 <h5 itemprop="price" class="text2">{{data.totalPrice?data.totalPrice.total:data.minPrice}} {{data.vil_currency}}</h5>
