@@ -31,12 +31,12 @@
                     </div>
                     <div class="columns">
                           <div class="buttons">
-                              <button class="button fi-button br-right">
+                              <button class="button fi-button br-right" @click="wht()" >
                                   <i class="flaticon-whatsapp"></i>
                                  <span class="fi-label"> {{$store.state.base.contact.ilt_mobil1}} <br><span class="note">Whatsapp iletişim</span> </span>  
                                  
                               </button>
-                              <button class="button  fi-button">
+                              <button class="button  fi-button" @click="phone()">
                                   <i class="flaticon-phone " ></i>
                                  <span class="fi-label"> {{$store.state.base.contact.ilt_sabit1}} <br> <span class="note">Müşteri Himetleri</span> </span>
                                   
@@ -176,7 +176,21 @@ export default {
          await this.$axios.get('/nav-set').then(resp => {
             this.veri = resp.data
           })
-      }
+      },
+         wht() {
+      let wh =
+        'https://api.whatsapp.com/send?phone=' +
+        this.$store.state.base.contact.ilt_mobil1 +
+        '&text=Merhaba'
+      window.open(wh, '_blank')
+    },
+     mailto(){
+           location.href = "mailto:"+this.$store.state.base.contact.ilt_eposta1;
+        },
+        
+    phone(){
+            location.href = "tel:"+this.$store.state.base.contact.ilt_sabit1
+       },
      }
 }
 </script>
@@ -405,4 +419,4 @@ a.footer-menu-item.button.footer-page-button {
 .col h4 {
     padding-left: 15px;
 }
-</style>
+</style> 

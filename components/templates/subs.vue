@@ -1,6 +1,6 @@
 <template>
     <div>
-        <b> {{lang=='en'?'Newsletter, only good mails !':'Üye Olun İndirimi Kap :)'}}  </b>
+        <b> {{lang=='en'?'Newsletter, only good mails !':'Bültene Abone Ol Kampanyalar Postana Gelsin!'}}  </b>
         <br><br>
         <div class="is-grouped">
              <div class="sb-feed sl-sol pr">

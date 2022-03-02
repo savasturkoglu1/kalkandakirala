@@ -209,7 +209,7 @@ VillA Evreni misyonumuz, müşteri memnuniyetini sürekli kılmak adına tatil d
  </div>
       </section>    -->
 
-    <sec class="section manifest">
+    <section class="section manifest">
       <div class="container">
         <div class="man-wrap pr">
           <h2>Likya kuşu size uygun kiralık tatil villasını bulsun!</h2>
@@ -257,7 +257,7 @@ Kiralık yazlık tatili için öncelikle tatil yapacağınız mevsimi belirlemen
            </div>
         </div>
       </div>
-    </sec>
+    </section>
 
   </div>
   

@@ -16,7 +16,7 @@
                                    <div class="level-item">
                                        <div class="navbar">
                                            <div class="navbar-item ">
-                                               <i class="flaticon-user "></i> villandakal
+                                               <i class="flaticon-user "></i> Editör
                                            </div>
                                            <div class="navbar-item ">
                                                 {{item.created_at}}

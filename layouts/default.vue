@@ -90,9 +90,9 @@ export default {
            
          });
 
-         setTimeout(() => {
-           this.popupOpen()
-         }, 2000);
+        //  setTimeout(() => {
+        //    this.popupOpen()
+        //  }, 2000);
 
        
   },

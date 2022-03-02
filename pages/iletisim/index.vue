@@ -1,8 +1,8 @@
 <template>
     <div>
         <section class="hero top-hero">
-                                           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d804.1385537441388!2d29.409968529283002!3d36.2746002987538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c02d7069fc8329%3A0x176e7f132bb3f04d!2sVillA%20Evreni!5e0!3m2!1sen!2str!4v1638286758188!5m2!1sen!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
+                                           <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d804.1385537441388!2d29.409968529283002!3d36.2746002987538!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c02d7069fc8329%3A0x176e7f132bb3f04d!2sVillA%20Evreni!5e0!3m2!1sen!2str!4v1638286758188!5m2!1sen!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe> -->
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12866.175988951483!2d29.4169102!3d36.2748483!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x7b726e70e61764d5!2sKalkandaKirala.com%20Kiral%C4%B1k%20Villa%20Tatil%20Asistan%C4%B1n%C4%B1z*21!5e0!3m2!1sen!2str!4v1646204564597!5m2!1sen!2str" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </section>
         <div class="container">
             <div class="columns is-centered page-body">

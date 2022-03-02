@@ -528,7 +528,7 @@
                             <Like :id="vil.id"  :title="false" />
                        </div>
                        <div class="ws-whatsapp">
-                            <div class="cs-row ws-cont" v-if="$store.state.base">
+                            <div class="cs-row ws-cont" v-if="$store.state.base"   @click="wht()">
                                              <span class="wa-icon">
                                                <i class="flaticon-whatsapp" ></i>
                                              </span>
@@ -716,7 +716,7 @@ export default {
           name: 'description',
           content: this.vil.vil_seo_aciklama
             ? this.vil.vil_seo_aciklama
-            : this.vil.vil_adi,
+            : this.vil.vil_baslik,
         },
         {
           hid: 'keywords',
@@ -958,6 +958,13 @@ export default {
   },
 
   methods: {
+     wht() {
+      let wh =
+        'https://api.whatsapp.com/send?phone=' +
+        this.$store.state.base.contact.ilt_mobil1 +
+        '&text=Merhaba'
+      window.open(wh, '_blank')
+    },
     go(i) {
       this.pos = i
       let id = '#sec' + i

@@ -15,7 +15,7 @@
                                   <nuxt-link class="col-card"                                       
                                         :to="$store.state.trUrls.bolge+item.bo_url">
                                            <div class="hb-wrap">
-                                        <img itemprop="image" loading="lazy" :src="item.bo_kapak"  :alt="item.bo_adi" />
+                                        <img itemprop="image" class="col-img" loading="lazy" :src="item.bo_kapak"  :alt="item.bo_adi" />
                                         <span class="car-data" >
                                          
                                              <div class="car-data-content  ">
@@ -155,4 +155,22 @@ span.hb-data {
     text-align: left;
     padding-left: 30px;
 }
+
+.col-card:hover img  {
+    animation: animateOne 4s linear infinite;
+
+    bottom: 0;
+    right: 0;
+   
+    position: absolute;
+    top: 0px;
+}
+
+.col-card  {
+    -webkit-transition: all 5s ease;
+    -moz-transition: all 5s ease;
+    -o-transition: all 5s ease;
+    transition: all 5s ease;
+}
+
 </style>
