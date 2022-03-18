@@ -23,13 +23,34 @@
                                    <div class="item-address">  <span class="su-pin"><i class="flaticon-pin"></i></span>
                                      {{data.vil_il}} /   <span class="unit-bolge"> {{data.vil_bolge}}</span> / {{data.vil_mevki}}
                                    </div>
-                                    <div class="u-onecikan"  itemprop="description" v-if="data.vil_onecikan_ozellik">
+                                    <!-- <div class="u-onecikan"  itemprop="description" v-if="data.vil_onecikan_ozellik">
                                     <span class="u-oc"  v-for="(item, d) in data.vil_onecikan_ozellik.split(',')" :key="d">
-                                        <!-- <i class="fal fa-circle"></i> -->
+                                       
                                         {{item}}
                                     </span>
-                                </div>
+                                </div> -->
+
+                                 
                                </div>
+                               <div class="hu-oc2 dFlex" v-if="data.vil_onecikan_ozellik">
+                                         <div class="justify-start">
+                                             <span class="u-oc"  v-for="(item, d) in data.vil_onecikan_ozellik.split(',').slice(0,2)" :key="d">
+                                        <!-- <i class="fal fa-circle"></i> -->
+                                             {{item}}
+                                            </span>
+                                         </div>
+                                        <b-tooltip 
+                                            position="is-left"
+                                            type="is-info"
+                                            square>
+                                            <template v-slot:content>
+                                                 <div class="fetures-toltip" v-for="(item, d) in data.vil_onecikan_ozellik.split(',')" :key="d">
+                                                      {{item}}
+                                                 </div>
+                                            </template>
+                                            <button class="feture-button"><i class='flaticon-menu-2'></i></button>
+                                        </b-tooltip>
+                                     </div>
                                <nav class="u-level">
                                    <div class="unit-ikons level-item">
                                   <ul>
@@ -241,7 +262,7 @@ span.unit-dates {
     z-index: 9;
 }
 .unit-title {
-    height: 140px;
+    height: 110px;
 }
 .u-desc {
     padding-right: 10px;
@@ -492,5 +513,22 @@ span.u-oc {
 
 .u-rating i::before {
     font-size: 14px;
+}
+
+.hu-oc {
+    margin-top: 10px;
+}
+
+button.feture-button {
+    border: none;
+    background: #fff;
+}
+
+.hu-oc2.dFlex {
+    width: 100%;
+    margin-bottom: 10px;
+    /* padding-bottom: 10px; */
+    border-top: 1px solid hsla(0,0%,74.5%,.4);
+    padding-top: 10px;
 }
 </style>

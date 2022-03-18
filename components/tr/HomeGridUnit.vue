@@ -31,12 +31,7 @@
                                     <b itemprop="name" > {{data.vil_adi}} </b> <br>
                                     <span class="hu-bolge"> {{data.vil_baslik}} </span>
                                 
-                                     <div class="hu-oc" v-if="data.vil_onecikan_ozellik">
-                                         <span class="u-oc"  v-for="(item, d) in data.vil_onecikan_ozellik.split(',')" :key="d">
-                                        <!-- <i class="fal fa-circle"></i> -->
-                                        {{item}}
-                                    </span>
-                                     </div>
+                                     
                                 </div>
                            </div>
                            <div class="column">
@@ -49,7 +44,28 @@
                                             </div>
                                     </div>
                            </div>
+                           
                     </div>
+
+                    <div class="hu-oc dFlex" v-if="data.vil_onecikan_ozellik">
+                                         <div class="justify-start">
+                                             <span class="u-oc"  v-for="(item, d) in features.slice(0,2)" :key="d">
+                                        <!-- <i class="fal fa-circle"></i> -->
+                                             {{item}}
+                                            </span>
+                                         </div>
+                                        <b-tooltip 
+                                            position="is-left"
+                                            type="is-info"
+                                            square>
+                                            <template v-slot:content>
+                                                 <div class="fetures-toltip" v-for="(item, d) in features" :key="d">
+                                                      {{item}}
+                                                 </div>
+                                            </template>
+                                            <button class="feture-button"><i class='flaticon-menu-2'></i></button>
+                                        </b-tooltip>
+                                     </div>
                     
                     <!-- <div class="su-onecikan"  itemprop="description" v-if="data.vil_onecikan_ozellik">
                          {{data.vil_onecikan_ozellik}}
@@ -92,8 +108,18 @@
 import Like from '../templates/like';
 export default {
     components : {  Like },
+    data(){
+        return{
+            features: [],
+            tooltip_labels : "asdasd" +"<br>" +"asadasdasd"
+        }
+    },
     props: {
         data:null
+    },
+    mounted(){
+        this.features = this.data.vil_onecikan_ozellik.split(',')
+        //this.tooltip_labels = this.features.join("\n");
     }
 }
 </script>
@@ -107,6 +133,7 @@ span.gr-price {
 }
 .su-title {
     padding-bottom: 5px;
+    min-height: 100px;
    
 }
 .su-price-d {
@@ -146,7 +173,7 @@ span.gr-price {
     font-size: 18px;
     
     color: #3b4249;
-    margin-right: 15px;
+    margin-right: 5px !important;
   font-weight: 500;
     font-size: 16px;
     
@@ -357,5 +384,17 @@ z-index: 1 !important;
 
 .hu-oc {
     margin-top: 10px;
+}
+
+button.feture-button {
+    border: none;
+    background: #fff;
+}
+
+.hu-oc.dFlex {
+    width: 100%;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid hsla(0,0%,74.5%,.4);
 }
 </style>

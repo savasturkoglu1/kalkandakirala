@@ -1,15 +1,10 @@
-@font-face {
+/* @font-face {
   font-family: "Visby";
   font-weight: 500; 
    font-display: swap;
   src: 
    url(~assets/visby/VisbyRoundCF-Regular.woff) format("woff");
-   /* url(~assets/visby/VisbyRoundCF-Bold.woff) format("woff")
-   url(~assets/visby/VisbyRoundCF-Bold.woff2) format("woff2"),
-   url(~assets/visby/VisbyRoundCF-DemiBold.woff) format("woff"),
-   url(~assets/visby/VisbyRoundCF-DemiBold.woff2) format("woff2"),
-   url(~assets/visby/VisbyRoundCF-Regular.woff2) format("woff2"); */
-   
+  
   
 }
 
@@ -66,8 +61,8 @@
 
    url(~assets/visby/VisbyRoundCF-Regular.woff2) format("woff2");
   
-}
- 
+} */
+@import url('https://fonts.googleapis.com/css?family=Nunito:400,400i,600,600i,700,700i,800,800i,900,900i&display=swap');
  @import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,600,700&display=swap&subset=latin-ext,vietnamese');
  /*@import url('https://fonts.googleapis.com/css?family=Nunito:400,400i,600,600i,700,700i,800,800i,900,900i&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Oxygen:300,400,700&display=swap&subset=latin-ext');
@@ -105,8 +100,8 @@ body {
     /* font-family:  system, -apple-system, BlinkMacSystemFont, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
     font-family: Circular,-apple-system,BlinkMacSystemFont,Roboto,Helvetica Neue,sans-serif !important; */
     /* font-family: 'Roboto', sans-serif; */
-    /* font-family: 'Quicksand', sans-serif; */
-    font-family: "Visby";
+    font-family: 'Nunito', sans-serif;
+    /* font-family: "Visby"; */
    
     color: #333 !important;
     

@@ -246,7 +246,9 @@ export default {
      },
         head () {
             return {
-            meta: [
+           title: "KalkandaKirala.com | Kiralık Villa Tatil Asistanınız!",
+               meta: [
+                 { hid: 'description', name: 'description', content: "KalkandaKirala.com | Kiralık Villa Tatil Asistanınız!" },
                 { hid: 'robots', name: 'robots', content: 'noindex' }
             ]
             }

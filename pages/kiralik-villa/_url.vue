@@ -218,13 +218,13 @@
                 </div>
               <div class="block-body vil-detail-cont">
                 <h6>Havuz Özellikleri</h6>
-                <div class="columns is-multiline">
-                  <div class="column">
-                    {{ vil.vil_havuz }}
+                <div class="hvz">
+                  <div class="div hv-row" v-for="(item,i) in vil.vil_havuz.split(',')" :key="i">
+                    - {{ item }}
                   </div>
                 </div>
 
-               
+               <h6>Özellikler</h6>
                 <div class="columns is-mobile is-multiline">
                   <div
                     :class="'column oz-cols is-' + col"
@@ -267,6 +267,44 @@
                
                 <div class="kural-col">
                      <rules :vil="vil" />
+                </div>
+
+                <div class="rules-botto">
+                    <div class="columns is-mobile is-multiline mesafeler">
+
+                        <div class="column is-one-quarter-desktop is-half-mobile mes-col">
+                          <div class="rule-wrap">
+                            
+                            <div class="mes-name"  >Parti düzenlenemez.
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="column is-one-quarter-desktop is-half-mobile mes-col">
+                          <div class="rule-wrap">
+                            
+                            <div class="mes-name"  >  Kapasite aşımı yapılamaz.
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="column is-one-quarter-desktop is-half-mobile mes-col">
+                          <div class="rule-wrap">
+                            
+                            <div class="mes-name"  >Evcil hayvan kabul edilemez.
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="column is-one-quarter-desktop is-half-mobile mes-col">
+                          <div class="rule-wrap">
+                            
+                            <div class="mes-name"  > Sigara içmek yasaktır.
+                            </div>
+                          </div>
+                        </div>
+
+                    </div>
                 </div>
               </div>
             </div>
@@ -732,12 +770,14 @@ export default {
           content: this.$store.state.baseTr + this.$route.path,
         },
         { property: 'og:locale', content: 'tr_TR' }, // Buraya o sayfanın dili. İngilizce ise en_US, türkçe ise tr_TR olacak.
-        { property: 'og:title', content: this.vil.vil_seo_baslik },
+        { property: 'og:title', content: this.vil.vil_seo_baslik
+        ? this.vil.vil_seo_baslik
+        : this.vil.vil_adi},
         {
           property: 'og:description',
-          content: this.vil.vil_seo_aciklama
-            ? this.vil.vil_seo_aciklama
-            : this.vil.vil_adi,
+          content:  this.vil.vil_seo_baslik
+        ? this.vil.vil_seo_baslik
+        : this.vil.vil_adi
         },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: this.$store.state.siteName },
@@ -1877,5 +1917,19 @@ span.prop-back-button {
     font-weight: 600;
     padding-right: 2px;
     box-shadow: 1px 1px 9px 3px #0000004a;
+}
+
+.hvz {
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.rule-wrap {
+    text-align: center;
+    background: #eef1f59c !important;
+    border-radius: 8px;
+    /* box-shadow: 0 2px 12px 0 rgb(55 64 77 / 8%); */
+    padding: 12px;
+    height: 100%;
 }
 </style>
