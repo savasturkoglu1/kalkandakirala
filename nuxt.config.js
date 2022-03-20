@@ -104,7 +104,7 @@ export default {
       
      ]
   },
-  
+  //loading: '~/components/tools/loader.vue',
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
     // '~/assets/css/style.css',

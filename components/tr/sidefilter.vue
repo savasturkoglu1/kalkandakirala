@@ -272,12 +272,12 @@ export default {
          if(filterparams.from) {
            // console.log(filterparams.ozellikler.split(",").map(Number))
             this.from = filterparams.from
-            this.date1 = filterparams.date1
+            this.date1 = filterparams.from
         }
          if(filterparams.to) {
            // console.log(filterparams.ozellikler.split(",").map(Number))
             this.to = filterparams.to
-            this.date2 = filterparams.date2
+            this.date2 = filterparams.to
             
         }
          if(filterparams.guests) {
@@ -411,7 +411,7 @@ export default {
       
         getDatas(){
              this.$axios.get('/teklif-al').then(resp => {
-                 this.veri = resp.data;
+                 this.veri = resp.data;  
                  console.log('filtre',resp.data);
             });
         },

@@ -389,7 +389,7 @@ export default {
 td.ui-datepicker-week-end.ui-datepicker-unselectable.ui-state-disabled {
     opacity: 0.6;
 }
-@import '~/assets/ui/jquery-ui.min.css';
+/* @import '~/assets/ui/jquery-ui.min.css'; */
 .field.column.is-4 {
     padding: 0px;
 }
