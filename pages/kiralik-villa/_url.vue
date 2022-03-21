@@ -218,7 +218,7 @@
                 </div>
               <div class="block-body vil-detail-cont">
                 <h6>Havuz Özellikleri</h6>
-                <div class="hvz">
+                <div class="hvz"  v-if="vil.vil_havuz">
                   <div class="div hv-row" v-for="(item,i) in vil.vil_havuz.split(',')" :key="i">
                     - {{ item }}
                   </div>
