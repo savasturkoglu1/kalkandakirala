@@ -144,7 +144,14 @@ export default {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa', 
-    ['nuxt-buefy', { css: false, materialDesignIcons: true }]
+    ['nuxt-buefy', { css: false, materialDesignIcons: true }],
+    ['nuxt-facebook-pixel-module', {
+      /* module options */
+      track: 'PageView',
+      pixelId: '3268105243514269',
+      autoPageView: true,
+      disabled: false
+    }],
   ],
 
   sitemap: {

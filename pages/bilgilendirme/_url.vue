@@ -64,7 +64,7 @@ export default {
                 { name:"twitter:title" , content:this.item.seo.seo_baslik },
                
                 { name:"twitter:creator" , content:"@twitterkullaniciadiniz"},
-                { property:"fb:pages" , content:"BURAYA_FACEBOOK_SAYFA_ID_NUMARASI" },
+                { property:"fb:pages" , content:"kalkandakiralacom" },
                 ],
 
                

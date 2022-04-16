@@ -788,7 +788,7 @@ export default {
         { name: 'twitter:title', content: this.vil.vil_seo_baslik },
         { name: 'twitter:image', content: this.vil.image.length>0?this.vil.image[0].res_url:'' },
         { name: 'twitter:creator', content: '@twitterkullaniciadiniz' },
-        { property: 'fb:pages', content: 'BURAYA_FACEBOOK_SAYFA_ID_NUMARASI' },
+        { property: 'fb:pages', content: 'kalkandakiralacom' },
       ],
 
       link: [

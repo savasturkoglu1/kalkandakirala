@@ -1,7 +1,7 @@
 <template>
-    <div class="conteiner sp-cont">
+    <div class="container sp-cont">
         <div class="columns">
-            <div class="column is-6 is-offset-3"> 
+            <div class="column is-8 is-offset-2"> 
                 <div class="se-wrap">
                     <h1>GüVENLİ ODEME SAYFASI</h1>
                   
@@ -41,12 +41,12 @@
                                       <div class="field">
                                             
                                             <div class="control has-icons-left has-icons-right">
-                                                <input class="input " type="text" :placeholder="rez.rez_ad"  >
+                                                <input class="input " type="text" :placeholder="rez.rez_ad" v-model="Name" >
                                                 <span class="icon is-small is-left">
-                                                <i class="fal fa-user"></i>
+                                                <i class="flaticon-avatar"></i>
                                                 </span>
                                                 <span v-if="false" class="icon is-small is-right">
-                                                <i class="fas fa-check"></i>
+                                                <i class="flaticon-check "></i>
                                                 </span>
                                             </div>
                                            
@@ -54,9 +54,9 @@
                                       <div class="field">
                                             
                                             <div class="control has-icons-left has-icons-right">
-                                                <input class="input " type="text" placeholder="1234 5678 9101 1213"  >
+                                                <input class="input " type="text" placeholder="1234 5678 9101 1213" v-model="Pan" >
                                                 <span class="icon is-small is-left">
-                                                <i class="fal fa-credit-card-front"></i>
+                                                <i class="flaticon-calendar-2"></i>
                                                 </span>
                                                 <span v-if="false" class="icon is-small is-right">
                                                   <i class="fas fa-check"></i>
@@ -68,9 +68,9 @@
                                            <div class="field sl-sol">
                                             
                                             <div class="control has-icons-left has-icons-right">
-                                                <input class="input " type="text" placeholder="12/2023"  >
+                                                <input class="input " type="text" placeholder="Son Kullanım Tarihi" v-model="Expiry" >
                                                 <span class="icon is-small is-left">
-                                                <i class="fal fa-calendar"></i>
+                                                <i class="flaticon-calendar-4"></i>
                                                 </span>
                                                 <span v-if="false" class="icon is-small is-right">
                                                   <i class="fas fa-check"></i>
@@ -81,9 +81,9 @@
                                        <div class="field sl-sag">
                                             
                                             <div class="control has-icons-left has-icons-right">
-                                                <input class="input " type="text" placeholder="123"  >
+                                                <input class="input " type="text" placeholder="CVV"  >
                                                 <span class="icon is-small is-left">
-                                              <i class="fal fa-credit-card-blank"></i>
+                                              <i class="flaticon-password"></i>
                                                 </span>
                                                 <span v-if="false" class="icon is-small is-right">
                                                   <i class="fas fa-check"></i>
@@ -92,7 +92,7 @@
                                            
                                       </div>
                                       </div>
-                                      <div class="button is-danger is-fullwidth">Öde</div>
+                                      <div class="button is-danger is-fullwidth"   @click="pay">Öde</div>
                                         </div>
                                   </div>
                            </div>
@@ -104,17 +104,63 @@
 </template>
 <script>
 export default {
+    data(){
+        return {
+            Expiry:'',
+            Name:'',
+            Cvv2:'',
+            Pan:0
+        }
+    },
      async asyncData ({$axios, params, route}) { 
            const kod = route.query.code;
            let rez  = await $axios.get('/kk-odeme/'+kod).then(res => { return res.data });  
            return { rez }
       },
+
+      methods:{
+          pay(){
+
+            let data = {
+                ShopCode:'kalkan_adm',
+                merchantPass:'lQleJ',
+                PurchAmount:100,
+                Currency:949,
+                OrderId:'kk123',
+                OkUrl:'',
+                FailUrl:'',
+                Rnd:new Date(),
+                Hash:'',
+                TxnType:'Auth',
+                InstallmentCount:'',
+                SecureType:"3DPay" ,
+                Lang :" tr",
+                Expiry: this.Expiry,
+                Pan:this.Pan,
+                Name:this.Name,
+                Cvv2:this.Cvv2,
+                
+
+                
+            }
+
+            this.$axios.post('https://test.inter-vpos.com.tr/mpi/Default.aspx', data).then(res => { 
+                console.log(res.data)
+
+             }); 
+
+          },
+
+          getPsData(){
+
+          }
+      }
 }
 </script>
 
 <style scoped>
 .se-wrap {
-    max-width: 700px;
+   
     display: block;
     background: #fff;
     border-radius: 5px;
@@ -123,7 +169,7 @@ export default {
     padding: 20px;
 }
     .kk-wrap {
-    max-width: 700px;
+   
     display: block;
     padding: 0px;
     background: #fff;

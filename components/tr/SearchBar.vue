@@ -217,7 +217,7 @@ export default {
         //         this.slectedLocations = bolgedIds;
         //    }     
         }
-   },
+   }, 
     // created(){
     //     this.getSearch();
     // },

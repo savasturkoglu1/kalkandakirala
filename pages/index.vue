@@ -318,7 +318,7 @@ export default {
                 
                  "url" : this.$store.state.baseTr,
                 "@type": "Organization",
-                "name": "vilalevreni",
+                "name": "kalkandakirala",
                 "address": {
                   "@type": "PostalAddress",
                   "streetAddress": "Kalkan ",
@@ -349,7 +349,7 @@ export default {
                  { name:"twitter:image" , content:this.homeSeo.kapak },
                  { name:"twitter:creator" , content:this.$store.state.twitter_user},
                  { property:"fb:pages" , content:this.$store.state.facebook_id },
-                  { name:"publisher", content:"https://www.vilalevreni.com/" },
+                  { name:"publisher", content:"https://www.kalkandakirala.com/" },
                   { name:"author", content:"SavasTurkoglu- LikyaPix" },
                   { name:"ROBOTS", content:"FOLLOW" },
                   { name:"Yandex", content:"index, follow" },
@@ -360,9 +360,9 @@ export default {
                 ],
 
                 link: [
-                       {rel: 'canonical',href: 'https://www.vilalevreni.com' },
-                       {rel: 'alterne',href:'https://www.vilalevreni.com', hreflang:"x-default"  },
-                        {rel: 'alterne',href:'https://www.vilalevreni.com', hreflang:"tr"  },
+                       {rel: 'canonical',href: 'https://www.kalkandakirala.com' },
+                       {rel: 'alterne',href:'https://www.kalkandakirala.com', hreflang:"x-default"  },
+                        {rel: 'alterne',href:'https://www.kalkandakirala.com', hreflang:"tr"  },
                                 
                     ],
 

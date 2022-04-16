@@ -25,7 +25,7 @@
               
                    <div class="r-row" v-for="(item,i) in results" :key="i" @click="goLink($store.state.trUrls.villa+item.vil_url)">
                      <div class="r-img-wrap">
-                            <img :src="item.vil_response_img" alt="villaevreni">
+                            <img :src="item.vil_response_img" alt="kalkandakirala">
                      </div>
                      <div class="r-details">
                          <h6> {{item.vil_adi}} </h6>

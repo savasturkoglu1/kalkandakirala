@@ -121,7 +121,7 @@ export default {
                 { name:"twitter:title" , content:this.data.e_seo_baslik },
                 { name:"twitter:image" , content:this.data.images[0].res_url },
                 { name:"twitter:creator" , content:"@twitterkullaniciadiniz"},
-                { property:"fb:pages" , content:"BURAYA_FACEBOOK_SAYFA_ID_NUMARASI" },
+                { property:"fb:pages" , content:"kalkandakiralacom" },
                 ],
 
                 link: [

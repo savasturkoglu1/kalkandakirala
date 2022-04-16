@@ -59,7 +59,7 @@ export default {
                 { name:"twitter:title" , content:this.bolge.seo.seo_baslik },
                 { name:"twitter:image" , content:this.bolge.bo_kapak },
                 { name:"twitter:creator" , content:"@twitterkullaniciadiniz"},
-                { property:"fb:pages" , content:"BURAYA_FACEBOOK_SAYFA_ID_NUMARASI" },
+                { property:"fb:pages" , content:"kalkandakiralacom" },
                 ],
 
                 link: [
