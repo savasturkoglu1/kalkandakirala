@@ -747,7 +747,7 @@ export default {
     return {
       title: this.vil.vil_seo_baslik
         ? this.vil.vil_seo_baslik
-        : this.vil.vil_adi,
+        : this.vil.vil_adi+'| KalkandaKirala.com',
      meta: [
         {
           hid: 'description',
@@ -775,9 +775,9 @@ export default {
         : this.vil.vil_adi},
         {
           property: 'og:description',
-          content:  this.vil.vil_seo_baslik
-        ? this.vil.vil_seo_baslik
-        : this.vil.vil_adi
+          content:  this.vil.vil_seo_aciklama
+        ? this.vil.vil_seo_aciklama
+        : this.vil.vil_baslik
         },
         { name: 'twitter:card', content: 'summary_large_image' },
         { name: 'twitter:site', content: this.$store.state.siteName },

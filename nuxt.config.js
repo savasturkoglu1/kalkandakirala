@@ -51,7 +51,8 @@ export default {
       { name:'theme-color' , content: '#cb1260'},      
      { name:"ROBOTS",content:"FOLLOW" },
      { name:"ROBOTS", content:"INDEX" },
-     { name:'p:domain_verify',content:"741bbe8beb6a3f1bacf3f0011b65b8c4"}
+     { name:'p:domain_verify',content:"741bbe8beb6a3f1bacf3f0011b65b8c4"},
+     { name:"facebook-domain-verification", content:"hgt7gx5so8s54hhwoer22aqmysxjjd" }
     
     ],
     link: [
@@ -119,7 +120,7 @@ export default {
   plugins: [
      '~/plugins/sosyal',   
      
-    {src:'~/plugins/lazy', mode: 'client', ssr:false}, 
+   // {src:'~/plugins/lazy', mode: 'client', ssr:false}, 
   //  {src:'~/plugins/swiper', mode: 'client', ssr:false},    
     // '~/plugins/touch',  
      { src: '~plugins/ga.js', mode: 'client' }, 

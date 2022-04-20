@@ -1,5 +1,5 @@
 <template>
-    
+     <div>
         <nuxt-link :to="$store.state.trUrls.villa+data.vil_url" :title="data.vil_adi">
              <div class="su-wrap"  itemscope itemtype="http://schema.org/Product">
                 <div class="su-img-wrap">
@@ -20,6 +20,11 @@
                     <div class="unit-like">
                         <like :id="data.id"  :count="data.vil_like"  />
                     </div>
+                     <div class="su-calendar">
+                                        <span class="mc-button "  @click="calMod($event)">
+                                            <i class="flaticon-calendar"></i>
+                                        </span>
+                     </div>
                 </div>
                 <div class="su-detay-wrap-d">
                     <div class="columns is-mobile unit-detail-top">
@@ -46,7 +51,7 @@
                            </div>
                            
                     </div>
-
+                   
                     <div class="hu-oc dFlex" v-if="data.vil_onecikan_ozellik">
                                          <div class="justify-start">
                                              <span class="u-oc"  v-for="(item, d) in features.slice(0,2)" :key="d">
@@ -100,17 +105,36 @@
                     </div>
                   
                 </div>
+               
             </div>
         </nuxt-link>
+         <b-modal
+                    v-model="calmodal"
+                    has-modal-card
+                   
+                    @close="()=> {this.calmodal= false}"
+                  :can-cancel="true">
+                    <div class="cm-body modal-card">
+                        <div class="modal-card-body mc-cont">
+                 
+                        <Calendar  :vilId="data.id" :inline="true" />
+                        </div>
+                       </div>
+                </b-modal>
+               
+
+                </div>
     
 </template>
 <script>
 import Like from '../templates/like';
+import Calendar from './calendar.vue';
 export default {
-    components : {  Like },
+    components : {  Like,Calendar },
     data(){
         return{
             features: [],
+            calmodal:false,
             tooltip_labels : "asdasd" +"<br>" +"asadasdasd"
         }
     },
@@ -120,11 +144,17 @@ export default {
     mounted(){
         this.features = this.data.vil_onecikan_ozellik.split(',')
         //this.tooltip_labels = this.features.join("\n");
+    },
+    methods:{
+        calMod(e){
+          e.preventDefault();
+          this.calmodal =!this.calmodal
+        }
     }
 }
 </script>
 
-<style >
+<style scoped>
 
 span.gr-price {
     font-size: 14px !important;
@@ -396,5 +426,27 @@ button.feture-button {
     margin-bottom: 10px;
     padding-bottom: 10px;
     border-bottom: 1px solid hsla(0,0%,74.5%,.4);
+}
+
+.su-calendar {
+    text-align: right;
+    margin-top: 5px;
+    cursor: pointer;
+    pointer-events: all;
+    z-index: 9; 
+  
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+}
+
+.su-calendar i::before {
+    font-size: 16px;
+    color: #eee;
+}
+
+.cm-body.modal-card {
+    width: 900px;
 }
 </style>

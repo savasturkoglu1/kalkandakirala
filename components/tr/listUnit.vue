@@ -1,4 +1,5 @@
 <template>
+<div>
    <nuxt-link :to="$store.state.trUrls.villa+data.vil_url" :title="data.vil_adi" >
     <div class="columns unit is-mobile " itemscope itemtype="http://schema.org/Product">
        
@@ -29,7 +30,11 @@
                                         {{item}}
                                     </span>
                                 </div> -->
-
+                                  <div class="su-calendar">
+                                        <span class="mc-button "  @click="calMod($event)">
+                                            <i class="flaticon-calendar"></i>
+                                        </span>
+                     </div>
                                  
                                </div>
                                <div class="hu-oc2 dFlex" v-if="data.vil_onecikan_ozellik">
@@ -122,16 +127,33 @@
     </div>
 
     </nuxt-link>
+      <b-modal
+                    v-model="calmodal"
+                    has-modal-card
+                   
+                    @close="()=> {this.calmodal= false}"
+                  :can-cancel="true">
+                    <div class="cm-body modal-card">
+                        <div class="modal-card-body mc-cont">
+                 
+                        <Calendar  :vilId="data.id" :inline="true" />
+                        </div>
+                       </div>
+                </b-modal>
+               
+
+                </div>
     
 </template>
 <script>
 import Like from '../templates/like';
 import moment from 'moment';
+import Calendar from './calendar.vue';
 export default {
-    components: { Like },
+    components: { Like,Calendar },
     data(){
         return{
-
+          calmodal:false,
         }
     },
     props: {
@@ -154,6 +176,10 @@ export default {
                    day
               }
            },
+           calMod(e){
+          e.preventDefault();
+          this.calmodal =!this.calmodal
+        }
     }
 }
 </script>
@@ -530,5 +556,28 @@ button.feture-button {
     /* padding-bottom: 10px; */
     border-top: 1px solid hsla(0,0%,74.5%,.4);
     padding-top: 10px;
+}
+
+
+.su-calendar {
+    text-align: right;
+    margin-top: 5px;
+    cursor: pointer;
+    pointer-events: all;
+    z-index: 9; 
+  
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #fff;
+}
+
+.su-calendar i::before {
+    font-size: 16px;
+    color: #333;
+}
+
+.cm-body.modal-card {
+    width: 900px;
 }
 </style>
