@@ -11,9 +11,10 @@
 
       <div class="slider-sectio parallax-slider mob" id="mobile-galery">
          
-         <span class="prop-back-button" @click="$router.go(-1)">
+         <span  class="prop-back-button" @click="goBack">
              <i class="flaticon-left-arrow"></i>
          </span>
+        
         <Slider v-if="vil" :images="vil.image" />
       </div>
     </div>
@@ -910,6 +911,7 @@ export default {
   },
 
   mounted() {
+   
     if (
       localStorage.getItem('clicked') === null ||
       localStorage.getItem('clicked') === undefined
@@ -998,6 +1000,13 @@ export default {
   },
 
   methods: {
+    goBack(){
+        if(this.$router.go(-1)){
+          this.$router.go(-1)
+        } else {
+          this.$router.push('/')
+        }
+    },
      wht() {
       let wh =
         'https://api.whatsapp.com/send?phone=' +

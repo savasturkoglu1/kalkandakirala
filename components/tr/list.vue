@@ -9,7 +9,7 @@
                    </span>
                    <span>Filtrele</span>
               </button>
-              <button class="mb-to-button button is-small has-icons-left">
+              <button class="mb-to-button button is-small has-icons-left" @click="()=> {this.smodal = true}">
                    <span class="icon">
                        <i class="flaticon-sort"></i>
                    </span>
@@ -17,7 +17,24 @@
               </button>
           </div>
    
-
+             <b-modal
+                    v-model="smodal"
+                    has-modal-card
+                   
+                    @close="()=> {this.smodal= false}"
+                    :can-cancel="true">
+                    <div class=" modal-card">
+                        <div class="modal-card-body">
+                         
+                         <MobileSort @sendOrder="
+                  (a, b) => {
+                    this.setSort(a, b)
+                  }
+                " />
+                           
+                        </div>
+                       </div>
+                </b-modal>
         <b-modal
             v-model="mFilter"
             has-modal-card
@@ -128,12 +145,14 @@ import MapUnit from './mapUnit'
 import GMap from '../../components/tr/GMap'
 import SideFilter from '../../components/tr/sidefilter'
 import TopFilter from './topFilter.vue'
+import MobileSort from '~/components/mobil/sort.vue'
 
 export default {
   watchQuery: true,
   scrollToTop: true,
   loading: true,
   components: {
+    MobileSort,
     Paginate,
     Filtre,
     ListUnit,
@@ -158,9 +177,10 @@ export default {
     return {
       url: this.$route.params.url,
       lang: 'tr',
-      type: 'kat',
+      type: 'kat', 
       page: 1,
       pagi: 3,
+      smodal:false,
       orderBy: 'id',
       orderCond: 'DESC',
       show: 1,
@@ -230,6 +250,7 @@ export default {
       localStorage.setItem('orderCond', b)
       this.orderBy = a
       this.orderCond = b
+      this.smodal = false,
       this.$router.push({
         query: {
           ...this.$route.query,

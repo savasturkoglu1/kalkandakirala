@@ -142,7 +142,10 @@ export default {
         data:null
     },
     mounted(){
-        this.features = this.data.vil_onecikan_ozellik.split(',')
+        if(this.data.vil_onecikan_ozellik){
+this.features = this.data.vil_onecikan_ozellik.split(',')
+        }
+        
         //this.tooltip_labels = this.features.join("\n");
     },
     methods:{
@@ -448,5 +451,11 @@ button.feture-button {
 
 .cm-body.modal-card {
     width: 900px;
+}
+
+@media  (max-width:768px) {
+    .cm-body.modal-card {
+    width: auto !important;
+}
 }
 </style>

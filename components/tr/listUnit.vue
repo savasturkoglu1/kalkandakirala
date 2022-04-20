@@ -580,4 +580,10 @@ button.feture-button {
 .cm-body.modal-card {
     width: 900px;
 }
+
+@media  (max-width:768px) {
+    .cm-body.modal-card {
+    width: auto !important;
+}
+}
 </style>

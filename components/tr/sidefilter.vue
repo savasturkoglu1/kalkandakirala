@@ -280,6 +280,10 @@ export default {
             this.date2 = filterparams.to
             
         }
+        if(this.from && this.to){
+           this.datePlc = this.from+' - '+this.to;
+           this.priceLabel = 'Toplam fiyat'
+        }
          if(filterparams.guests) {
            // console.log(filterparams.ozellikler.split(",").map(Number))
             this.guests = filterparams.guests
@@ -427,8 +431,8 @@ export default {
               
                 let qSet =  { 
                     guests:this.guests,
-                    from:this.date1,
-                    to:this.date2
+                    from:this.from,
+                    to:this.to
                 };     
                 //  this.sKats.length>0?qSet['kats'] = this.sKats.join(','):'';
                 //   this.sOz.length>0?qSet['ozellikler'] = this.sOz.join(','):'';
@@ -475,6 +479,7 @@ export default {
 
                 qSet['minPrice'] = this.minPrice;
                 qSet['maxPrice'] = this.maxPrice;
+
                    
                this.$emit('cBack',qSet );                
         },

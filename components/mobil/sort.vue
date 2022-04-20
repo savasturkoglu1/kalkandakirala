@@ -1,41 +1,6 @@
 <template>
-    <nav class="level ist-level">
-                    <div class="level-left">
-                     <div class="buttons " v-if="!map">
-                        <div :class="show==1?'button  selected-style':'button'" @click="setShow(1)">
-                              <i class="flaticon-list-1"></i>
-                        </div>
-                        <div  v-if="!listOnly"  :class="show==2?'button  selected-style':'button'" @click="setShow(2)">
-                          <i class="flaticon-grid"></i>
-                        </div>
-                     </div>
-                    </div>
-                    <div class="level-item desk has-text-centered">
-                      <div v-if="!listOnly" class="button" >
-                         
-                          <span v-if="map">
-                             Liste görünümüne Geç
-                          </span>
-                          <!-- <span v-else>
-                            Harita görünümüne Geç
-                          </span> -->
-                      </div>
-                    </div>
-                    <div class="level-right">
-                      <div class="dropdown is-hoverable">
-                        <div class="dropdown-trigger">
-                          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
-                            <span>{{plc}}</span>
-                            <span class="icon is-small">
-                              <i class="fas fa-angle-down" aria-hidden="true"></i>
-                            </span>
-                          </button>
-                        </div>
-                        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                          <div class="dropdown-content">
-                          
-                            <div class="dropdown-item">
-                                 <a 
+    <div class="mobil-sort-wra">
+         <a 
                                  :class="orderBy=='vil_kapasite'&&orderCond=='asc'?'dropdown-item is-active':'dropdown-item'"
                                   @click="setSort('vil_kapasite', 'asc')">
                                  Kapsite azdan çoka
@@ -59,21 +24,15 @@
                                 <a :class="orderBy=='smart'?'dropdown-item is-active':'dropdown-item'"  @click="setSort('smart', 'asc')">
                                  Akıllı Sıralama
                                 </a>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                        
-                    </div>
-              </nav>
+    </div>
 </template>
 <script>
 export default {
 
     data(){
         return {
-            orderBy:'id',
-            orderCond: 'desc',
+            orderBy:null,
+            orderCond: null,
             show:2,
             map:false,
             plc:'Sıralama',
@@ -98,8 +57,9 @@ export default {
          const orderCond = localStorage.getItem('orderCond');
          this.show =a?a:1 ;
 
-      //   this.orderBy = orderBy?orderBy:null;
-      //   this.orderCond = orderCond?orderCond:null;
+        //  this.orderBy = orderBy?orderBy:null;
+        //  this.orderCond = orderCond?orderCond:null;
+        //   this.$emit('sendOrder', this.orderBy,this.orderCond );
         }
 
         //  this.map = JSON.parse(localStorage.getItem('listView')) ;
