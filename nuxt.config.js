@@ -152,7 +152,11 @@ export default {
       pixelId: '3268105243514269',
       autoPageView: true,
       disabled: false
-    }],
+    }],  
+
+    '@nuxtjs/gtm'
+
+    /// GTM-5VLCKFJ  tag maanger
   ],
 
   sitemap: {
@@ -164,6 +168,35 @@ export default {
     gzip: true,
     generate: false, 
   },
+
+  gtm: {
+    id: 'GTM-5VLCKFJ',
+    enabled:true,
+    debug: false,
+
+    id: undefined,
+    layer: 'dataLayer',
+    variables: {},
+
+    pageTracking: false,
+    pageViewEventName: 'nuxtRoute',
+
+    autoInit: true,
+    respectDoNotTrack: true,
+
+    scriptId: 'gtm-script',
+    scriptDefer: false,
+    scriptURL: 'https://www.googletagmanager.com/gtm.js',
+    crossOrigin: false,
+
+    noscript: true,
+    noscriptId: 'gtm-noscript',
+    noscriptURL: 'https://www.googletagmanager.com/ns.html'
+
+    
+  },
+
+ 
 
 
 
