@@ -133,7 +133,7 @@
     </div>
   </div>
 </template>
-<script>
+<script> 
 import Paginate from '../templates/pagination'
 import Filtre from '../tr/SearchBar'
 import ListUnit from './listUnit'

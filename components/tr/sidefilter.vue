@@ -285,11 +285,13 @@ export default {
            this.priceLabel = 'Toplam fiyat'
         }
          if(filterparams.guests) {
-           // console.log(filterparams.ozellikler.split(",").map(Number))
-            this.guests = filterparams.guests
+           
+            
             
             
         }
+
+        this.guests = filterparams.guests || 0
        
     },
     mounted(){
@@ -297,7 +299,7 @@ export default {
         this.getDatas();
 
         let g = localStorage.getItem('f_g')
-        this.guests = g?parseInt(g):0
+       // this.guests = g?parseInt(g):0
         //this.sKats = this.getLocal('f_kategori')
     },
 

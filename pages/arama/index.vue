@@ -23,7 +23,7 @@
          <!-- <Paginate v-if="veri" :data="veri" :getPage="setQuery" /> -->
           
 
-     </div>
+     </div> 
     </div>
 </template>
 
