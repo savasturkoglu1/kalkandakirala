@@ -10,6 +10,19 @@
   <!-- <section class="info-sec">
     <info-card />
   </section> -->
+
+  <section class="des2"  v-if="$store.state.base">
+   <div class="container">
+      <div class="colus">
+          <div class="v-link">
+            <nuxt-link to="/kiralik-villa-tipleri/2023-fiyatli-villalar">
+        <h3>2023 Fiyatlı villalara Gözatın -> </h3>
+      </nuxt-link>
+          </div>
+      </div>
+   </div>
+    
+  </section>
  <section class="des2"  v-if="$store.state.base">
    <div class="container">
      <div class="section-tit dFlex">
@@ -815,5 +828,8 @@ img.mn-icon {
 
 .columns.pad30 {
     padding: 30px;
+}
+.v-link {
+    padding: 15px;
 }
 </style>
