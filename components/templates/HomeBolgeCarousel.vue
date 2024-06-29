@@ -48,7 +48,7 @@ export default {
             gray: false,
             opacity: false,
             values: 1,
-            perList: 4,
+            perList:3,
             increment: 1,
             repeat: true,
             katsCar:0,

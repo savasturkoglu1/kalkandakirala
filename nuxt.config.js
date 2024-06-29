@@ -174,11 +174,11 @@ export default {
     enabled:true,
     debug: false,
 
-    id: undefined,
+   
     layer: 'dataLayer',
     variables: {},
 
-    pageTracking: false,
+    pageTracking: true,
     pageViewEventName: 'nuxtRoute',
 
     autoInit: true,

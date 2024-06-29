@@ -69,12 +69,7 @@
                             : 'Bu kısma villa başlık yazısı gelecek '
                         }}
                       </h2>
-                 </div>
-                
-
-              
-
-                <div class="item-address ">
+                      <div class="item-address ">
                   <span class="icon">
                     <i class="flaticon-pin"></i>
                   </span>
@@ -82,6 +77,14 @@
                   <span class="unit-bolge"> {{ vil.vil_bolge }}</span> /
                   {{ vil.lokasyon.vil_mevki }}
                 </div>
+                 </div>
+                
+
+              
+                <div>
+                  <Yapi :vil="vil"/>
+                </div>
+                
                </div>
             </div>
             <div class="ow-sec">
@@ -176,6 +179,7 @@
                                       
                            </div>
                      </div>
+                    
                  </div>
                  
             </div>
@@ -712,9 +716,12 @@ import Slider from '../../components/mobil/ImageGrid.vue'
 import MobilBooking from '../../components/mobil/BookingForm'
 import Rules from '~/components/templates/rules.vue'
 
+import Yapi from '~/components/yapi/banner.vue'
+
 export default {
   components: {
     Slider,
+    Yapi,
     Calendar,
     Brd,
     BookingForm,
