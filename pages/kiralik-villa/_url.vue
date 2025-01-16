@@ -70,13 +70,13 @@
                         }}
                       </h2>
                       <div class="item-address ">
-                  <span class="icon">
-                    <i class="flaticon-pin"></i>
-                  </span>
-                  {{ vil.lokasyon.vil_il }} {{ vil.lokasyon.vil_il ? '/' : '' }}
-                  <span class="unit-bolge"> {{ vil.vil_bolge }}</span> /
-                  {{ vil.lokasyon.vil_mevki }}
-                </div>
+                        <span class="icon">
+                          <i class="flaticon-pin"></i>
+                        </span>
+                        {{ vil.lokasyon.vil_il }} {{ vil.lokasyon.vil_il ? '/' : '' }}
+                        <span class="unit-bolge"> {{ vil.vil_bolge }}</span> /
+                        {{ vil.lokasyon.vil_mevki }}
+                      </div>
                  </div>
                 
 
